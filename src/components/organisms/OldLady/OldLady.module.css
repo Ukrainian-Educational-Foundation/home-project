@@ -1,0 +1,88 @@
+.old_lady {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100vw;
+  height: 919px;
+  padding: 40px 90px;
+  gap: 64px;
+  opacity: 0px;
+}
+
+.old_lady > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1260px;
+  height: 149px;
+  padding: 35px 84px;
+  gap: 8px;
+  border-radius: 16px;
+  opacity: 0px;
+  background: #5368a7b2;
+  font-family: Onest;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.old_lady > div:last-child {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  width: 1260px;
+  height: 636px;
+  gap: 48px;
+  opacity: 0px;
+}
+
+.old_lady > div:last-child > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 606px;
+  height: 636px;
+  gap: 0px;
+  border-radius: 16px;
+  opacity: 0px;
+}
+
+.old_lady > div:last-child > ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 606px;
+  gap: 64px;
+  opacity: 0px;
+}
+
+.old_lady > div:last-child > ul > li:first-child {
+  font-family: Onest;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50.4px;
+  letter-spacing: 0.02em;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5368a7;
+}
+
+.old_lady > div:last-child > ul > li:nth-of-type(2),
+.old_lady > div:last-child > ul > li:nth-of-type(3) {
+  font-family: Onest;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}

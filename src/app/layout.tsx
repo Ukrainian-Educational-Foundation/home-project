@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/Header/Header";
+import Header from "@/components/organisms/Header/Header";
+import Footer from "@/components/organisms/Footer/Footer";
 
-const geistOnest = localFont({
+const Onest = localFont({
   src: "./fonts/Onest/static/Onest-Regular.ttf",
   variable: "--font-onest",
-  weight: "100 900",
+  weight: "400",
 });
 
 export const metadata: Metadata = {
@@ -21,10 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistOnest.variable}`}>
+      <body className={`${Onest.variable}`}>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <Header />
           {children}
+          <Footer />
         </div>
       </body>
     </html>

@@ -1,0 +1,122 @@
+.ukr_map {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 998px;
+  padding: 40px 90px;
+  gap: 0px;
+  opacity: 0px;
+}
+
+.ukr_map div:first-child {
+  font-family: Onest;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50.4px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5368a7;
+}
+
+.ukr_map_wrap {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 1260px;
+  height: 352px;
+  gap: 48px;
+  opacity: 0px;
+  margin: 64px 0;
+}
+
+.ukr_map_wrap ul {
+  width: 712px;
+  height: auto;
+  gap: 24px;
+  opacity: 0px;
+}
+
+.ukr_map_wrap ul li {
+  font-family: Onest;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  margin-bottom: 20px;
+  color: #303058;
+}
+
+.ukr_map_last {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 222px;
+  gap: 40px;
+  opacity: 0px;
+}
+
+.ukr_map_last div {
+  font-family: Onest;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.ukr_map_last ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 1258px;
+  height: 150px;
+  gap: 0px;
+  justify: space-between;
+  opacity: 0px;
+}
+
+.ukr_map_last ul li {
+  position: relative;
+  width: 265px;
+  height: 150px;
+  padding: 0px;
+  gap: 0px;
+  border-radius: 16px;
+  background-image: url(/video.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ukr_map_last ul > li > div {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.activeButton,
+.defaultButton {
+  background-image: url(/pause.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 28.81px;
+  height: 29.13px;
+  gap: 0px;
+  border: none;
+  background: inherit;
+}
+
+.activeButton {
+  background-image: url(/play.png);
+}
