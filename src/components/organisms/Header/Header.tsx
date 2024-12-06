@@ -1,4 +1,4 @@
-import Button from "../../atoms/Button/Button";
+import Button from "@/components/atoms/Button/Button";
 import styles from "./Header.module.css";
 
 import React from "react";
