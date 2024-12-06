@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
-import Header from "@/components/organisms/Header/Header";
-import Footer from "@/components/organisms/Footer/Footer";
+import Header from "../components/organisms/Header/Header";
+import Footer from "../components/organisms/Footer/Footer";
 
 const Onest = localFont({
   src: "./fonts/Onest/static/Onest-Regular.ttf",
