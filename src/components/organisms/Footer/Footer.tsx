@@ -1,7 +1,7 @@
 import Image from "next/image";
 import styles from "./Footer.module.css";
 import React from "react";
-import Button from "@/components/atoms/Button/Button";
+import Button from "../../atoms/Button/Button";
 
 function Footer() {
   return (
