@@ -9,13 +9,13 @@ function OurSupport() {
         <div>Компанії, що підтримують нас:</div>
         <ul>
           <li>
-            <Image src="/hau.png" alt="logo" width={122.97} height={35.05} />
+            <Image src="/hau.png" alt="logo" width={123} height={35} />
           </li>
           <li>
-            <Image src="/univest.png" alt="logo" width={135.77} height={48} />
+            <Image src="/univest.png" alt="logo" width={136} height={48} />
           </li>
           <li>
-            <Image src="/razom.png" alt="logo" width={137.79} height={54} />
+            <Image src="/razom.png" alt="logo" width={138} height={54} />
           </li>
           <li>
             <Image src="/12security.png" alt="logo" width={144} height={48} />

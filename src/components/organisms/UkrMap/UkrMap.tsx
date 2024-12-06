@@ -46,7 +46,7 @@ function UkrMap() {
         <br /> так і надати їм психологічну підтримку та належне виховання.
       </div>
       <div className={`${styles.ukr_map_wrap}`}>
-        <Image src="/map.png" alt="logo" width={500} height={331.32} />
+        <Image src="/map.png" alt="logo" width={500} height={331} />
         <ul>
           <li>
             До прикладу, у нашого фонду під опікою хлопчик Влад з Лиману,
@@ -100,8 +100,11 @@ function UkrMap() {
                     }
                     onClick={
                       activeVideo[videoName]
-                        ? () => handlePlay(videoName)
-                        : () => handlePause(videoName)
+                        ? () => handlePause(videoName)
+                        : () => {
+                            handlePlay(videoName);
+                            console.log(activeVideo[videoName]);
+                          }
                     }
                   ></button>
                 </div>
