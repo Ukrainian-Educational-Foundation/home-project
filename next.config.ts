@@ -2,6 +2,7 @@ import path from "path";
 import { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
+  output: "export",
   webpack(config) {
     config.resolve.alias = {
       ...(config.resolve.alias || {}),
