@@ -1,0 +1,240 @@
+.about_fond {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 919px;
+  padding: 40px 90px;
+  gap: 40px;
+}
+
+.about_fond > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 1260px;
+  height: 61px;
+  font-family: Onest;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50.4px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5368a7;
+}
+
+.about_fond > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: auto;
+  height: 166px;
+  gap: 24px;
+}
+
+.about_fond > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 281px;
+  height: 166px;
+}
+
+.about_fond > ul > li > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 281px;
+  height: 80px;
+  font-family: Bitter;
+  font-size: 80px;
+  font-weight: 600;
+  line-height: 64px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.about_fond > ul > li > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 281px;
+  height: 86px;
+  font-family: Onest;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.about_fond_team {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 305px;
+}
+
+.about_fond_team > div:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  margin: 0 auto;
+  width: 1146px;
+}
+
+.about_fond_team > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 1260px;
+  margin: 0 auto;
+  height: 61px;
+  font-family: Onest;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.about_fond_wrap {
+  overflow: hidden;
+  width: 930px;
+}
+
+.about_fond_wrap > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 100%;
+  height: 232px;
+}
+
+.about_fond_wrap > ul > li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 162px;
+  height: 212px;
+  padding: 16px 0px 0px 0px;
+  gap: 8px;
+  border-radius: 16px;
+  margin: 0 12px;
+  background: #5368a766;
+}
+
+.about_fond_team > div:nth-of-type(2) > button {
+  background: transparent;
+  border: none;
+  font-size: 36px;
+  cursor: pointer;
+  color: #303058;
+  padding: 10px;
+}
+
+.about_fond_team img {
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.about_fond_team img:last-child {
+  border-radius: 16px;
+  object-fit: cover;
+}
+
+.about_fond_card {
+  width: 162px;
+  height: 92px;
+  padding: 8px;
+  gap: 4px;
+  border-radius: 16px;
+  background: #5368a7b2;
+}
+
+.about_fond_card > div:first-child {
+  width: 151px;
+  height: 24px;
+  font-family: Onest;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.about_fond_card > div:last-child {
+  width: 140px;
+  height: 48px;
+  font-family: Onest;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
+}
+
+.about_fond_last {
+  width: 1260px;
+  height: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-family: Onest;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.about_fond_last > ul {
+  width: 734px;
+  height: 118px;
+  gap: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Onest;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.about_fond_last > ul > li {
+  width: 218px;
+  height: 118px;
+  gap: 8px;
+  border-radius: 16px;
+}

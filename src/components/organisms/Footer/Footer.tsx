@@ -7,7 +7,7 @@ function Footer() {
   return (
     <div className={`${styles.footer}`}>
       <div className={`${styles.footer_main}`}>
-        <Image src="/Fund_logo.png" alt="logo" width={180} height={60} />
+        <Image src="/Fund_logo1.png" alt="logo" width={180} height={60} />
         <div>
           Наша місія - змінювати життя дітей (евакуювати, знаходити житло,
           <br />

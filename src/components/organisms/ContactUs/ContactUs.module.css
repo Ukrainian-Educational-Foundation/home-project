@@ -1,0 +1,121 @@
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 100vw;
+  height: 449px;
+  padding: 40px 90px;
+  gap: 80px;
+}
+
+.contact > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1260px;
+  height: 61px;
+  font-family: Onest;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50.4px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5368a7;
+}
+
+.contact > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 1260px;
+  height: 148px;
+}
+
+.contact_headers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 1172px;
+  height: 52px;
+  padding: 0px 2px;
+  font-family: Onest;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.contact_headers li {
+  width: 30%;
+}
+
+.contact_headers li:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.contact_headers li:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.contact > div:last-child > ul:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 1172px;
+  height: 59px;
+  padding: 0px 2px;
+  font-family: Onest;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.contact_phone,
+.contact_email {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  height: 59px;
+  gap: 10px;
+}
+
+.contact_email {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.contact_social {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 30%;
+  height: 32px;
+  padding: 0 0 0 120px;
+}
+
+.contact_social button {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  background: inherit;
+  border: none;
+}

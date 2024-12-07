@@ -8,7 +8,7 @@ function Header() {
   return (
     <div className={`${styles.header}`}>
       <div>
-        <Image src="/Fund_logo.png" alt="logo" width={180} height={60} />
+        <Image src="/Fund_logo1.png" alt="logo" width={180} height={60} />
       </div>
       <div className={`${styles.buttons}`}>
         <button>Головна</button>

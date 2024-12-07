@@ -1,0 +1,77 @@
+.house {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  height: 919px;
+}
+
+.house > div:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1260px;
+  height: 61px;
+  font-family: Onest;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50.4px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5368a7;
+  margin-bottom: 37px;
+}
+
+.house > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 1260px;
+}
+
+.house > ul > li:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  width: 344px;
+  height: 351px;
+  font-family: Onest;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.house > ul > li:last-child {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 328px;
+  height: 641px;
+}
+
+.house > ul > li:last-child > img:first-child {
+  position: absolute;
+  left: 0;
+}
+
+.house > ul > li:last-child > img:nth-of-type(2) {
+  position: absolute;
+  right: 0;
+  top: 28%;
+}
+
+.house > ul > li:last-child > img:last-child {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}

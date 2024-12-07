@@ -1,7 +1,7 @@
 .help_describe {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   flex-direction: column;
   width: 100vw;
   height: 919px;
@@ -12,9 +12,10 @@
 .help_describe > div:first-child {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
+  flex-direction: column;
   width: 1260px;
-  height: 61px;
+  height: 339px;
   font-family: Onest;
   font-size: 36px;
   font-weight: 500;
@@ -24,4 +25,58 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #5368a7;
+}
+
+.help_describe > div:first-child ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 1109px;
+  height: 214p;
+  gap: 40px;
+}
+
+.help_describe > div:first-child ul li {
+  width: 343px;
+  height: 214px;
+  gap: 8px;
+}
+
+.help_describe > div:first-child ul li div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 343px;
+  height: 86px;
+  font-family: Onest;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
+.help_describe > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  width: 1260px;
+  height: 355px;
+  padding: 66px 64px;
+  gap: 8px;
+  border-radius: 16px;
+  background: #5368a7b2;
+  font-family: Onest;
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 40px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #ffffff;
 }
