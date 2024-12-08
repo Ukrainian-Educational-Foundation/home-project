@@ -8,9 +8,18 @@ function ContactUs() {
       <div>ЗВ’ЯЖИСЬ З НАМИ</div>
       <div>
         <ul className={`${styles.contact_headers}`}>
-          <li>Залиш повідомлення</li>
-          <li>Будемо раді почути</li>
-          <li>Будь з нами в соцмережах</li>
+          <li>
+            Залиш повідомлення
+            <Image src="/Vector-l.png" alt="logo" width={86} height={88} />
+          </li>
+          <li>
+            Будемо раді почути
+            <Image src="/Vector-c.png" alt="logo" width={206} height={68} />
+          </li>
+          <li>
+            Будь з нами в соцмережах
+            <Image src="/Vector-r.png" alt="logo" width={60} height={89} />
+          </li>
         </ul>
         <ul>
           <li className={`${styles.contact_email}`}>
