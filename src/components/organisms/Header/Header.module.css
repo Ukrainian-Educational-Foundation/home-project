@@ -10,14 +10,18 @@
 }
 
 .buttons {
-  width: max-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 624px;
+  height: 60px;
 }
 
 .buttons button {
   position: relative;
   color: #ffffff;
   background: none;
-  padding: 14px 29px;
   border: none;
   cursor: pointer;
   font-family: Onest, sans-serif;
