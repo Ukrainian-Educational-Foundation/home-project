@@ -25,11 +25,13 @@ function Preview() {
         </ul>
       </div>
       <div className={`${styles.preview_right}`}>
-        <ul>
-          <li>Влад, 7 років</li>
-          <li>м. Лиман, Донецька обл</li>
-          <li>мама загинула, живе з бабусею</li>
-        </ul>
+        <div>
+          <ul>
+            <li>Влад, 7 років</li>
+            <li>м. Лиман, Донецька обл</li>
+            <li>мама загинула, живе з бабусею</li>
+          </ul>
+        </div>
       </div>
     </div>
   );

@@ -30,7 +30,6 @@
 
 .preview_left ul {
   display: flex;
-  align-items: left;
   justify-content: space-between;
   flex-direction: column;
   height: 608px;
@@ -88,8 +87,17 @@
 
 .preview_right {
   width: 50%;
-  height: max-content;
-  margin-top: 528px;
+  height: 751px;
+  padding: 40px 64px 40px 90px;
+}
+
+.preview_right > div {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  flex-direction: row;
+  height: 608px;
+  gap: 40px;
 }
 
 .preview_right ul {
