@@ -1,5 +1,5 @@
-import Preview from "@/components/organisms/Preview/Preview";
 import styles from "./page.module.css";
+import Preview from "@/components/organisms/Preview/Preview";
 import OurSupport from "@/components/organisms/OurSupport/OurSupport";
 import UkrMap from "@/components/organisms/UkrMap/UkrMap";
 import OldLady from "@/components/organisms/OldLady/OldLady";

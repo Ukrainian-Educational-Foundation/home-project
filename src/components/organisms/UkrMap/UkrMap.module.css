@@ -5,8 +5,6 @@
   width: 100vw;
   height: 998px;
   padding: 40px 90px;
-  gap: 0px;
-  opacity: 0px;
 }
 
 .ukr_map div:first-child {
@@ -29,7 +27,6 @@
   width: 1260px;
   height: 352px;
   gap: 48px;
-  opacity: 0px;
   margin: 64px 0;
 }
 
@@ -37,7 +34,6 @@
   width: 712px;
   height: auto;
   gap: 24px;
-  opacity: 0px;
 }
 
 .ukr_map_wrap ul li {
@@ -60,7 +56,6 @@
   width: 100%;
   height: 222px;
   gap: 40px;
-  opacity: 0px;
 }
 
 .ukr_map_last div {
@@ -81,9 +76,6 @@
   justify-content: space-between;
   width: 1258px;
   height: 150px;
-  gap: 0px;
-  justify: space-between;
-  opacity: 0px;
 }
 
 .ukr_map_last ul li {
@@ -91,7 +83,6 @@
   width: 265px;
   height: 150px;
   padding: 0px;
-  gap: 0px;
   border-radius: 16px;
   background-image: url(/video.png);
   background-size: cover;
@@ -111,7 +102,6 @@
   background-repeat: no-repeat;
   width: 28.81px;
   height: 29.13px;
-  gap: 0px;
   border: none;
   background-color: inherit;
   cursor: pointer;

@@ -15,7 +15,6 @@
   padding: 40px 64px 40px 90px;
   gap: 8px;
   border: 1px;
-  opacity: 0px;
   background: linear-gradient(
     94.68deg,
     rgba(255, 255, 255, 0.9) 0.97%,
@@ -36,7 +35,6 @@
   flex-direction: column;
   height: 608px;
   gap: 40px;
-  opacity: 0px;
 }
 
 .preview_left ul > li:first-child {
@@ -98,7 +96,6 @@
   gap: 8px;
   border-radius: 16px;
   border: 1px;
-  opacity: 0px;
   background: #ffffff99;
   border: 1px solid;
   border-image-source: linear-gradient(
