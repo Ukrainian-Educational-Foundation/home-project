@@ -1,9 +1,15 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./Preview.module.css";
 import React from "react";
 import Button from "@/components/atoms/Button/Button";
+import { useWindowSize } from "@/hooks/useResizeObserver";
 
 function Preview() {
+  const { width } = useWindowSize();
+
+  const isMobile = width <= 768;
   return (
     <div className={`${styles.preview}`}>
       <div className={`${styles.preview_left}`}>
@@ -18,13 +24,16 @@ function Preview() {
           </li>
           <li>
             Ми будуємо дім для дітей-сиріт, що
-            <br /> живуть з опікунами пенсійного віку
+            <br className={`${styles.hidden_on_mobile}`} /> живуть з опікунами
+            пенсійного віку
           </li>
           <li>
             <div>
-              мета збору <span>5 000 000 грн</span>
+              мета збору
+              <br className={`${styles.show_on_mobile}`} />
+              <span>5 000 000 грн</span>
             </div>
-            <Button text="ХОЧУ ДОПОМОГТИ" size="Large" />
+            <Button text="ХОЧУ ДОПОМОГТИ" size={isMobile ? "Small" : "Large"} />
           </li>
         </ul>
       </div>
