@@ -10,15 +10,21 @@ function HelpDescribe() {
         Що отримають діти в ДОМІ
         <ul>
           <li>
-            <Image src="/benefit2.png" alt="logo" width={120} height={120} />
+            <div>
+              <Image src="/benefit2.png.webp" alt="logo" fill />
+            </div>
             <div>Фінансове забезпечення</div>
           </li>
           <li>
-            <Image src="/benefit1.png" alt="logo" width={120} height={120} />
+            <div>
+              <Image src="/benefit1.png.webp" alt="logo" fill />
+            </div>
             <div>Освіта</div>
           </li>
           <li>
-            <Image src="/benefit.png" alt="logo" width={120} height={120} />
+            <div>
+              <Image src="/benefit.png.webp" alt="logo" fill />
+            </div>
             <div>Пихологічна підтримка</div>
           </li>
         </ul>

@@ -9,16 +9,24 @@ function OurSupport() {
         <div>Компанії, що підтримують нас:</div>
         <ul>
           <li>
-            <Image src="/hau.png" alt="logo" width={123} height={35} />
+            <div>
+              <Image src="/hau.png.webp" alt="logo" fill />
+            </div>
           </li>
           <li>
-            <Image src="/univest.png" alt="logo" width={136} height={48} />
+            <div>
+              <Image src="/univest.png.webp" alt="logo" fill />
+            </div>
           </li>
           <li>
-            <Image src="/razom.png" alt="logo" width={138} height={54} />
+            <div>
+              <Image src="/razom.png.webp" alt="logo" fill />
+            </div>
           </li>
           <li>
-            <Image src="/12security.png" alt="logo" width={144} height={48} />
+            <div>
+              <Image src="/12security.webp" alt="logo" fill />
+            </div>
           </li>
         </ul>
       </div>

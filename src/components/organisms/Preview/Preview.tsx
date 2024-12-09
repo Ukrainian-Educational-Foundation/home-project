@@ -9,8 +9,12 @@ function Preview() {
       <div className={`${styles.preview_left}`}>
         <ul>
           <li>
-            <Image src="/Dim.png" alt="logo" width={506} height={328} />
-            <Image src="/sunrice.png" alt="logo" width={208} height={208} />
+            <div>
+              <Image src="/Dim.png.webp" alt="logo" fill />
+            </div>
+            <div>
+              <Image src="/sunrice.png.webp" alt="logo" fill />
+            </div>
           </li>
           <li>
             Ми будуємо дім для дітей-сиріт, що

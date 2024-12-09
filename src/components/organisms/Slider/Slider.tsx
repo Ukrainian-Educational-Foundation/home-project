@@ -7,11 +7,11 @@ const Slider = () => {
   const [view, setView] = useState(0);
 
   const handlePrev = () => {
-    if (view > 0) setView(view - 1);
+    if (view < 0) setView(view + 1260);
   };
 
   const handleNext = () => {
-    if (view < 3) setView(view + 1);
+    if (view > -3780) setView(view - 1260);
   };
 
   return (
@@ -21,7 +21,9 @@ const Slider = () => {
         <div
           className={styles.slider_container}
           style={{
-            transform: `translateX(-${view * 1260}px)`,
+            position: "relative",
+            left: `${view}px`,
+            transition: "300ms",
           }}
         >
           <div className={styles.slide}>

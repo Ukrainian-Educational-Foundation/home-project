@@ -10,44 +10,52 @@ function ContactUs() {
         <ul className={`${styles.contact_headers}`}>
           <li>
             Залиш повідомлення
-            <Image src="/Vector-l.png" alt="logo" width={86} height={88} />
+            <div>
+              <Image src="/Vector-l.png.webp" alt="logo" fill />
+            </div>
           </li>
           <li>
             Будемо раді почути
-            <Image src="/Vector-c.png" alt="logo" width={206} height={68} />
+            <div>
+              <Image src="/Vector-c.png.webp" alt="logo" fill />
+            </div>
           </li>
           <li>
             Будь з нами в соцмережах
-            <Image src="/Vector-r.png" alt="logo" width={60} height={89} />
+            <div>
+              <Image src="/Vector-r.png.webp" alt="logo" fill />
+            </div>
           </li>
         </ul>
         <ul>
           <li className={`${styles.contact_email}`}>
-            <Image
-              src="/mail.png"
-              alt="logo"
-              width={24}
-              height={24}
-              layout="intrinsic"
-            />
+            <div>
+              <Image
+                src="/mail.png.webp"
+                alt="logo"
+                fill
+              />
+            </div>
             ukraine.ef@gmail.com
           </li>
           <li className={`${styles.contact_phone}`}>
-            <Image src="/phone-call.png" alt="logo" width={24} height={24} />
+            <div>
+              <Image src="/phone-call.png.webp" alt="logo" fill />
+            </div>
             +380 68 338 68 70
           </li>
           <li className={`${styles.contact_social}`}>
             <button>
-              <Image src="/FB.png" alt="logo" width={32} height={32} />
+              <Image src="/FB.png.webp" alt="logo" fill />
             </button>
             <button>
-              <Image src="/Linkedin.png" alt="logo" width={32} height={32} />
+              <Image src="/Linkedin.png.webp" alt="logo" fill />
             </button>
             <button>
-              <Image src="/Telegram.png" alt="logo" width={32} height={32} />
+              <Image src="/Telegram.png.webp" alt="logo" fill />
             </button>
             <button>
-              <Image src="/Instagram.png" alt="logo" width={32} height={32} />
+              <Image src="/Instagram.png.webp" alt="logo" fill />
             </button>
           </li>
         </ul>

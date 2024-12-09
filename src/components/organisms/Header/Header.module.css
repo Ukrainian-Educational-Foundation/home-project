@@ -46,6 +46,12 @@
   width: 100%;
 }
 
+.header > div:first-child {
+  position: relative;
+  width: 180px;
+  height: 60px;
+}
+
 .header div:last-child {
   display: flex;
   width: 394px;

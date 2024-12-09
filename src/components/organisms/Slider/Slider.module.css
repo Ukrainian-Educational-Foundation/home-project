@@ -88,23 +88,23 @@
   background-size: contain;
   cursor: pointer;
   border: none;
-  transition: background-color 0.3s ease;
+  transition: 0.2s ease;
 }
 
 .buttons button:first-child {
-  background-image: url(/arrow-button-left.png);
+  background-image: url(/arrow-button-left.webp);
 }
 
 .buttons button:first-child:hover {
-  background-image: url(/left-hover.png);
+  background-image: url(/left-hover.png.webp);
 }
 
 .buttons button:last-child {
-  background-image: url(/arrow-button-right.png);
+  background-image: url(/arrow-button-right.webp);
 }
 
 .buttons button:last-child:hover {
-  background-image: url(/right-hover.png);
+  background-image: url(/right-hover.png.webp);
 }
 
 .buttons button:disabled {

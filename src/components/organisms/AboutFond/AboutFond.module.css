@@ -149,6 +149,9 @@
   cursor: pointer;
   color: #303058;
   padding: 10px;
+  position: relative;
+  width: 80px;
+  height: 80px;
 }
 
 .about_fond_team img {
@@ -233,8 +236,15 @@
 }
 
 .about_fond_last > ul > li {
+  position: relative;
   width: 218px;
   height: 118px;
   gap: 8px;
   border-radius: 16px;
+}
+
+.about_img_wrap {
+  position: relative;
+  width: 104px;
+  height: 104px;
 }

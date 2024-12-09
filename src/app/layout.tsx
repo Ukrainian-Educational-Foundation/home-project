@@ -5,13 +5,13 @@ import Header from "../components/organisms/Header/Header";
 import Footer from "../components/organisms/Footer/Footer";
 
 const Onest = localFont({
-  src: "./fonts/Onest/static/Onest-Regular.ttf",
+  src: "./fonts/Onest-Regular.woff2",
   variable: "--font-onest",
   weight: "400",
 });
 
 const Bitter = localFont({
-  src: "./fonts/Bitter/static/Bitter-Regular.ttf",
+  src: "./fonts/Bitter-Regular.woff2",
   variable: "--font-bitter",
   weight: "400",
 });

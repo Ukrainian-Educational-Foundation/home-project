@@ -47,3 +47,27 @@
   padding: 12px 18px 12px 18px;
   gap: 8px;
 }
+
+.our_suppurt_wrap ul li > div:first-child {
+  position: relative;
+  width: 123px;
+  height: 35px;
+}
+
+.our_suppurt_wrap ul li > div:nth-of-type(2) {
+  position: relative;
+  width: 136px;
+  height: 48px;
+}
+
+.our_suppurt_wrap ul li > div:nth-of-type(3) {
+  position: relative;
+  width: 138px;
+  height: 54px;
+}
+
+.our_suppurt_wrap ul li > div:last-child {
+  position: relative;
+  width: 144px;
+  height: 48px;
+}

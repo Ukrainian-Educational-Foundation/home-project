@@ -47,7 +47,7 @@ function AboutFond() {
         <div>Наша команда</div>
         <div>
           <button onClick={handlePrev} disabled={view === 0}>
-            <Image src="/arrow-left.png" alt="logo" width={80} height={80} />
+            <Image src="/arrow-left.png.webp" alt="logo" fill  />
           </button>
           <div className={`${styles.about_fond_wrap}`}>
             <ul
@@ -60,12 +60,11 @@ function AboutFond() {
               {data.length > 0 ? (
                 data.map((human, index) => (
                   <li key={index}>
-                    <div>
+                    <div className={`${styles.about_img_wrap}`}>
                       <Image
                         src={human.photo || "/user.png"}
                         alt={human.name || "No photo available"}
-                        width={104}
-                        height={104}
+                        fill 
                         priority={index === 0}
                         style={{
                           objectPosition:
@@ -85,7 +84,7 @@ function AboutFond() {
             </ul>
           </div>
           <button onClick={handleNext} disabled={view === 3}>
-            <Image src="/arrow-right.png" alt="logo" width={80} height={80} />
+            <Image src="/arrow-right.png.webp" alt="logo" fill  />
           </button>
         </div>
       </div>
@@ -93,13 +92,13 @@ function AboutFond() {
         <div>Медіа про нас</div>
         <ul>
           <li>
-            <Image src="/news.png" alt="logo" width={218} height={118} />
+            <Image src="/news.png.webp" alt="logo" fill  />
           </li>
           <li>
-            <Image src="/news.png" alt="logo" width={218} height={118} />
+            <Image src="/news.png.webp" alt="logo" fill  />
           </li>
           <li>
-            <Image src="/news.png" alt="logo" width={218} height={118} />
+            <Image src="/news.png.webp" alt="logo" fill  />
           </li>
         </ul>
       </div>

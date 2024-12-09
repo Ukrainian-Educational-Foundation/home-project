@@ -4,7 +4,7 @@
   width: 100vw;
   height: 751px;
   gap: 8px;
-  background-image: url(/main_picture.png);
+  background-image: url(/main_picture.png.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -41,16 +41,20 @@
   left: -67px;
 }
 
-.preview_left ul > li:first-child img:first-child {
+.preview_left ul > li:first-child div:first-child {
   position: relative;
   z-index: 999;
+  width: 506px;
+  height: 328px;
 }
 
-.preview_left ul > li:first-child img:last-child {
+.preview_left ul > li:first-child div:last-child {
   position: absolute;
   z-index: 1;
   left: 355px;
   top: 13px;
+  width: 208px;
+  height: 208px;
 }
 
 .preview_left ul > li:nth-of-type(2) {

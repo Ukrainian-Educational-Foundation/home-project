@@ -49,6 +49,12 @@
   color: #303058;
 }
 
+.house > ul > li:nth-of-type(2) {
+  position: relative;
+  width: 532px;
+  height: 445px;
+}
+
 .house > ul > li:last-child {
   position: relative;
   display: flex;
@@ -59,19 +65,25 @@
   height: 641px;
 }
 
-.house > ul > li:last-child > img:first-child {
+.house > ul > li:last-child > div:first-child {
   position: absolute;
   left: 0;
+  width: 182px;
+  height: 182px;
 }
 
-.house > ul > li:last-child > img:nth-of-type(2) {
+.house > ul > li:last-child > div:nth-of-type(2) {
   position: absolute;
   right: 0;
   top: 28%;
+  width: 205px;
+  height: 205px;
 }
 
-.house > ul > li:last-child > img:last-child {
+.house > ul > li:last-child > div:last-child {
   position: absolute;
   left: 0;
   bottom: 0;
+  width: 231px;
+  height: 235px;
 }

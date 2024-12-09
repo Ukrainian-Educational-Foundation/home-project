@@ -38,12 +38,22 @@
 }
 
 .help_describe > div:first-child ul li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   width: 343px;
   height: 214px;
   gap: 8px;
 }
 
-.help_describe > div:first-child ul li div {
+.help_describe > div:first-child ul li div:first-child {
+  position: relative;
+  width: 120px;
+  height: 120px;
+}
+
+.help_describe > div:first-child ul li div:last-child {
   display: flex;
   align-items: center;
   justify-content: center;

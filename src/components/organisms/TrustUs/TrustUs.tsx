@@ -9,7 +9,9 @@ function TrustUs() {
       <div>Нам довіряють</div>
       <ul>
         <li className={`${styles.trust_wrap}`}>
-          <Image src="/none.png" alt="logo" width={116} height={116} />
+          <div>
+            <Image src="/none.png.webp" alt="logo" fill />
+          </div>
           <ul>
             <li>Ім’я прізвище</li>
             <li>Позиція, компанія</li>
@@ -17,7 +19,9 @@ function TrustUs() {
           <div>“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</div>
         </li>
         <li className={`${styles.trust_wrap}`}>
-          <Image src="/none.png" alt="logo" width={116} height={116} />
+          <div>
+            <Image src="/none.png.webp" alt="logo" fill />
+          </div>
           <ul>
             <li>Ім’я прізвище</li>
             <li>Позиція, компанія</li>
@@ -25,7 +29,9 @@ function TrustUs() {
           <div>“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</div>
         </li>
         <li className={`${styles.trust_wrap}`}>
-          <Image src="/none.png" alt="logo" width={116} height={116} />
+          <div>
+            <Image src="/none.png.webp" alt="logo" fill />
+          </div>
           <ul>
             <li>Ім’я прізвище</li>
             <li>Позиція, компанія</li>
@@ -33,7 +39,9 @@ function TrustUs() {
           <div>“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</div>
         </li>
         <li className={`${styles.trust_wrap}`}>
-          <Image src="/none.png" alt="logo" width={116} height={116} />
+          <div>
+            <Image src="/none.png.webp" alt="logo" fill />
+          </div>
           <ul>
             <li>Ім’я прізвище</li>
             <li>Позиція, компанія</li>
@@ -41,7 +49,9 @@ function TrustUs() {
           <div>“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</div>
         </li>
         <li className={`${styles.trust_wrap}`}>
-          <Image src="/none.png" alt="logo" width={116} height={116} />
+          <div>
+            <Image src="/none.png.webp" alt="logo" fill />
+          </div>
           <ul>
             <li>Ім’я прізвище</li>
             <li>Позиція, компанія</li>
@@ -49,7 +59,9 @@ function TrustUs() {
           <div>“Lorem ipsum dolor sit amet, consectetur adipiscing elit”</div>
         </li>
         <li className={`${styles.trust_wrap}`}>
-          <Image src="/none.png" alt="logo" width={116} height={116} />
+          <div>
+            <Image src="/none.png.webp" alt="logo" fill />
+          </div>
           <ul>
             <li>Ім’я прізвище</li>
             <li>Позиція, компанія</li>

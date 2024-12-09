@@ -3,18 +3,17 @@
   --font-bitter: "Bitter", sans-serif;
 }
 
-
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
-  font-family: Onest, sans-serif;
+  font-family: var(--font-onest);
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Onest, sans-serif;
+  font-family: var(--font-onest);
 }
 
 li {
@@ -31,4 +30,3 @@ a {
   color: inherit;
   text-decoration: none;
 }
-

@@ -30,6 +30,12 @@
   margin: 64px 0;
 }
 
+.ukr_map_wrap > div:first-child {
+  position: relative;
+  width: 500px;
+  height: 331px;
+}
+
 .ukr_map_wrap ul {
   width: 712px;
   height: auto;
@@ -84,7 +90,7 @@
   height: 150px;
   padding: 0px;
   border-radius: 16px;
-  background-image: url(/video.png);
+  background-image: url(/video.png.webp);
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -108,9 +114,9 @@
 }
 
 .defaultButton {
-  background-image: url(/play.png);
+  background-image: url(/play.png.webp);
 }
 
 .activeButton {
-  background-image: url(/pause.png);
+  background-image: url(/pause.png.webp);
 }
