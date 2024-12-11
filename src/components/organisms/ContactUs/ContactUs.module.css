@@ -120,6 +120,11 @@
   width: 30%;
   height: 59px;
   gap: 10px;
+  cursor: pointer;
+}
+
+.contact_email a {
+  width: 100%;
 }
 
 .contact_phone > div {
@@ -128,16 +133,20 @@
   height: 24px;
 }
 
-.contact_email {
+.contact_email,
+.contact_email a {
+  position: relative;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: left;
 }
 
-.contact_email > div {
+.contact_email div {
   position: relative;
   width: 28px;
   height: 24px;
+  margin-right: 10px;
 }
 
 .contact_social {

@@ -11,7 +11,7 @@ function Preview() {
 
   const isMobile = width <= 768;
   return (
-    <div className={`${styles.preview}`}>
+    <div className={`${styles.preview}`} id="preview">
       <div className={`${styles.preview_left}`}>
         <ul>
           <li>

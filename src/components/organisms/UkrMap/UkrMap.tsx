@@ -37,7 +37,7 @@ function UkrMap() {
   };
 
   return (
-    <div className={`${styles.ukr_map}`}>
+    <div className={`${styles.ukr_map}`} id="ukr_map">
       <div>
         На прифронтових територіях України проживають діти, які втратили
         <br /> своїх батьків, та перебувають під опікою людей похилого віку
