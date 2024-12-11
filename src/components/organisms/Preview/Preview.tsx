@@ -29,7 +29,7 @@ function Preview() {
           </li>
           <li>
             <div>
-              мета збору
+              мета збору &nbsp; 
               <br className={`${styles.show_on_mobile}`} />
               <span>5 000 000 грн</span>
             </div>
