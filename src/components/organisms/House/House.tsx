@@ -22,17 +22,32 @@ function House() {
           <br /> підтримки та відновлення.
         </li>
         <li>
-          <Image src="/Home.png.webp" alt="logo" fill />
+          <Image src="/Home.png.webp" alt="logo" fill sizes="auto, auto" />
         </li>
         <li>
           <div>
-            <Image src="/Ellipse1.png.webp" alt="logo" fill />
+            <Image
+              src="/Ellipse1.png.webp"
+              alt="logo"
+              fill
+              sizes="auto, auto"
+            />
           </div>
           <div>
-            <Image src="/Ellipse2.png.webp" alt="logo" fill />
+            <Image
+              src="/Ellipse2.png.webp"
+              alt="logo"
+              fill
+              sizes="auto, auto"
+            />
           </div>
           <div>
-            <Image src="/Ellipse3.png.webp" alt="logo" fill />
+            <Image
+              src="/Ellipse3.png.webp"
+              alt="logo"
+              fill
+              sizes="auto, auto"
+            />
           </div>
         </li>
       </ul>

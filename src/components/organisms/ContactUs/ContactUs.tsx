@@ -31,19 +31,34 @@ function ContactUs() {
           <li>
             Залиш повідомлення
             <div>
-              <Image src="/Vector-l.png.webp" alt="logo" fill />
+              <Image
+                src="/Vector-l.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
           </li>
           <li>
             Будемо раді почути
             <div>
-              <Image src="/Vector-c.png.webp" alt="logo" fill />
+              <Image
+                src="/Vector-c.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
           </li>
           <li>
             Будь з нами в соцмережах
             <div>
-              <Image src="/Vector-r.png.webp" alt="logo" fill />
+              <Image
+                src="/Vector-r.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
           </li>
         </ul>
@@ -55,14 +70,24 @@ function ContactUs() {
               rel="noopener noreferrer"
             >
               <div>
-                <Image src="/mail.png.webp" alt="logo" fill />
+                <Image
+                  src="/mail.png.webp"
+                  alt="logo"
+                  fill
+                  sizes="auto, auto"
+                />
               </div>
               ukraine.ef@gmail.com
             </a>
           </li>
           <li className={`${styles.contact_phone}`} onClick={copyToClipboard}>
             <div>
-              <Image src="/phone-call.png.webp" alt="logo" fill />
+              <Image
+                src="/phone-call.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
             {phoneNumber}
             <CopyNotification showNotification={showNotification} />
@@ -74,7 +99,12 @@ function ContactUs() {
               rel="noopener noreferrer"
             >
               <button>
-                <Image src="/FB.png.webp" alt="logo" fill />
+                <Image
+                  src="/FB.png.webp"
+                  alt="logo"
+                  fill
+                  sizes="auto, auto"
+                />
               </button>
             </a>
             <a
@@ -83,7 +113,12 @@ function ContactUs() {
               rel="noopener noreferrer"
             >
               <button>
-                <Image src="/Linkedin.png.webp" alt="logo" fill />
+                <Image
+                  src="/Linkedin.png.webp"
+                  alt="logo"
+                  fill
+                  sizes="auto, auto"
+                />
               </button>
             </a>
             <a
@@ -92,7 +127,12 @@ function ContactUs() {
               rel="noopener noreferrer"
             >
               <button>
-                <Image src="/Telegram.png.webp" alt="logo" fill />
+                <Image
+                  src="/Telegram.png.webp"
+                  alt="logo"
+                  fill
+                  sizes="auto, auto"
+                />
               </button>
             </a>
             <a
@@ -101,7 +141,12 @@ function ContactUs() {
               rel="noopener noreferrer"
             >
               <button>
-                <Image src="/Instagram.png.webp" alt="logo" fill />
+                <Image
+                  src="/Instagram.png.webp"
+                  alt="logo"
+                  fill
+                  sizes="(max-width: 768px) 32px, (max-width: 1024px) 48px, 64px"
+                />
               </button>
             </a>
           </li>

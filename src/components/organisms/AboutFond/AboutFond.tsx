@@ -8,18 +8,18 @@ import AnimatedNumbers from "@/hooks/animationNumber";
 
 function AboutFond() {
   const [view, setView] = useState(0);
-  const [animate, setAnimate] = useState(false); // Флаг для запуска анимации
+  const [animate, setAnimate] = useState(false);
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    const currentSection = sectionRef.current; // Сохраняем текущее значение ref
+    const currentSection = sectionRef.current;
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setAnimate(true); // Запуск анимации при попадании в зону видимости
+          setAnimate(true);
         }
       },
-      { threshold: 0.5 } // Запуск, когда 50% секции видно на экране
+      { threshold: 0.5 }
     );
 
     if (currentSection) {
@@ -28,7 +28,7 @@ function AboutFond() {
 
     return () => {
       if (currentSection) {
-        observer.unobserve(currentSection); // Используем сохранённую переменную
+        observer.unobserve(currentSection);
       }
     };
   }, []);
@@ -73,7 +73,12 @@ function AboutFond() {
         <div>Наша команда</div>
         <div>
           <button onClick={handlePrev} disabled={view === 0}>
-            <Image src="/arrow-left.png.webp" alt="logo" fill />
+            <Image
+              src="/arrow-left.png.webp"
+              alt="logo"
+              fill
+              sizes="auto, auto"
+            />
           </button>
           <div className={`${styles.about_fond_wrap}`}>
             <ul
@@ -91,7 +96,7 @@ function AboutFond() {
                         src={human.photo || "/user.png"}
                         alt={human.name || "No photo available"}
                         fill
-                        priority={index === 0}
+                        sizes="auto, auto"
                         style={{
                           objectPosition:
                             data.length === index + 1 ? "0px -10px" : "50% 50%",
@@ -110,7 +115,12 @@ function AboutFond() {
             </ul>
           </div>
           <button onClick={handleNext} disabled={view === 3}>
-            <Image src="/arrow-right.png.webp" alt="logo" fill />
+            <Image
+              src="/arrow-right.png.webp"
+              alt="logo"
+              fill
+              sizes="auto, auto"
+            />
           </button>
         </div>
       </div>
@@ -118,13 +128,13 @@ function AboutFond() {
         <div>Медіа про нас</div>
         <ul>
           <li>
-            <Image src="/news.png.webp" alt="logo" fill />
+            <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
           </li>
           <li>
-            <Image src="/news.png.webp" alt="logo" fill />
+            <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
           </li>
           <li>
-            <Image src="/news.png.webp" alt="logo" fill />
+            <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
           </li>
         </ul>
       </div>

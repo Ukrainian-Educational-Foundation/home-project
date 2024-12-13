@@ -28,7 +28,7 @@ function OurSupport() {
           {duplicatedLogos.map((src, index) => (
             <li key={index}>
               <div>
-                <Image src={src} alt="logo" fill />
+                <Image src={src} alt="logo" fill sizes="auto, auto" />
               </div>
             </li>
           ))}

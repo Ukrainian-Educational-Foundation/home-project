@@ -16,10 +16,15 @@ function Preview() {
         <ul>
           <li>
             <div>
-              <Image src="/Dim.png.webp" alt="logo" fill />
+              <Image src="/Dim.png.webp" alt="logo" fill sizes="auto, auto" />
             </div>
             <div>
-              <Image src="/sunrice.png.webp" alt="logo" fill />
+              <Image
+                src="/sunrice.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
           </li>
           <li>
@@ -29,7 +34,7 @@ function Preview() {
           </li>
           <li>
             <div>
-              мета збору &nbsp; 
+              мета збору &nbsp;
               <br className={`${styles.show_on_mobile}`} />
               <span>5 000 000 грн</span>
             </div>

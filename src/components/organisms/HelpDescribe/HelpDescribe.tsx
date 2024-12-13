@@ -11,19 +11,34 @@ function HelpDescribe() {
         <ul>
           <li>
             <div>
-              <Image src="/benefit2.png.webp" alt="logo" fill />
+              <Image
+                src="/benefit2.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
             <div>Фінансове забезпечення</div>
           </li>
           <li>
             <div>
-              <Image src="/benefit1.png.webp" alt="logo" fill />
+              <Image
+                src="/benefit1.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
             <div>Освіта</div>
           </li>
           <li>
             <div>
-              <Image src="/benefit.png.webp" alt="logo" fill />
+              <Image
+                src="/benefit.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
             </div>
             <div>Пихологічна підтримка</div>
           </li>

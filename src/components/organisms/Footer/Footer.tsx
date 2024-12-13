@@ -8,7 +8,12 @@ function Footer() {
     <div className={`${styles.footer}`}>
       <div className={`${styles.footer_main}`}>
         <div>
-          <Image src="/Fund_logo1.png.webp" alt="logo" fill />
+          <Image
+            src="/Fund_logo1.png.webp"
+            alt="logo"
+            fill
+            sizes="auto, auto"
+          />
         </div>
         <div>
           Наша місія - змінювати життя дітей (евакуювати, знаходити житло,
@@ -21,7 +26,7 @@ function Footer() {
       <div>
         developed by Team Challenge
         <div>
-          <Image src="/element.png.webp" alt="logo" fill />
+          <Image src="/element.png.webp" alt="logo" fill sizes="auto, auto" />
         </div>
         &nbsp;&nbsp;&nbsp;2024
       </div>

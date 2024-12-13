@@ -47,7 +47,7 @@ function UkrMap() {
       </div>
       <div className={`${styles.ukr_map_wrap}`}>
         <div>
-          <Image src="/map.png.webp" alt="logo" fill />
+          <Image src="/map.png.webp" alt="logo" fill sizes="auto, auto" />
         </div>
         <ul>
           <li>
@@ -105,7 +105,6 @@ function UkrMap() {
                         ? () => handlePause(videoName)
                         : () => {
                             handlePlay(videoName);
-                            console.log(activeVideo[videoName]);
                           }
                     }
                   ></button>
