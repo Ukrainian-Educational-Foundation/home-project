@@ -120,3 +120,15 @@
 .activeButton {
   background-image: url(/pause.png.webp);
 }
+
+.trust_close {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  padding: 6px;
+  right: 50px;
+  top: 50px;
+  cursor: pointer;
+  background: inherit;
+  border: none;
+}

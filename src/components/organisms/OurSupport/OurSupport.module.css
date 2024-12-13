@@ -33,7 +33,7 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
-  max-width: 170%;
+  max-width: 150%;
   height: 128px;
   gap: 8px;
   animation: marquee 7s linear infinite;
@@ -68,73 +68,67 @@
   padding: 0 75px;
 }
 
-.our_suppurt_wrap ul li:first-child > div {
-  position: relative;
-  width: 123px;
-  height: 35px;
-}
-
-.our_suppurt_wrap ul li:nth-of-type(2) > div {
+.our_suppurt_wrap ul li:nth-of-type(1) > div {
   position: relative;
   width: 136px;
   height: 48px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(3) > div {
+.our_suppurt_wrap ul li:nth-of-type(2) > div {
   position: relative;
   width: 138px;
   height: 54px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(4) > div {
+.our_suppurt_wrap ul li:nth-of-type(3) > div {
   position: relative;
   width: 144px;
   height: 48px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(5) > div {
+.our_suppurt_wrap ul li:nth-of-type(4) > div {
   position: relative;
   width: 80px;
   height: 80px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(6) > div {
+.our_suppurt_wrap ul li:nth-of-type(5) > div {
   position: relative;
   width: 136px;
   height: 48px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(7) > div {
+.our_suppurt_wrap ul li:nth-of-type(6) > div {
   position: relative;
   width: 74px;
   height: 74px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(8) > div {
+.our_suppurt_wrap ul li:nth-of-type(7) > div {
   position: relative;
   width: 176.64px;
   height: 48px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(9) > div {
+.our_suppurt_wrap ul li:nth-of-type(8) > div {
   position: relative;
   width: 250px;
   height: 80px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(10) > div {
+.our_suppurt_wrap ul li:nth-of-type(9) > div {
   position: relative;
   width: 187.37px;
   height: 40px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(11) > div {
+.our_suppurt_wrap ul li:nth-of-type(10) > div {
   position: relative;
   width: 64.89px;
   height: 64px;
 }
 
-.our_suppurt_wrap ul li:nth-of-type(12) > div {
+.our_suppurt_wrap ul li:nth-of-type(11) > div {
   position: relative;
   width: 171.53px;
   height: 40px;

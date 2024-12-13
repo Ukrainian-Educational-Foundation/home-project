@@ -4,7 +4,6 @@ import React from "react";
 
 function OurSupport() {
   const logos = [
-    "/hau.png.webp",
     "/univest.png.webp",
     "/razom.png.webp",
     "/12security.webp",
