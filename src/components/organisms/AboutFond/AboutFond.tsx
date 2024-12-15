@@ -6,10 +6,51 @@ import { data } from "@/data/data";
 import Image from "next/image";
 import AnimatedNumbers from "@/hooks/animationNumber";
 
+interface DataProps {
+  name: string;
+  position: string;
+  photo: string;
+}
+
+const Slide = {
+  VIEW: 930,
+};
+
 function AboutFond() {
-  const [view, setView] = useState(0);
+  const initialView = -Slide.VIEW;
+
+  const [view, setView] = useState(initialView);
   const [animate, setAnimate] = useState(false);
+  const [isData, setData] = useState<DataProps[]>([]);
+  const [isHover, setHover] = useState({
+    one: false,
+    two: false,
+    three: false,
+  });
+
   const sectionRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (data.length > 0 && isData.length === 0) {
+      setData([...data.slice(data.length / 2), ...data]);
+    }
+  }, [isData.length]);
+
+  const handlePrev = () => {
+    if (view === 0) {
+      setView(initialView);
+    } else {
+      setView(view + Slide.VIEW);
+    }
+  };
+
+  const handleNext = () => {
+    if (view === -Slide.VIEW * 2) {
+      setView(initialView);
+    } else {
+      setView(view - Slide.VIEW);
+    }
+  };
 
   useEffect(() => {
     const currentSection = sectionRef.current;
@@ -32,14 +73,6 @@ function AboutFond() {
       }
     };
   }, []);
-
-  const handlePrev = () => {
-    if (view < 0) setView(view + 186);
-  };
-
-  const handleNext = () => {
-    if (view > -774) setView(view - 186);
-  };
 
   return (
     <div className={`${styles.about_fond}`} id="about_fond" ref={sectionRef}>
@@ -72,7 +105,7 @@ function AboutFond() {
       <div className={`${styles.about_fond_team}`}>
         <div>Наша команда</div>
         <div>
-          <button onClick={handlePrev} disabled={view === 0}>
+          <button onClick={handlePrev}>
             <Image
               src="/arrow-left.png.webp"
               alt="logo"
@@ -88,8 +121,8 @@ function AboutFond() {
                 transition: "300ms",
               }}
             >
-              {data.length > 0 ? (
-                data.map((human, index) => (
+              {isData.length > 0 ? (
+                isData.map((human, index) => (
                   <li key={index}>
                     <div className={`${styles.about_img_wrap}`}>
                       <Image
@@ -99,7 +132,9 @@ function AboutFond() {
                         sizes="auto, auto"
                         style={{
                           objectPosition:
-                            data.length === index + 1 ? "0px -10px" : "50% 50%",
+                            human.name === "Дмитро Лук’яниця"
+                              ? "0px -15px"
+                              : "50% 50%",
                         }}
                       />
                     </div>
@@ -114,7 +149,7 @@ function AboutFond() {
               )}
             </ul>
           </div>
-          <button onClick={handleNext} disabled={view === 3}>
+          <button onClick={handleNext}>
             <Image
               src="/arrow-right.png.webp"
               alt="logo"
@@ -124,17 +159,67 @@ function AboutFond() {
           </button>
         </div>
       </div>
-      <div className={`${styles.about_fond_last}`}>
+      <div className={styles.about_fond_last}>
         <div>Медіа про нас</div>
         <ul>
-          <li>
-            <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+          <li
+            onMouseEnter={() => setHover((prev) => ({ ...prev, one: true }))}
+            onMouseLeave={() => setHover((prev) => ({ ...prev, one: false }))}
+          >
+            <a
+              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image
+                src="/news.png.webp"
+                alt="logo"
+                fill
+                sizes="auto, auto"
+              />
+              {isHover.one ? (
+                <div className={styles.about_fond_text}>
+                  Волонтер Тетяна Люлька: На власні очі бачила, як батьки по
+                  підвалах ховають дітей від евакуації
+                </div>
+              ) : null}
+            </a>
           </li>
-          <li>
-            <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+          <li
+            onMouseEnter={() => setHover((prev) => ({ ...prev, two: true }))}
+            onMouseLeave={() => setHover((prev) => ({ ...prev, two: false }))}
+          >
+            <a
+              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+              {isHover.two ? (
+                <div className={styles.about_fond_text}>
+                  Волонтер Тетяна Люлька: На власні очі бачила, як батьки по
+                  підвалах ховають дітей від евакуації
+                </div>
+              ) : null}
+            </a>
           </li>
-          <li>
-            <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+          <li
+            onMouseEnter={() => setHover((prev) => ({ ...prev, three: true }))}
+            onMouseLeave={() => setHover((prev) => ({ ...prev, three: false }))}
+          >
+            <a
+              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+              {isHover.three ? (
+                <div className={styles.about_fond_text}>
+                  Волонтер Тетяна Люлька: На власні очі бачила, як батьки по
+                  підвалах ховають дітей від евакуації
+                </div>
+              ) : null}
+            </a>
           </li>
         </ul>
       </div>

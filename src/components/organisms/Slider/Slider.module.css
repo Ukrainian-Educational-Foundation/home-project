@@ -32,13 +32,11 @@
   align-items: center;
   justify-content: space-between;
   flex-direction: row;
-  width: 5040px;
-  gap: 8px;
+  width: max-content;
   transition: transform 0.3s ease-in-out;
 }
 
 .slide {
-  flex: 0 0 606px;
   height: 540px;
   border-radius: 16px;
   background: #b9b9b9;
@@ -47,6 +45,7 @@
   justify-content: center;
   font-size: 24px;
   color: #ffffff;
+  margin: 0 12px;
 }
 
 .slide > div {

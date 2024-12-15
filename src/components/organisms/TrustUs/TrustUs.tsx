@@ -2,24 +2,55 @@
 
 import Button from "@/components/atoms/Button/Button";
 import styles from "./TrustUs.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { dataSlideTrust } from "@/data/dataSlideTrust";
 
-function TrustUs() {
-  const [center, setCenter] = useState<number>(1);
-  const [view, setView] = useState(0);
+interface DataProps {
+  logo: string;
+  comments: string;
+  width: string;
+  height: string;
+}
 
-  const moveLeft = () => {
-    if (view < 0) {
-      setView(view + 440);
+enum Slide {
+  VIEW = 440,
+}
+
+function TrustUs() {
+  const initialView = -Slide.VIEW * Math.floor(dataSlideTrust.length - 3);
+  const initialCenter = Math.floor(dataSlideTrust.length - 2);
+
+  const [center, setCenter] = useState<number>(initialCenter);
+  const [view, setView] = useState(initialView);
+  const [data, setData] = useState<DataProps[]>([]);
+
+  useEffect(() => {
+    if (dataSlideTrust.length > 0 && data.length === 0) {
+      setData([...dataSlideTrust.slice(3), ...dataSlideTrust]);
+    }
+  }, [data.length]);
+
+  useEffect(() => {
+    console.log(initialView, initialCenter);
+  }, [initialView, initialCenter]);
+
+  const handlePrev = () => {
+    if (view === 0) {
+      setView(initialView);
+      setCenter(initialCenter);
+    } else {
+      setView(view + Slide.VIEW);
       setCenter(center - 1);
     }
   };
 
-  const moveRight = () => {
-    if (view > -3140) {
-      setView(view - 440);
+  const handleNext = () => {
+    if (view === -Slide.VIEW * (data.length - 3)) {
+      setView(initialView);
+      setCenter(initialCenter);
+    } else {
+      setView(view - Slide.VIEW);
       setCenter(center + 1);
     }
   };
@@ -35,8 +66,8 @@ function TrustUs() {
             transition: "300ms",
           }}
         >
-          {dataSlideTrust.length > 0 ? (
-            dataSlideTrust.map((item, index) => (
+          {data.length > 0 ? (
+            data.map((item, index) => (
               <li
                 key={index}
                 className={
@@ -59,9 +90,9 @@ function TrustUs() {
                 }}
                 onClick={
                   index === center - 1
-                    ? moveLeft
+                    ? handlePrev
                     : index === center + 1
-                    ? moveRight
+                    ? handleNext
                     : () => {}
                 }
               >

@@ -40,7 +40,7 @@
   text-decoration-skip-ink: none;
 }
 
-.footer > div:nth-of-type(2) {
+.footer > div:nth-of-type(2) > a {
   display: flex;
   justify-content: center;
   font-family: Onest;
@@ -50,6 +50,7 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
+  cursor: pointer;
 }
 
 .footer > div:nth-of-type(2) div {

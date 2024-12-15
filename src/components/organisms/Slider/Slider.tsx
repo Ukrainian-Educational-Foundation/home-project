@@ -1,17 +1,46 @@
 "use client";
 
+import { dataFoundSlider } from "@/data/dataFoundSlider";
 import styles from "./Slider.module.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+
+interface DataProps {
+  text: string;
+  id: number;
+}
+
+enum Slide {
+  VIEW = 1260,
+}
 
 const Slider = () => {
-  const [view, setView] = useState(0);
+  const initialView =
+    -Slide.VIEW * Math.floor((dataFoundSlider.length - 2) / 2);
+
+  const [view, setView] = useState(initialView);
+  const [data, setData] = useState<DataProps[]>([]);
+
+  useEffect(() => {
+    if (dataFoundSlider.length > 0 && data.length === 0) {
+      setData([...dataFoundSlider.slice(2), ...dataFoundSlider]);
+    }
+  }, [data.length]);
 
   const handlePrev = () => {
-    if (view < 0) setView(view + 1260);
+    if (view === 0) {
+      setView(initialView);
+    } else {
+      setView(view + Slide.VIEW);
+    }
   };
 
   const handleNext = () => {
-    if (view > -3780) setView(view - 1260);
+    console.log(view, -Slide.VIEW * (data.length / 2 - 1));
+    if (view === -Slide.VIEW * (data.length / 2 - 1)) {
+      setView(initialView);
+    } else {
+      setView(view - Slide.VIEW);
+    }
   };
 
   return (
@@ -26,63 +55,20 @@ const Slider = () => {
             transition: "300ms",
           }}
         >
-          <div className={styles.slide}>
-            <div>
-              Практично півроку ми шукали приміщення, що відповідало б нашим
-              критеріям – велика територія, селище або на околицях міста, 2-3
-              корпуса з можливістю додаткової забудови
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
-              роботи по зачищенню території.
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Практично півроку ми шукали приміщення, що відповідало б нашим
-              критеріям – велика територія, селище або на околицях міста, 2-3
-              корпуса з можливістю додаткової забудови
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
-              роботи по зачищенню території.
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Практично півроку ми шукали приміщення, що відповідало б нашим
-              критеріям – велика територія, селище або на околицях міста, 2-3
-              корпуса з можливістю додаткової забудови
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
-              роботи по зачищенню території.
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Практично півроку ми шукали приміщення, що відповідало б нашим
-              критеріям – велика територія, селище або на околицях міста, 2-3
-              корпуса з можливістю додаткової забудови
-            </div>
-          </div>
-          <div className={styles.slide}>
-            <div>
-              Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
-              роботи по зачищенню території.
-            </div>
-          </div>
+          {data.length > 0 ? (
+            data.map((el, i) => (
+              <div key={i} className={styles.slide}>
+                <div>{el.text}</div>
+              </div>
+            ))
+          ) : (
+            <div>Loading...</div>
+          )}
         </div>
       </div>
       <div className={styles.buttons}>
-        <button onClick={handlePrev} disabled={view === 0}></button>
-        <button onClick={handleNext} disabled={view === 3}></button>
+        <button onClick={handlePrev}></button>
+        <button onClick={handleNext}></button>
       </div>
     </div>
   );

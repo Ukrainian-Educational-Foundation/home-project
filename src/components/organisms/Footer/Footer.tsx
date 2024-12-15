@@ -24,11 +24,17 @@ function Footer() {
         <Button text="ХОЧУ ДОПОМОГТИ" size="Small" />
       </div>
       <div>
-        developed by Team Challenge
-        <div>
-          <Image src="/element.png.webp" alt="logo" fill sizes="auto, auto" />
-        </div>
-        &nbsp;&nbsp;&nbsp;2024
+        <a
+          href="https://teamchallenge.io/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          developed by Team Challenge
+          <div>
+            <Image src="/element.png.webp" alt="logo" fill sizes="auto, auto" />
+          </div>
+          &nbsp;&nbsp;&nbsp;2024
+        </a>
       </div>
     </div>
   );
