@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useTranslation } from "next-i18next";
+// import { useTranslation } from "next-i18next";
 
 import Button from "@/components/atoms/Button/Button";
 import styles from "./Header.module.css";
@@ -12,7 +12,7 @@ import Image from "next/image";
 function Header() {
   const [isBurger, setBurger] = useState(false);
 
-  const { t } = useTranslation("common");
+  // const { t } = useTranslation("common");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -27,9 +27,7 @@ function Header() {
         <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto, auto" />
       </div>
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
-        <button onClick={() => scrollToSection("preview")}>
-          {t("header_main")}
-        </button>
+        <button onClick={() => scrollToSection("preview")}>Головна</button>
         <button onClick={() => scrollToSection("ukr_map")}>Про проект</button>
         <button onClick={() => scrollToSection("about_fond")}>Про фонд</button>
         <button onClick={() => scrollToSection("contact")}>Контакти</button>
