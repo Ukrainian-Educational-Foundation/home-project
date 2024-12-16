@@ -87,3 +87,25 @@
   width: 231px;
   height: 235px;
 }
+
+.house > ul > li > div img {
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 2s ease, opacity 2s ease;
+}
+
+.house > ul > li > div img {
+  animation: change 2s forwards;
+}
+
+@keyframes change {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+  }
+}

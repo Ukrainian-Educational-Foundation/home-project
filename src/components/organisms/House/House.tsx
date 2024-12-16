@@ -1,10 +1,30 @@
+"use client";
+
 import Image from "next/image";
 import styles from "./House.module.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 function House() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const images = [
+    ["/Ellipse1.png.webp", "/Ellipse2.png.webp", "/Ellipse3.png.webp"],
+    ["/Ellipse2.png.webp", "/Ellipse3.png.webp", "/cycle4.webp"],
+    ["/Ellipse3.png.webp", "/cycle4.webp", "/cycle.webp"],
+    ["/cycle4.webp", "/cycle.webp", "/Ellipse1.png.webp"],
+    ["/cycle2.webp", "/Ellipse1.png.webp", "/Ellipse2.png.webp"],
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 1500);
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
-    <div className={`${styles.house}`}>
+    <div className={styles.house}>
       <div>Що буде з проектом далі</div>
       <ul>
         <li>
@@ -22,33 +42,20 @@ function House() {
           <br /> підтримки та відновлення.
         </li>
         <li>
-          <Image src="/Home.png.webp" alt="logo" fill sizes="auto, auto" />
+          <Image src="/Home.png.webp" alt="logo" fill sizes="auto" />
         </li>
         <li>
-          <div>
-            <Image
-              src="/Ellipse1.png.webp"
-              alt="logo"
-              fill
-              sizes="auto, auto"
-            />
-          </div>
-          <div>
-            <Image
-              src="/Ellipse2.png.webp"
-              alt="logo"
-              fill
-              sizes="auto, auto"
-            />
-          </div>
-          <div>
-            <Image
-              src="/Ellipse3.png.webp"
-              alt="logo"
-              fill
-              sizes="auto, auto"
-            />
-          </div>
+          {images[currentIndex].map((src, idx) => (
+            <div key={idx}>
+              <Image
+                key={`${currentIndex}-${idx}`}
+                src={src}
+                alt={`image ${idx + 1}`}
+                fill
+                sizes="auto"
+              />
+            </div>
+          ))}
         </li>
       </ul>
     </div>

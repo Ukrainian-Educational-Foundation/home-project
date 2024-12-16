@@ -1,5 +1,8 @@
 "use client";
 
+import Link from "next/link";
+import { useTranslation } from "next-i18next";
+
 import Button from "@/components/atoms/Button/Button";
 import styles from "./Header.module.css";
 
@@ -8,6 +11,8 @@ import Image from "next/image";
 
 function Header() {
   const [isBurger, setBurger] = useState(false);
+
+  const { t } = useTranslation("common");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -22,7 +27,9 @@ function Header() {
         <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto, auto" />
       </div>
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
-        <button onClick={() => scrollToSection("preview")}>Головна</button>
+        <button onClick={() => scrollToSection("preview")}>
+          {t("header_main")}
+        </button>
         <button onClick={() => scrollToSection("ukr_map")}>Про проект</button>
         <button onClick={() => scrollToSection("about_fond")}>Про фонд</button>
         <button onClick={() => scrollToSection("contact")}>Контакти</button>
@@ -31,11 +38,19 @@ function Header() {
         <Button text="ХОЧУ ДОПОМОГТИ" size="Small" />
         <ul>
           <li>
-            <button>UA</button>
+            <button>
+              <Link href="/" locale={false}>
+                UA
+              </Link>
+            </button>
           </li>
           <li className={styles.line}></li>
           <li>
-            <button>EN</button>
+            <button>
+              <Link href="/en" locale={false}>
+                EN
+              </Link>
+            </button>
           </li>
         </ul>
       </div>
