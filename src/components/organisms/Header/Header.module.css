@@ -102,14 +102,35 @@
 }
 
 @media (max-width: 1024px) {
+  .header_lang {
+    width: auto;
+    order: 2;
+  }
+
+  .header_lang ul {
+    margin-left: 10px;
+    width: auto;
+    height: 50px;
+    gap: 5px;
+  }
+
+  .header_lang ul li button {
+    font-size: 20px;
+  }
+
+  .header > div:first-child {
+    order: 1;
+  }
+
   .buttons,
   .buttons.activeMenu {
+    order: 0;
     display: flex;
     flex-direction: column;
     position: absolute;
     justify-content: space-between;
     top: 100%;
-    right: -100%;
+    left: -100%;
     padding: 0 50px;
     width: max-content;
     height: max-content;
@@ -120,7 +141,7 @@
   }
 
   .buttons.activeMenu {
-    right: 0;
+    left: 0;
   }
 
   .header_burger {
@@ -165,5 +186,27 @@
   .buttons.activeMenu button {
     margin: 10px 0;
     text-align: left;
+  }
+}
+
+@media (max-width: 579px) {
+  .header > div:first-child {
+    display: none;
+  }
+
+  .buttons,
+  .buttons.activeMenu {
+    width: 100vw;
+  }
+}
+
+@media (max-width: 385px) {
+  .header > div:first-child {
+    display: none;
+  }
+
+  .buttons,
+  .buttons.activeMenu {
+    width: 100vw;
   }
 }

@@ -10,7 +10,7 @@ function OldLady() {
         здоров’я захищаючи країну”
       </div>
       <div>
-        <div style={{ width: "606px", height: "636px", overflow: "hidden" }}>
+        <div >
           <video
             src="/old.webm"
             autoPlay

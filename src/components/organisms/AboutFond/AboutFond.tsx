@@ -129,7 +129,7 @@ function AboutFond() {
                         src={human.photo || "/user.png"}
                         alt={human.name || "No photo available"}
                         fill
-                        sizes="auto, auto"
+                        sizes="auto"
                         style={{
                           objectPosition:
                             human.name === "Дмитро Лук’яниця"
@@ -175,7 +175,7 @@ function AboutFond() {
                 src="/news.png.webp"
                 alt="logo"
                 fill
-                sizes="auto, auto"
+                sizes="auto"
               />
               {isHover.one ? (
                 <div className={styles.about_fond_text}>

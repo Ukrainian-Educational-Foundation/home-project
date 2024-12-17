@@ -32,7 +32,6 @@ function TrustUs() {
   }, [data.length]);
 
   useEffect(() => {
-    console.log(initialView, initialCenter);
   }, [initialView, initialCenter]);
 
   const handlePrev = () => {

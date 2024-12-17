@@ -10,7 +10,7 @@ interface DataProps {
 }
 
 enum Slide {
-  VIEW = 1260,
+  VIEW = 90,
 }
 
 const Slider = () => {
@@ -51,7 +51,7 @@ const Slider = () => {
           className={styles.slider_container}
           style={{
             position: "relative",
-            left: `${view}px`,
+            left: `${view}vw`,
             transition: "300ms",
           }}
         >

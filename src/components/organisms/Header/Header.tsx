@@ -24,13 +24,41 @@ function Header() {
   return (
     <div className={`${styles.header}`}>
       <div>
-        <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto, auto" />
+        <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto" />
       </div>
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
-        <button onClick={() => scrollToSection("preview")}>Головна</button>
-        <button onClick={() => scrollToSection("ukr_map")}>Про проект</button>
-        <button onClick={() => scrollToSection("about_fond")}>Про фонд</button>
-        <button onClick={() => scrollToSection("contact")}>Контакти</button>
+        <button
+          onClick={() => {
+            scrollToSection("preview");
+            setBurger(false);
+          }}
+        >
+          Головна
+        </button>
+        <button
+          onClick={() => {
+            scrollToSection("ukr_map");
+            setBurger(false);
+          }}
+        >
+          Про проект
+        </button>
+        <button
+          onClick={() => {
+            scrollToSection("about_fond");
+            setBurger(false);
+          }}
+        >
+          Про фонд
+        </button>
+        <button
+          onClick={() => {
+            scrollToSection("contact");
+            setBurger(false);
+          }}
+        >
+          Контакти
+        </button>
       </div>
       <div className={`${styles.header_lang}`}>
         <Button text="ХОЧУ ДОПОМОГТИ" size="Small" />

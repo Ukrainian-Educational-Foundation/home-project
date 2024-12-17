@@ -143,47 +143,84 @@
 
 @media (max-width: 1024px) {
   .preview {
-    background-position: right center;
+    background-image: none;
+    background-size: none;
+    background-repeat: none;
+    flex-direction: column;
+    width: 100vw;
+    height: max-content;
   }
 
-  .show_on_mobile {
-    display: block;
-  }
-
-  .preview_right ul,
-  .preview_left ul,
-  .preview_right,
-  .preview_left,
-  .preview {
+  .preview_left {
+    width: 100vw;
     height: auto;
   }
 
-  .preview_left ul > li:first-child {
-    left: -35px;
+  .preview_right {
+    background-image: url(/main_picture.png.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: max-content;
+    width: 100vw;
+    background-position: right center;
   }
+}
 
-  .preview_right,
-  .preview_left {
-    padding: 20px;
-  }
-
-  .preview_right ul {
-    white-space: wrap;
-  }
-
-  .hidden_on_mobile {
-    display: none;
-  }
-
+@media (max-width: 768px) {
   .preview_left ul > li:first-child div:first-child {
-    width: 40vw;
-    height: 40vh;
+    width: 385px;
+    height: 250px;
+  }
+
+  .preview_left ul > li:first-child {
+    left: -47px;
   }
 
   .preview_left ul > li:first-child div:last-child {
-    left: 28vw;
-    top: 38px;
-    width: 15vw;
-    height: 20vh;
+    left: 65vw;
+    width: 150px;
+    height: 150px;
+  }
+
+  .preview_left ul > li:nth-of-type(2) {
+    font-size: 20px;
+    line-height: 20px;
+  }
+
+  .preview_left ul {
+    height: auto;
+    gap: 20px;
+  }
+
+  .preview_right {
+    height: 500px;
+  }
+
+  .preview_right > div {
+    height: 100%;
+  }
+}
+
+@media (max-width: 559px) {
+  .preview_left {
+    padding: 40px 40px;
+  }
+
+  .preview_right {
+    padding: 40px 20px;
+  }
+}
+
+@media (max-width: 449px) {
+  .preview_right ul {
+    height: auto;
+    width: max-content;
+    font-size: 16px;
+    line-height: 20px;
+    white-space: wrap;
+  }
+
+  .preview_left {
+    padding: 40px 20px;
   }
 }

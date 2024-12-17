@@ -22,8 +22,8 @@
 }
 
 .slider_wrap {
-  width: 1260px;
-  height: 540px;
+  width: 90vw;
+  height: auto;
   overflow: hidden;
 }
 
@@ -37,7 +37,7 @@
 }
 
 .slide {
-  height: 540px;
+  height: 90vh;
   border-radius: 16px;
   background: #b9b9b9;
   display: flex;
@@ -45,14 +45,14 @@
   justify-content: center;
   font-size: 24px;
   color: #ffffff;
-  margin: 0 12px;
+  margin: 0 1vw;
 }
 
 .slide > div {
-  width: 606px;
+  width: 43vw;
   height: 195px;
   top: 345px;
-  padding: 27px 83px;
+  padding: 27px 65px;
   gap: 8px;
   border-radius: 16px;
   border: 1px;
@@ -109,4 +109,42 @@
 .buttons button:disabled {
   background-color: #cccccc;
   cursor: not-allowed;
+}
+
+@media (max-width: 1024px) {
+  .slider {
+    width: 100vw;
+    height: auto;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .slider > div:first-child {
+    width: 90vw;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .slider_wrap {
+    width: 90vw;
+    height: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide {
+    height: 65vh;
+  }
+
+  .slide > div {
+    height: 50%;
+    padding: 20px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .buttons button {
+    width: 45px;
+    height: 45px;
+  }
 }

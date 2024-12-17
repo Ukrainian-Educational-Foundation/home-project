@@ -44,3 +44,30 @@
   color: #a1a1a1;
   cursor: not-allowed;
 }
+
+@media (max-width: 1024px) {
+  .small {
+    width: 150px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .large {
+    width: 204px;
+    height: 60px;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 369px) {
+  .small {
+    width: 110px;
+    height: 50px;
+    font-size: 14px;
+  }
+
+  .button {
+    white-space: wrap;
+    line-height: 20px;
+  }
+}
