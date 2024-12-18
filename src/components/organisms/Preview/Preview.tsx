@@ -5,9 +5,11 @@ import styles from "./Preview.module.css";
 import React from "react";
 import Button from "@/components/atoms/Button/Button";
 import { useWindowSize } from "@/hooks/useResizeObserver";
+import { useTranslations } from "next-intl";
 
 function Preview() {
   const { width } = useWindowSize();
+  const t = useTranslations("Preview");
 
   const isMobile = width <= 768;
   return (
@@ -28,26 +30,25 @@ function Preview() {
             </div>
           </li>
           <li>
-            Ми будуємо дім для дітей-сиріт, що
-            <br className={`${styles.hidden_on_mobile}`} /> живуть з опікунами
-            пенсійного віку
+            {t("title")}
+            <br className={`${styles.hidden_on_mobile}`} /> {t("subTitle")}
           </li>
           <li>
             <div>
-              мета збору &nbsp;
+              {t("goal")} &nbsp;
               <br className={`${styles.show_on_mobile}`} />
-              <span>5 000 000 грн</span>
+              <span>{t("goalPrice")}</span>
             </div>
-            <Button text="ХОЧУ ДОПОМОГТИ" size={isMobile ? "Small" : "Large"} />
+            <Button text={t("btn_help")} size={isMobile ? "Small" : "Large"} />
           </li>
         </ul>
       </div>
       <div className={`${styles.preview_right}`}>
         <div>
           <ul>
-            <li>Влад, 7 років</li>
-            <li>м. Лиман, Донецька обл</li>
-            <li>мама загинула, живе з бабусею</li>
+            <li>{t("aboutChildren.name")}</li>
+            <li>{t("aboutChildren.address")}</li>
+            <li>{t("aboutChildren.history")}</li>
           </ul>
         </div>
       </div>

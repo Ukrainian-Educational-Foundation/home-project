@@ -1,3 +1,4 @@
+import { useParams } from "next/navigation";
 import styles from "./CopyToClipboard.module.css";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -6,6 +7,8 @@ interface ModalProps {
 }
 
 const CopyNotification = ({ showNotification }: ModalProps) => {
+  const params = useParams();
+
   return (
     <div className={`${styles.motion_wrap}`}>
       <AnimatePresence>
@@ -17,7 +20,9 @@ const CopyNotification = ({ showNotification }: ModalProps) => {
             exit={{ opacity: 0, y: 50 }}
             transition={{ duration: 0.3 }}
           >
-            Номер скопійовано в буфер обміну!
+            {params.locale === "en"
+              ? "Number copied to clipboard"
+              : "Номер скопійовано в буфер обміну!"}
           </motion.div>
         )}
       </AnimatePresence>

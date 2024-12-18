@@ -17,10 +17,11 @@
     "next": "^15.0.4",
     "next-i18next": "^15.4.0",
     "next-intl": "^3.26.1",
-    "plugin": "^0.3.3",
+    "plugin": "^0.0.15",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-i18next": "^15.2.0"
+    "react-i18next": "^15.2.0",
+    "resolve-from": "^5.0.0"
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^5.8.1",

@@ -1,8 +1,10 @@
 import Image from "next/image";
 import styles from "./OurSupport.module.css";
 import React from "react";
+import { useTranslations } from "next-intl";
 
 function OurSupport() {
+  const t = useTranslations("OurSupport");
   const logos = [
     "/univest.png.webp",
     "/razom.png.webp",
@@ -22,7 +24,7 @@ function OurSupport() {
   return (
     <div className={styles.our_suppurt}>
       <div className={styles.our_suppurt_wrap}>
-        <div>Компанії, що підтримують нас:</div>
+        <div>{t("supporting")}</div>
         <ul>
           {duplicatedLogos.map((src, index) => (
             <li key={index}>

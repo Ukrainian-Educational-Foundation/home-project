@@ -4,8 +4,10 @@ import Image from "next/image";
 import styles from "./ContactUs.module.css";
 import React, { useState } from "react";
 import CopyNotification from "@/components/atoms/CopyToClipboard/CopyToClipboard";
+import { useTranslations } from "next-intl";
 
 function ContactUs() {
+  const t = useTranslations("ContactUs");
   const phoneNumber = "+380 68 338 68 70";
   const [showNotification, setShowNotification] = useState(false);
 
@@ -25,11 +27,11 @@ function ContactUs() {
 
   return (
     <div className={`${styles.contact}`} id="contact">
-      <div>ЗВ’ЯЖИСЬ З НАМИ</div>
+      <div>{t("contactUS")}</div>
       <div>
         <ul className={`${styles.contact_headers}`}>
           <li>
-            Залиш повідомлення
+            {t("LeaveMessage")}
             <div>
               <Image
                 src="/Vector-l.png.webp"
@@ -40,7 +42,7 @@ function ContactUs() {
             </div>
           </li>
           <li>
-            Будемо раді почути
+            {t("fromYou")}
             <div>
               <Image
                 src="/Vector-c.png.webp"
@@ -51,7 +53,7 @@ function ContactUs() {
             </div>
           </li>
           <li>
-            Будь з нами в соцмережах
+            {t("media")}
             <div>
               <Image
                 src="/Vector-r.png.webp"

@@ -10,6 +10,7 @@ import AboutFond from "@/components/organisms/AboutFond/AboutFond";
 import TrustUs from "@/components/organisms/TrustUs/TrustUs";
 import ContactUs from "@/components/organisms/ContactUs/ContactUs";
 
+
 export default function Home() {
   return (
     <div className={styles.page}>
@@ -20,7 +21,7 @@ export default function Home() {
       <Slider />
       <HelpDescribe />
       <House />
-      <AboutFond />
+      <AboutFond/>
       <TrustUs />
       <ContactUs />
     </div>
