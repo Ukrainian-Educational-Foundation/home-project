@@ -21,7 +21,7 @@ export default function Home() {
       <Slider />
       <HelpDescribe />
       <House />
-      <AboutFond/>
+      <AboutFond />
       <TrustUs />
       <ContactUs />
     </div>
