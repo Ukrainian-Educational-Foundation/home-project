@@ -151,6 +151,40 @@
     grid-row-gap: 0px;
     gap: 20px;
   }
+
+  .ukr_map_wrap {
+    flex-direction: column;
+    width: 100vw;
+    height: auto;
+    gap: 30px;
+    margin: 50px 0;
+  }
+
+  .ukr_map_wrap > div:first-child {
+    position: relative;
+    width: 80vw;
+    height: auto;
+  }
+
+  .ukr_map_wrap > div:first-child img {
+    position: relative !important;
+  }
+
+  .ukr_map_wrap ul {
+    width: 90vw;
+    height: auto;
+  }
+
+  .ukr_map_wrap ul li {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .ukr_map div:first-child {
+    width:90vw;
+    font-size: 18px;
+    line-height: 30px;
+  }
 }
 
 @media (max-width: 768px) {

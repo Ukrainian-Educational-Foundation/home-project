@@ -15,16 +15,17 @@ interface DataProps {
   photo: string;
 }
 
-const Slide = {
-  VIEW: 930,
-};
+enum Slide {
+  VIEW = 930,
+  VIEW_TAB = 66,
+  VIEW_MOB = 90,
+}
 
 function AboutFond() {
+
   const t = useTranslations("AboutFond");
   const params = useParams();
-  const initialView = -Slide.VIEW;
 
-  const [view, setView] = useState(initialView);
   const [animate, setAnimate] = useState(false);
   const [isData, setData] = useState<DataProps[]>([]);
   const [isHover, setHover] = useState({
@@ -32,10 +33,52 @@ function AboutFond() {
     two: false,
     three: false,
   });
+  const [isTablet, setIsTablet] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const [flag, setFlag] = useState(true);
+  const [initialView, setInitialView] = useState(0);
+  const [view, setView] = useState(0);
 
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    
+    const newView = isTablet
+      ? -Slide.VIEW_TAB * 2 - 22
+      : isMobile
+      ? -Slide.VIEW_MOB * 2 - 30
+      : -Slide.VIEW;
+    setInitialView(newView);
+    setView(newView);
+  }, [isTablet, isMobile]);
+
+  useEffect(() => {
+    if (
+      isTablet
+        ? view < -isData.length * 22
+        : isMobile
+        ? view < -isData.length * 30
+        : view < -isData.length * 186
+    ) {
+      setView(initialView);
+    }
+  }, [initialView, view, isData, isTablet, isMobile]);
+
+  useEffect(() => {
+    if (data.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
+      setData([...data.slice(data.length / 2), ...data]);
+    }
+    if (
+      data.length > 0 &&
+      isData.length > 0 &&
+      (isTablet || isMobile) &&
+      flag
+    ) {
+      setData([...data.slice(3), ...data]);
+      setFlag(false);
+    }
+  }, [isData.length, isTablet, flag, isMobile]);
+
     if (params.locale === "en") {
       if (dataEn.length > 0 && isData.length === 0) {
         setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
@@ -49,18 +92,28 @@ function AboutFond() {
   }, [isData.length, params.locale]);
 
   const handlePrev = () => {
-    if (view === 0) {
+    if (view >= 0) {
       setView(initialView);
     } else {
-      setView(view + Slide.VIEW);
+      setView(
+        view +
+          (isTablet ? Slide.VIEW_TAB : isMobile ? Slide.VIEW_MOB : Slide.VIEW)
+      );
     }
   };
 
   const handleNext = () => {
-    if (view === -Slide.VIEW * 2) {
+    if (
+      (!isTablet && !isMobile && view === -Slide.VIEW * 2) ||
+      (isTablet && view < -Slide.VIEW_TAB * 5) ||
+      (isMobile && view < -Slide.VIEW_MOB * 5)
+    ) {
       setView(initialView);
     } else {
-      setView(view - Slide.VIEW);
+      setView(
+        view -
+          (isTablet ? Slide.VIEW_TAB : isMobile ? Slide.VIEW_MOB : Slide.VIEW)
+      );
     }
   };
 
@@ -83,6 +136,36 @@ function AboutFond() {
       if (currentSection) {
         observer.unobserve(currentSection);
       }
+    };
+  }, []);
+
+  useEffect(() => {
+    const tabletMediaQuery = window.matchMedia(
+      "(min-width: 768px) and (max-width: 1024px)"
+    );
+    const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
+
+    const handleTabletResize = (
+      event: MediaQueryListEvent | MediaQueryList
+    ) => {
+      setIsTablet(event.matches);
+    };
+
+    const handleMobileResize = (
+      event: MediaQueryListEvent | MediaQueryList
+    ) => {
+      setIsMobile(event.matches);
+    };
+
+    handleTabletResize(tabletMediaQuery);
+    handleMobileResize(mobileMediaQuery);
+
+    tabletMediaQuery.addEventListener("change", handleTabletResize);
+    mobileMediaQuery.addEventListener("change", handleMobileResize);
+
+    return () => {
+      tabletMediaQuery.removeEventListener("change", handleTabletResize);
+      mobileMediaQuery.removeEventListener("change", handleMobileResize);
     };
   }, []);
 
@@ -129,7 +212,7 @@ function AboutFond() {
             <ul
               style={{
                 position: "relative",
-                left: `${view}px`,
+                left: `${view}${!isTablet && !isMobile ? "px" : "vw"}`,
                 transition: "300ms",
               }}
             >
@@ -183,12 +266,7 @@ function AboutFond() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image
-                src="/news.png.webp"
-                alt="logo"
-                fill
-                sizes="auto"
-              />
+              <Image src="/news.png.webp" alt="logo" fill sizes="auto" />
               {isHover.one ? (
                 <div className={styles.about_fond_text}>{t("review")}</div>
               ) : null}
