@@ -3,6 +3,7 @@
 import Image from "next/image";
 import styles from "./UkrMap.module.css";
 import React, { useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 interface ActiveVideo {
   videoOne: boolean;
@@ -12,6 +13,7 @@ interface ActiveVideo {
 }
 
 function UkrMap() {
+  const t = useTranslations("UkrMap");
   const videoRefs = {
     videoOne: useRef<HTMLVideoElement>(null),
     videoTwo: useRef<HTMLVideoElement>(null),
@@ -71,7 +73,7 @@ function UkrMap() {
       </div>
       {playingVideo && <div className="overlay"></div>}
       <div className={`${styles.ukr_map_last} ${playingVideo ? "hidden" : ""}`}>
-        <div>Подивіться відеоісторії наших підопічних:</div>
+        <div>{t("videoStories")}</div>
         <ul>
           {Object.keys(videoRefs).map((key) => {
             const videoName = key as keyof typeof videoRefs;

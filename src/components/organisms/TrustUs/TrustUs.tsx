@@ -5,6 +5,9 @@ import styles from "./TrustUs.module.css";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { dataSlideTrust } from "@/data/dataSlideTrust";
+import { dataSlideTrustEn } from "@/data/dataSlideTrustEn";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 interface DataProps {
   logo: string;
@@ -18,6 +21,8 @@ enum Slide {
 }
 
 function TrustUs() {
+  const t = useTranslations("TrustUs");
+  const params = useParams();
   const initialView = -Slide.VIEW * Math.floor(dataSlideTrust.length - 3);
   const initialCenter = Math.floor(dataSlideTrust.length - 2);
 
@@ -26,10 +31,17 @@ function TrustUs() {
   const [data, setData] = useState<DataProps[]>([]);
 
   useEffect(() => {
+    if (params.locale === "en") {
+      if (dataSlideTrustEn.length > 0 && data.length === 0) {
+        setData([...dataSlideTrustEn.slice(3), ...dataSlideTrustEn]);
+      }
+      return;
+    }
+
     if (dataSlideTrust.length > 0 && data.length === 0) {
       setData([...dataSlideTrust.slice(3), ...dataSlideTrust]);
     }
-  }, [data.length]);
+  }, [data.length, params.locale]);
 
   useEffect(() => {
   }, [initialView, initialCenter]);
@@ -56,7 +68,7 @@ function TrustUs() {
 
   return (
     <div className={styles?.trust}>
-      <div>Нам довіряють</div>
+      <div>{t("title")}</div>
       <div className={styles?.trust_wrap}>
         <ul
           style={{
@@ -114,7 +126,7 @@ function TrustUs() {
           )}
         </ul>
       </div>
-      <Button size="Large" text="ХОЧУ ДОПОМОГТИ" />
+      <Button size="Large" text={t("btn_help")} />
     </div>
   );
 }

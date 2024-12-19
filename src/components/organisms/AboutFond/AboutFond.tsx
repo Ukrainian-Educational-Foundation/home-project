@@ -3,8 +3,11 @@
 import styles from "./AboutFond.module.css";
 import React, { useState, useEffect, useRef } from "react";
 import { data } from "@/data/data";
+import { dataEn } from "@/data/dataEn";
 import Image from "next/image";
 import AnimatedNumbers from "@/hooks/animationNumber";
+import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 interface DataProps {
   name: string;
@@ -19,6 +22,10 @@ enum Slide {
 }
 
 function AboutFond() {
+
+  const t = useTranslations("AboutFond");
+  const params = useParams();
+
   const [animate, setAnimate] = useState(false);
   const [isData, setData] = useState<DataProps[]>([]);
   const [isHover, setHover] = useState({
@@ -35,6 +42,7 @@ function AboutFond() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
+    
     const newView = isTablet
       ? -Slide.VIEW_TAB * 2 - 22
       : isMobile
@@ -70,6 +78,18 @@ function AboutFond() {
       setFlag(false);
     }
   }, [isData.length, isTablet, flag, isMobile]);
+
+    if (params.locale === "en") {
+      if (dataEn.length > 0 && isData.length === 0) {
+        setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
+      }
+      return;
+    }
+
+    if (data.length > 0 && isData.length === 0) {
+      setData([...data.slice(data.length / 2), ...data]);
+    }
+  }, [isData.length, params.locale]);
 
   const handlePrev = () => {
     if (view >= 0) {
@@ -151,34 +171,34 @@ function AboutFond() {
 
   return (
     <div className={`${styles.about_fond}`} id="about_fond" ref={sectionRef}>
-      <div>Про фонд</div>
+      <div>{t("title")}</div>
       <ul>
         <li>
           <div>{animate && <AnimatedNumbers value={10} />}</div>
           <div>
-            років
+            {t("years.title")}
             <br />
-            працює наш фонд
+            {t("years.description")}
           </div>
         </li>
         <li>
           <div>{animate && <AnimatedNumbers value={6} />}</div>
-          <div>проектів реалізовано</div>
+          <div>{t("projects")}</div>
         </li>
         <li>
           <div>{animate && <AnimatedNumbers value={86} />}</div>
           <div>
-            поїздок
-            <br />у прифронтові зони
+            {t("trips.title")}
+            <br />у {t("trips.description")}
           </div>
         </li>
         <li>
           <div>{animate && <AnimatedNumbers value={20000} />}</div>
-          <div>дітей під опікою</div>
+          <div>{t("children")}</div>
         </li>
       </ul>
       <div className={`${styles.about_fond_team}`}>
-        <div>Наша команда</div>
+        <div>{t("team")}</div>
         <div>
           <button onClick={handlePrev}>
             <Image
@@ -235,7 +255,7 @@ function AboutFond() {
         </div>
       </div>
       <div className={styles.about_fond_last}>
-        <div>Медіа про нас</div>
+        <div>{t("aboutUs")}</div>
         <ul>
           <li
             onMouseEnter={() => setHover((prev) => ({ ...prev, one: true }))}
@@ -248,10 +268,7 @@ function AboutFond() {
             >
               <Image src="/news.png.webp" alt="logo" fill sizes="auto" />
               {isHover.one ? (
-                <div className={styles.about_fond_text}>
-                  Волонтер Тетяна Люлька: На власні очі бачила, як батьки по
-                  підвалах ховають дітей від евакуації
-                </div>
+                <div className={styles.about_fond_text}>{t("review")}</div>
               ) : null}
             </a>
           </li>
@@ -266,10 +283,7 @@ function AboutFond() {
             >
               <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
               {isHover.two ? (
-                <div className={styles.about_fond_text}>
-                  Волонтер Тетяна Люлька: На власні очі бачила, як батьки по
-                  підвалах ховають дітей від евакуації
-                </div>
+                <div className={styles.about_fond_text}>{t("review")}</div>
               ) : null}
             </a>
           </li>
@@ -284,10 +298,7 @@ function AboutFond() {
             >
               <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
               {isHover.three ? (
-                <div className={styles.about_fond_text}>
-                  Волонтер Тетяна Люлька: На власні очі бачила, як батьки по
-                  підвалах ховають дітей від евакуації
-                </div>
+                <div className={styles.about_fond_text}>{t("review")}</div>
               ) : null}
             </a>
           </li>
