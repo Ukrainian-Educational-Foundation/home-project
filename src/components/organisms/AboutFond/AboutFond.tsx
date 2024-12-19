@@ -22,7 +22,6 @@ enum Slide {
 }
 
 function AboutFond() {
-
   const t = useTranslations("AboutFond");
   const params = useParams();
 
@@ -42,7 +41,6 @@ function AboutFond() {
   const sectionRef = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
-    
     const newView = isTablet
       ? -Slide.VIEW_TAB * 2 - 22
       : isMobile
@@ -79,6 +77,7 @@ function AboutFond() {
     }
   }, [isData.length, isTablet, flag, isMobile]);
 
+  useEffect(() => {
     if (params.locale === "en") {
       if (dataEn.length > 0 && isData.length === 0) {
         setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
