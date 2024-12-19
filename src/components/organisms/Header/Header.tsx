@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 // import { useTranslation } from "next-i18next";
+import { useTranslations } from "next-intl";
 
 import Button from "@/components/atoms/Button/Button";
 import styles from "./Header.module.css";
@@ -13,6 +14,7 @@ function Header() {
   const [isBurger, setBurger] = useState(false);
 
   // const { t } = useTranslation("common");
+  const t = useTranslations("Header");
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -33,7 +35,7 @@ function Header() {
             setBurger(false);
           }}
         >
-          Головна
+          {t("main")}
         </button>
         <button
           onClick={() => {
@@ -41,7 +43,7 @@ function Header() {
             setBurger(false);
           }}
         >
-          Про проект
+          {t("about_project")}
         </button>
         <button
           onClick={() => {
@@ -49,7 +51,7 @@ function Header() {
             setBurger(false);
           }}
         >
-          Про фонд
+          {t("about_fond")}
         </button>
         <button
           onClick={() => {
@@ -57,15 +59,15 @@ function Header() {
             setBurger(false);
           }}
         >
-          Контакти
+          {t("contacts")}
         </button>
       </div>
       <div className={`${styles.header_lang}`}>
-        <Button text="ХОЧУ ДОПОМОГТИ" size="Small" />
+        <Button text={t("btn_help")} size="Small" />
         <ul>
           <li>
             <button>
-              <Link href="/" locale={false}>
+              <Link href="/uk" locale={false}>
                 UA
               </Link>
             </button>

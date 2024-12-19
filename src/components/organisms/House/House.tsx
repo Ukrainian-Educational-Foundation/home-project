@@ -3,8 +3,10 @@
 import Image from "next/image";
 import styles from "./House.module.css";
 import React, { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 function House() {
+  const t = useTranslations("House");
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isTablet, setIsTablet] = useState(false);
 
@@ -45,10 +47,12 @@ function House() {
 
   return (
     <div className={styles.house}>
-      <div>Що буде з проектом далі</div>
+      <div>{t("title")}</div>
       <ul>
         <li>
-          Для родин полеглих героїв, тих, хто
+          <p>{t("description")}</p>
+          {isTablet ? null : <br />}
+          {/* Для родин полеглих героїв, тих, хто
           {isTablet ? null : <br />} перебуває в полоні або отримав
           {isTablet ? null : <br />} поранення, а також для дітей, чиї
           {isTablet ? null : <br />} батьки працюють у ДСНС чи є
@@ -60,7 +64,7 @@ function House() {
           {isTablet ? null : <br />} працюватимуть кваліфіковані
           {isTablet ? null : <br />} психологи, а також будуть
           {isTablet ? null : <br />} організовані групові заняття для
-          {isTablet ? null : <br />} підтримки та відновлення.
+          {isTablet ? null : <br />} підтримки та відновлення. */}
         </li>
         <li>
           <Image src="/Home.png.webp" alt="logo" fill sizes="auto" />

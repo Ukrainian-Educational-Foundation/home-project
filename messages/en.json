@@ -1,0 +1,86 @@
+{
+  "Header": {
+    "main": "Home",
+    "about_project": "About the project",
+    "about_fond": "About the foundation",
+    "contacts": "Contacts",
+    "btn_help": "Want to help"
+  },
+  "Preview": {
+    "logo": "Center for helping children",
+    "title": "We are building a home for",
+    "subTitle": "orphaned children living with elderly guardians",
+    "goal": "Fundraising goal",
+    "goalPrice": "5,000,000 UAH",
+    "btn_help": "Want to help",
+    "aboutChildren": {
+      "name": "Vlad, 7 years old",
+      "address": "from Lyman, Donetsk Oblast",
+      "history": "Mom died, lives with his grandmother"
+    }
+  },
+  "OurSupport": {
+    "supporting": "Companies supporting us:"
+  },
+  "UkrMap": {
+    "videoStories": "Watch the video stories of our wards:"
+  },
+  "OldLady": {
+    "title": "\"We are deeply convinced that we must take responsibility for the children and wives of those who took responsibility for us and gave their lives or health to defend our country.\"",
+    "aboutProject": {
+      "title": "This is why the idea of the ДІМ Center for Children project was born.",
+      "description": "This category of children and elderly people requires round-the-clock care. We began searching for models of similar centers to adopt the best practices.",
+      "teamInformation": "Our team visited all well-known (and even lesser-known) shelters, rehabilitation centers, and care homes in Ukraine and Europe. And only one (!!!) truly stands out: Marta Levchenko's “City of Goodness”. It is the largest shelter in Ukraine, currently housing 300 mothers with children, two relocated orphanages, a hospice for children with cancer, and an animal shelter."
+    }
+  },
+  "Slider": {
+    "title": "We found it!"
+  },
+  "HelpDescribe": {
+    "title": "What the children will receive in the HOME",
+    "financialSupport": "Financial support",
+    "education": "Education",
+    "psychologicalCare": "Psychological care",
+    "missing": {
+      "title": "But we are still missing the most important step — purchasing this home.",
+      "subTitle": "To achieve this, we need to raise",
+      "goal": "5,000,000 UAH by the New Year. Let’s create a MIRACLE for the children together!"
+    },
+    "btn_help": "Want to help"
+  },
+  "House": {
+    "title": "What will happen to the project next",
+    "description": "For families of fallen heroes, those in captivity, or those who have been injured, as well as for children whose parents work in the State Emergency Service or are medical workers, the 'HOME' Center will offer a rehabilitation program. The center will have qualified psychologists and organized group sessions for support and recovery."
+  },
+  "AboutFond": {
+    "title": "About the  foundation",
+    "projects": "projects implemented",
+    "years": {
+      "title": "years",
+      "description": "of our foundation work"
+    },
+    "trips": {
+      "title": "trips ",
+      "description": "to frontline zones"
+    },
+    "children": "children under our care",
+    "team": "Our team",
+    "aboutUs": "Media about us",
+    "review": "Volunteer Tetiana Liulka: “I’ve seen with my own eyes how parents hide their children in basements to avoid evacuation."
+  },
+  "TrustUs": {
+    "title": "We are trusted by",
+    "btn_help": "Want to help"
+  },
+  "ContactUs": {
+    "contactUS": "CONTACT US",
+    "LeaveMessage": "Leave a message",
+    "fromYou": "We’d love to hear from you",
+    "media": "Follow us on social media"
+  },
+
+  "Footer": {
+    "about_fond": "Our mission is to change the lives of children (evacuating, finding housing, providing medical care, clothing, and education). We aim to make small daily changes that lead to a significant transformation in the lives of children in Ukraine.",
+    "btn_help": "Want to help"
+  }
+}
