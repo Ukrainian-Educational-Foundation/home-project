@@ -288,3 +288,182 @@
   width: 104px;
   height: 104px;
 }
+
+@media (max-width: 1024px) {
+  .about_fond {
+    height: auto;
+    padding: 20px;
+    gap: 40px;
+  }
+
+  .about_fond > div:first-child {
+    width: 100vw;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .about_fond > ul {
+    width: auto;
+    height: auto;
+    gap: 24px;
+  }
+
+  .about_fond > ul > li {
+    width: auto;
+    height: auto;
+  }
+
+  .about_fond > ul > li > div:first-child {
+    width: auto;
+    font-size: 60px;
+  }
+
+  .about_fond > ul > li > div:last-child {
+    width: auto;
+    font-size: 18px;
+    line-height: 26px;
+  }
+
+  .about_fond_team {
+    height: auto;
+  }
+
+  .about_fond_team > div:first-child {
+    width: 100vw;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .about_fond_team > div:nth-of-type(2) {
+    width: 81vw;
+  }
+
+  .about_fond_team > div:nth-of-type(2) > button {
+    width: 50px;
+    height: 50px;
+  }
+
+  .about_fond_wrap {
+    width: 66vw;
+  }
+
+  .about_fond_wrap > ul > li {
+    width: 20vw;
+    height: auto;
+    margin: 0 1vw;
+  }
+
+  .about_fond_card > div:first-child {
+    width: 18vw;
+  }
+
+  .about_fond_card > div:last-child {
+    width: 18vw;
+  }
+
+  .about_fond_card {
+    width: 100%;
+    padding: 1vw;
+  }
+
+  .about_fond_team > div:nth-of-type(2) > button {
+    width: 5vw;
+    height: 5vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_fond {
+    gap: 20px;
+    padding: 0 20px 20px 20px;
+  }
+
+  .about_fond > ul {
+    gap: 10px;
+  }
+
+  .about_fond_card {
+    padding: 3vw 1vw;
+  }
+
+
+  .about_fond > ul > li > div:first-child {
+    font-size: 32px;
+    height: 40px;
+  }
+
+  .about_fond > ul > li > div:last-child {
+    font-size: 14px;
+    line-height: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .about_fond_team > div:nth-of-type(2) {
+    width: 100vw;
+  }
+
+  .about_fond > ul > li > div:first-child {
+    font-size: 26px;
+    height: 40px;
+  }
+
+  .about_fond > ul > li > div:last-child {
+    font-size: 12px;
+    line-height: 20px;
+    height: 75px;
+  }
+
+  .about_fond_wrap {
+    width: 90vw;
+  }
+
+  .about_fond_card > div:last-child,
+  .about_fond_card > div:first-child {
+    width: 26vw;
+    font-size: 12px;
+    line-height: 12px;
+  }
+
+  .about_fond_card > div:first-child {
+    font-size: 14px;
+  }
+
+  .about_fond_wrap > ul > li {
+    width: 28vw;
+  }
+}
+
+@media (max-width: 450px) {
+  .about_img_wrap {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .about_fond_card {
+    height: 70px;
+  }
+}
+
+@media (max-width: 450px) {
+  .about_img_wrap {
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .about_fond_card {
+    height: 70px;
+  }
+}
+
+@media (max-width: 400px) {
+  .about_fond_card > div:last-child {
+    font-size: 10px;
+  }
+
+  .about_fond_card > div:first-child {
+    font-size: 12px;
+  }
+}
