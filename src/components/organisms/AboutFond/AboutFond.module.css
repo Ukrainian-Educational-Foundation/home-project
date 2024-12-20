@@ -370,6 +370,21 @@
     width: 5vw;
     height: 5vh;
   }
+
+  .about_fond_last {
+    width: 100vw;
+    height: auto;
+    font-size: 24px;
+    line-height: 40px;
+  }
+
+  .about_fond_last > ul {
+    width: 90vw;
+    height: auto;
+    gap: 40px;
+    font-size: 24px;
+    line-height: 40px;
+  }
 }
 
 @media (max-width: 768px) {
@@ -386,7 +401,6 @@
     padding: 3vw 1vw;
   }
 
-
   .about_fond > ul > li > div:first-child {
     font-size: 32px;
     height: 40px;
@@ -395,6 +409,10 @@
   .about_fond > ul > li > div:last-child {
     font-size: 14px;
     line-height: 20px;
+  }
+
+  .about_fond_last > ul {
+    flex-direction: column;
   }
 }
 
