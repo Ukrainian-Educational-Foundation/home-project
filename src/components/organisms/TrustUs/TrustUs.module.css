@@ -9,6 +9,15 @@
   gap: 64px;
 }
 
+.trust_main_wrap {
+  width: auto;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
 .trust > div:first-child {
   display: flex;
   align-items: center;
@@ -131,4 +140,92 @@
   border: 1px solid #5368a7b2;
   background: #ffffff;
   z-index: 997;
+}
+
+@media (max-width: 1260px) {
+  .trust {
+    height: auto;
+    padding: 40px;
+    gap: 50px;
+  }
+
+  .trust > div:first-child {
+    width: 100vw;
+    height: auto;
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .trust_wrap {
+    width: 52vw;
+  }
+
+  .trust_wrap ul {
+    justify-content: center;
+  }
+
+  .trust_wrap li {
+    margin: 0 1vw;
+  }
+
+  .rust_card > div:last-child {
+    width: 70%;
+    height: auto;
+  }
+
+  .trust_left,
+  .trust_right {
+    display: none;
+  }
+
+  .trust_card {
+    width: 50vw;
+    height: 40vh;
+    top: 0;
+  }
+
+  .trust_btn_right,
+  .trust_btn_left {
+    background: transparent;
+    border: none;
+    font-size: 36px;
+    cursor: pointer;
+    color: #303058;
+    padding: 10px;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+
+  .trust_wrap ul {
+    align-items: center;
+  }
+}
+
+@media (max-width: 849px) {
+  .trust_wrap {
+    width: 82vw;
+  }
+
+  .trust_left,
+  .trust_right {
+    display: none;
+  }
+
+  .trust_card {
+    width: 80vw;
+    height: 40vh;
+    top: 0;
+  }
+
+  .trust_carddiv:last-child {
+    white-space: normal;
+    word-wrap: break-word;
+  }
+
+  .trust_btn_right,
+  .trust_btn_left {
+    width: 5vw;
+    height: 5vh;
+  }
 }
