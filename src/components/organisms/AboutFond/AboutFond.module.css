@@ -414,9 +414,7 @@
   .about_fond_last > ul {
     flex-direction: column;
   }
-}
 
-@media (max-width: 768px) {
   .about_fond_team > div:nth-of-type(2) {
     width: 100vw;
   }
