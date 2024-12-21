@@ -12,6 +12,7 @@ function Preview() {
   const t = useTranslations("Preview");
 
   const isMobile = width <= 768;
+  const isSpace = width < 354;
   return (
     <div className={`${styles.preview}`} id="preview">
       <div className={`${styles.preview_left}`}>
@@ -35,7 +36,7 @@ function Preview() {
           </li>
           <li>
             <div>
-              {t("goal")} &nbsp;
+              {t("goal")} {isSpace ? ' ' : null}
               <br className={`${styles.show_on_mobile}`} />
               <span>{t("goalPrice")}</span>
             </div>

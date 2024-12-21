@@ -223,4 +223,8 @@
   .preview_left {
     padding: 40px 20px;
   }
+
+  .preview_left ul > li:nth-of-type(3) span {
+    white-space: nowrap;
+  }
 }

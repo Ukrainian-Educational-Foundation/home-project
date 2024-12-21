@@ -14,47 +14,96 @@ interface DataProps {
 
 enum Slide {
   VIEW = 90,
+  VIEW_MOB = 92,
 }
 
 const Slider = () => {
   const t = useTranslations("Slider");
   const params = useParams();
 
-  const initialView =
-    -Slide.VIEW * Math.floor((dataFoundSlider.length - 2) / 2);
-
-  const [view, setView] = useState(initialView);
+  const [initialView, setInitialView] = useState(0);
+  const [view, setView] = useState(0);
   const [data, setData] = useState<DataProps[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
+  const [flag, setFlag] = useState(true);
+
+  useEffect(() => {
+    const newView = isMobile
+      ? -Slide.VIEW_MOB * dataFoundSlider.length + Slide.VIEW_MOB
+      : -Slide.VIEW * Math.floor((dataFoundSlider.length - 2) / 2);
+    setInitialView(newView);
+    setView(newView);
+  }, [isMobile, data]);
 
   useEffect(() => {
     if (params.locale === "en") {
-      if (dataFoundSliderEn.length > 0 && data.length === 0) {
+      if (dataFoundSliderEn.length > 0 && data.length === 0 && !isMobile) {
         setData([...dataFoundSliderEn.slice(2), ...dataFoundSliderEn]);
-      }
-      return;
+      } else if (isMobile) return;
+      if (isMobile && flag) {
+        setData([...dataFoundSliderEn.slice(1), ...dataFoundSliderEn]);
+        setFlag(false);
+      } else if (isMobile) return;
     }
 
-    if (dataFoundSlider.length > 0 && data.length === 0) {
+    if (dataFoundSlider.length > 0 && data.length === 0 && !isMobile) {
       setData([...dataFoundSlider.slice(2), ...dataFoundSlider]);
     }
-  }, [data.length, params.locale]);
+    if (isMobile && flag) {
+      setData([...dataFoundSlider.slice(1), ...dataFoundSlider]);
+      setFlag(false);
+    }
+  }, [data.length, params.locale, isMobile, flag]);
 
   const handlePrev = () => {
-    if (view === 0) {
-      setView(initialView);
+    if (!isMobile) {
+      if (view === 0) {
+        setView(initialView);
+      } else {
+        setView(view + Slide.VIEW);
+      }
     } else {
-      setView(view + Slide.VIEW);
+      if (view === 0) {
+        setView(initialView);
+      } else {
+        setView(view + Slide.VIEW_MOB);
+      }
     }
   };
 
   const handleNext = () => {
-    console.log(view, -Slide.VIEW * (data.length / 2 - 1));
-    if (view === -Slide.VIEW * (data.length / 2 - 1)) {
-      setView(initialView);
+    if (!isMobile) {
+      if (view === -Slide.VIEW * (data.length / 2 - 1)) {
+        setView(initialView);
+      } else {
+        setView(view - Slide.VIEW);
+      }
     } else {
-      setView(view - Slide.VIEW);
+      if (view === -Slide.VIEW_MOB * data.length + Slide.VIEW_MOB) {
+        setView(initialView);
+      } else {
+        setView(view - Slide.VIEW_MOB);
+      }
     }
   };
+
+  useEffect(() => {
+    const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
+
+    const handleMobileResize = (
+      event: MediaQueryListEvent | MediaQueryList
+    ) => {
+      setIsMobile(event.matches);
+    };
+
+    handleMobileResize(mobileMediaQuery);
+
+    mobileMediaQuery.addEventListener("change", handleMobileResize);
+
+    return () => {
+      mobileMediaQuery.removeEventListener("change", handleMobileResize);
+    };
+  }, []);
 
   return (
     <div className={styles.slider}>

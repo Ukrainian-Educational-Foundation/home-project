@@ -37,10 +37,6 @@ function TrustUs() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
-    console.log(isTablet, isMobile);
-  }, [isTablet, isMobile]);
-
-  useEffect(() => {
     if (isMobile) {
       setView(initialViewMob);
     } else if (isTablet) {
