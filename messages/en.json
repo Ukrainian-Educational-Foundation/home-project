@@ -23,12 +23,16 @@
     "supporting": "Companies supporting us:"
   },
   "UkrMap": {
-    "videoStories": "Watch the video stories of our wards:"
+    "videoStories": "Watch the video stories of our wards:",
+    "title": "In the frontline territories of Ukraine, there are children who have lost their parents and are under the care of elderly guardians (70+ years old). These guardians are unable to provide for the children physically or financially, nor can they offer the psychological support and proper upbringing the children need.",
+    "description_p1": "For example, our foundation is currently supporting a 7-year-old boy named Vlad from Lyman, Donetsk Oblast. He witnessed his mother’s death. We evacuated him and his grandmother to Bila Tserkva, where we rented housing for them. We take him to a psychologist twice a week and fully provide them with food, medical care, and clothing.",
+    "description_p2": "From Vlad’s case, we realized the need to create a place where such children can live and receive comprehensive support until adulthood, while their guardians could continue living there even after the child reaches adulthood.",
+    "description_p3": "Vlad’s story is just one of thousands like it."
   },
   "OldLady": {
     "title": "\"We are deeply convinced that we must take responsibility for the children and wives of those who took responsibility for us and gave their lives or health to defend our country.\"",
     "aboutProject": {
-      "title": "This is why the idea of the ДІМ Center for Children project was born.",
+      "title": "This is why the idea of the HOME Center for Children project was born.",
       "description": "This category of children and elderly people requires round-the-clock care. We began searching for models of similar centers to adopt the best practices.",
       "teamInformation": "Our team visited all well-known (and even lesser-known) shelters, rehabilitation centers, and care homes in Ukraine and Europe. And only one (!!!) truly stands out: Marta Levchenko's “City of Goodness”. It is the largest shelter in Ukraine, currently housing 300 mothers with children, two relocated orphanages, a hospice for children with cancer, and an animal shelter."
     }

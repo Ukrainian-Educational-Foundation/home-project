@@ -1,11 +1,25 @@
+"use client";
 import Image from "next/image";
 import styles from "./Footer.module.css";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Button from "@/components/atoms/Button/Button";
 import { useTranslations } from "next-intl";
 
 function Footer() {
   const t = useTranslations("Footer");
+  const [widthView, setWidthView] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setWidthView(window.innerWidth);
+    };
+    handleResize();
+
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <div className={`${styles.footer}`}>
       <div className={`${styles.footer_main}`}>
@@ -24,7 +38,11 @@ function Footer() {
           лікувати, одягати, навчати). Робити щоденні маленькі зміни, що <br />
           призводять до якісної зміни життя дітей в Україні. */}
         </div>
-        <Button text={t("btn_help")} size="Small" />
+        {widthView < 1025 ? (
+          <Button text={t("btn_help")} size="Large" />
+        ) : (
+          <Button text={t("btn_help")} size="Small" />
+        )}
       </div>
       <div>
         <a
