@@ -1,8 +1,8 @@
 {
   "Header": {
     "main": "Home",
-    "about_project": "About the project",
-    "about_fond": "About the foundation",
+    "about_project": "About project",
+    "about_fond": "About foundation",
     "contacts": "Contacts",
     "btn_help": "Want to help"
   },

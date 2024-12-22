@@ -14,7 +14,8 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  width: 40%;
+  /* width: 40%; */
+  width: 44%;
   height: 60px;
   transition: 200ms;
 }
@@ -99,6 +100,15 @@
 
 .header_burger {
   display: none;
+}
+
+@media (max-width: 1400px) {
+.buttons {
+  width: 46%;
+}
+.buttons button {
+  font-size: 22px;
+}
 }
 
 @media (max-width: 1024px) {
