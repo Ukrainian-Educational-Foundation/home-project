@@ -44,6 +44,7 @@ const Slider = () => {
         setData([...dataFoundSliderEn.slice(1), ...dataFoundSliderEn]);
         setFlag(false);
       } else if (isMobile) return;
+      return
     }
 
     if (dataFoundSlider.length > 0 && data.length === 0 && !isMobile) {

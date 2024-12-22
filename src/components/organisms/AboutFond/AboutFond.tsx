@@ -63,6 +63,28 @@ function AboutFond() {
   }, [initialView, view, isData, isTablet, isMobile]);
 
   useEffect(() => {
+    if (params.locale === "en") {
+      if (dataEn.length > 0 && isData.length === 0) {
+        setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
+      }
+      if (dataEn.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
+        setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
+      }
+      if (
+        dataEn.length > 0 &&
+        isData.length > 0 &&
+        (isTablet || isMobile) &&
+        flag
+      ) {
+        setData([...dataEn.slice(3), ...dataEn]);
+        setFlag(false);
+      }
+      return;
+    }
+
+    if (data.length > 0 && isData.length === 0) {
+      setData([...data.slice(data.length / 2), ...data]);
+    }
     if (data.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
       setData([...data.slice(data.length / 2), ...data]);
     }
@@ -75,20 +97,7 @@ function AboutFond() {
       setData([...data.slice(3), ...data]);
       setFlag(false);
     }
-  }, [isData.length, isTablet, flag, isMobile]);
-
-  useEffect(() => {
-    if (params.locale === "en") {
-      if (dataEn.length > 0 && isData.length === 0) {
-        setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
-      }
-      return;
-    }
-
-    if (data.length > 0 && isData.length === 0) {
-      setData([...data.slice(data.length / 2), ...data]);
-    }
-  }, [isData.length, params.locale]);
+  }, [flag, isData.length, isMobile, isTablet, params.locale]);
 
   const handlePrev = () => {
     if (view >= 0) {
