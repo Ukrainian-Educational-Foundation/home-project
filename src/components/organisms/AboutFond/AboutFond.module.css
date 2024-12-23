@@ -64,7 +64,7 @@
 
 .about_fond > ul > li > div:last-child {
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   justify-content: center;
   width: 281px;
   height: 86px;
@@ -76,6 +76,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #303058;
+  margin-top: 8px;
 }
 
 .about_fond_team {
