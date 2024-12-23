@@ -10,6 +10,7 @@ function Button({ text, disabled = false, size = "Small" }: ButtonProps) {
       href="https://send.monobank.ua/jar/5HAkre4YYa"
       target="_blank"
       rel="noopener noreferrer"
+      className={styles.link}
     >
       <button disabled={disabled} className={`${styles.button} ${sizeClass}`}>
         {text}
