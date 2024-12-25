@@ -26,7 +26,7 @@ function Header() {
   return (
     <div className={`${styles.header}`}>
       <div>
-        <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto" />
+        <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
       </div>
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
         <button

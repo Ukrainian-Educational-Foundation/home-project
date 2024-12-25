@@ -19,7 +19,7 @@ function Preview() {
         <ul>
           <li>
             <div>
-              <Image src="/Dim.png.webp" alt="logo" fill sizes="auto, auto" />
+              <Image src="/Dim.png.webp" alt="logo" fill sizes="auto" />
             </div>
             <div>
               <Image

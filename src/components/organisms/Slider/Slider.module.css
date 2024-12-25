@@ -91,19 +91,19 @@
 }
 
 .buttons button:first-child {
-  background-image: url(/arrow-button-left.webp);
+  background-image: url(/left.webp);
 }
 
 .buttons button:first-child:hover {
-  background-image: url(/left-hover.png.webp);
+  background-image: url(/left-hover.webp);
 }
 
 .buttons button:last-child {
-  background-image: url(/arrow-button-right.webp);
+  background-image: url(/right.webp);
 }
 
 .buttons button:last-child:hover {
-  background-image: url(/right-hover.png.webp);
+  background-image: url(/right-hover.webp);
 }
 
 .buttons button:disabled {

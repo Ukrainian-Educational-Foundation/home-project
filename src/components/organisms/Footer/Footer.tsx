@@ -25,7 +25,7 @@ function Footer() {
       <div className={`${styles.footer_main}`}>
         <div>
           <Image
-            src="/Fund_logo1.png.webp"
+            src="/FundLogo.webp"
             alt="logo"
             fill
             sizes="auto, auto"
