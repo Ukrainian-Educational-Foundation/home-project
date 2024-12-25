@@ -197,7 +197,7 @@ function AboutFond() {
           <div>{animate && <AnimatedNumbers value={86} />}</div>
           <div>
             {t("trips.title")}
-            <br />у {t("trips.description")}
+            <br />{t("trips.description")}
           </div>
         </li>
         <li>

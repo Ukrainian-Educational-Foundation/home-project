@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-// import { useTranslation } from "next-i18next";
 import { useTranslations } from "next-intl";
 
 import Button from "@/components/atoms/Button/Button";
@@ -9,11 +8,12 @@ import styles from "./Header.module.css";
 
 import React, { useState } from "react";
 import Image from "next/image";
+import { useParams } from "next/navigation";
 
 function Header() {
+  const params = useParams();
   const [isBurger, setBurger] = useState(false);
 
-  // const { t } = useTranslation("common");
   const t = useTranslations("Header");
 
   const scrollToSection = (id: string) => {
@@ -26,7 +26,11 @@ function Header() {
   return (
     <div className={`${styles.header}`}>
       <div>
-        <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
+        {params.locale === "en" ? (
+          <Image src="/logo_english.svg" alt="logo" fill sizes="auto" />
+        ) : (
+          <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
+        )}
       </div>
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
         <button

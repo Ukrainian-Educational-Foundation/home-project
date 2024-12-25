@@ -48,13 +48,26 @@
   height: 328px;
 }
 
-.preview_left ul > li:first-child div:last-child {
+/*.preview_left ul > li:first-child div:last-child {
   position: absolute;
   z-index: 1;
   left: 355px;
   top: 13px;
   width: 208px;
   height: 208px;
+} */
+.sunrice,
+.sunrice_en {
+  position: absolute;
+  z-index: -1;
+  left: 355px;
+  top: 13px;
+  width: 208px;
+  height: 208px;
+}
+.sunrice_en {
+  top: -8px;
+  left: 410px;
 }
 
 .preview_left ul > li:nth-of-type(2) {
@@ -169,18 +182,34 @@
 
 @media (max-width: 768px) {
   .preview_left ul > li:first-child div:first-child {
-    width: 385px;
+    /* width: 385px; */
+    width: 100%;
+    min-width: 368px;
+    max-width: 385px;
     height: 250px;
+  }
+
+  .logo_en {
+    margin-left: 10px;
   }
 
   .preview_left ul > li:first-child {
     left: -47px;
   }
 
-  .preview_left ul > li:first-child div:last-child {
+  /* .preview_left ul > li:first-child div:last-child {
     left: 65vw;
     width: 150px;
     height: 150px;
+  } */
+  .sunrice,
+  .sunrice_en {
+    left: 65vw;
+    width: 150px;
+    height: 150px;
+  }
+  .sunrice_en {
+    left: 70vw;
   }
 
   .preview_left ul > li:nth-of-type(2) {

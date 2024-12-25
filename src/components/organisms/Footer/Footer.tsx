@@ -4,9 +4,11 @@ import styles from "./Footer.module.css";
 import React, { useEffect, useState } from "react";
 import Button from "@/components/atoms/Button/Button";
 import { useTranslations } from "next-intl";
+import { useParams } from "next/navigation";
 
 function Footer() {
   const t = useTranslations("Footer");
+  const params = useParams();
   const [widthView, setWidthView] = useState(0);
 
   useEffect(() => {
@@ -24,12 +26,11 @@ function Footer() {
     <div className={`${styles.footer}`}>
       <div className={`${styles.footer_main}`}>
         <div>
-          <Image
-            src="/FundLogo.webp"
-            alt="logo"
-            fill
-            sizes="auto, auto"
-          />
+          {params.locale === "en" ? (
+            <Image src="/logo_english.svg" alt="logo" fill sizes="auto" />
+          ) : (
+            <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
+          )}
         </div>
         <div>
           {t("about_fond")}
