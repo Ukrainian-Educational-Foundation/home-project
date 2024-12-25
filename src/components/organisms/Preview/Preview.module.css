@@ -95,6 +95,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #303058;
+  gap: 8px;
 }
 
 .preview_left ul > li:nth-of-type(3) span {

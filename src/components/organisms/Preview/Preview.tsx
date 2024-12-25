@@ -11,8 +11,8 @@ import { useParams } from "next/navigation";
 function Preview() {
   const { width } = useWindowSize();
   const t = useTranslations("Preview");
-  const params = useParams()
-  
+  const params = useParams();
+
   const isMobile = width <= 768;
   const isSpace = width < 354;
   return (
@@ -74,7 +74,7 @@ function Preview() {
           </li>
           <li>
             <div>
-              {t("goal")} {isSpace ? ' ' : null}
+              {t("goal")} {isSpace ? " " : null}
               <br className={`${styles.show_on_mobile}`} />
               <span>{t("goalPrice")}</span>
             </div>

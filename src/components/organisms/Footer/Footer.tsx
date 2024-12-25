@@ -8,7 +8,7 @@ import { useParams } from "next/navigation";
 
 function Footer() {
   const t = useTranslations("Footer");
-  const params = useParams()
+  const params = useParams();
   const [widthView, setWidthView] = useState(0);
 
   useEffect(() => {
@@ -29,7 +29,7 @@ function Footer() {
           {params.locale === "en" ? (
             <Image src="/logo_english.svg" alt="logo" fill sizes="auto" />
           ) : (
-            <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto" />
+            <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
           )}
         </div>
         <div>

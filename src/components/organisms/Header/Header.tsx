@@ -1,7 +1,6 @@
 "use client";
 
 import Link from "next/link";
-// import { useTranslation } from "next-i18next";
 import { useTranslations } from "next-intl";
 
 import Button from "@/components/atoms/Button/Button";
@@ -12,10 +11,9 @@ import Image from "next/image";
 import { useParams } from "next/navigation";
 
 function Header() {
-  const params = useParams()
+  const params = useParams();
   const [isBurger, setBurger] = useState(false);
 
-  // const { t } = useTranslation("common");
   const t = useTranslations("Header");
 
   const scrollToSection = (id: string) => {
@@ -31,7 +29,7 @@ function Header() {
         {params.locale === "en" ? (
           <Image src="/logo_english.svg" alt="logo" fill sizes="auto" />
         ) : (
-          <Image src="/Fund_logo1.png.webp" alt="logo" fill sizes="auto" />
+          <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
         )}
       </div>
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
