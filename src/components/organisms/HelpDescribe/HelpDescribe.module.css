@@ -145,6 +145,10 @@
     line-height: 24px;
     padding: 20px;
   }
+
+  .help_describe > div:last-child a {
+    width: auto;
+  }
 }
 
 @media (max-width: 380px) {

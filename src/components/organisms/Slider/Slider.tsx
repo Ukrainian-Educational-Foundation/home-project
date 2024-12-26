@@ -13,7 +13,8 @@ interface DataProps {
 }
 
 enum Slide {
-  VIEW = 90,
+  VIEW = 1260,
+  VIEW_TAB = 90,
   VIEW_MOB = 92,
 }
 
@@ -25,15 +26,18 @@ const Slider = () => {
   const [view, setView] = useState(0);
   const [data, setData] = useState<DataProps[]>([]);
   const [isMobile, setIsMobile] = useState(false);
+  const [isTablet, setIsTablet] = useState(false);
   const [flag, setFlag] = useState(true);
 
   useEffect(() => {
     const newView = isMobile
       ? -Slide.VIEW_MOB * dataFoundSlider.length + Slide.VIEW_MOB
+      : isTablet
+      ? -Slide.VIEW_TAB * Math.floor((dataFoundSlider.length - 2) / 2)
       : -Slide.VIEW * Math.floor((dataFoundSlider.length - 2) / 2);
     setInitialView(newView);
     setView(newView);
-  }, [isMobile, data]);
+  }, [isMobile, isTablet, data]);
 
   useEffect(() => {
     if (params.locale === "en") {
@@ -44,7 +48,7 @@ const Slider = () => {
         setData([...dataFoundSliderEn.slice(1), ...dataFoundSliderEn]);
         setFlag(false);
       } else if (isMobile) return;
-      return
+      return;
     }
 
     if (dataFoundSlider.length > 0 && data.length === 0 && !isMobile) {
@@ -57,13 +61,19 @@ const Slider = () => {
   }, [data.length, params.locale, isMobile, flag]);
 
   const handlePrev = () => {
-    if (!isMobile) {
+    if (!isMobile && !isTablet) {
       if (view === 0) {
         setView(initialView);
       } else {
         setView(view + Slide.VIEW);
       }
-    } else {
+    } else if (isTablet) {
+      if (view === 0) {
+        setView(initialView);
+      } else {
+        setView(view + Slide.VIEW_TAB);
+      }
+    } else if (isMobile) {
       if (view === 0) {
         setView(initialView);
       } else {
@@ -73,13 +83,19 @@ const Slider = () => {
   };
 
   const handleNext = () => {
-    if (!isMobile) {
+    if (!isMobile && !isTablet) {
       if (view === -Slide.VIEW * (data.length / 2 - 1)) {
         setView(initialView);
       } else {
         setView(view - Slide.VIEW);
       }
-    } else {
+    } else if (isTablet) {
+      if (view === -Slide.VIEW_TAB * (data.length / 2 - 1)) {
+        setView(initialView);
+      } else {
+        setView(view - Slide.VIEW_TAB);
+      }
+    } else if (isMobile) {
       if (view === -Slide.VIEW_MOB * data.length + Slide.VIEW_MOB) {
         setView(initialView);
       } else {
@@ -89,7 +105,16 @@ const Slider = () => {
   };
 
   useEffect(() => {
+    const tabletMediaQuery = window.matchMedia(
+      "(min-width: 768px) and (max-width: 1024px)"
+    );
     const mobileMediaQuery = window.matchMedia("(max-width: 768px)");
+
+    const handleTabletResize = (
+      event: MediaQueryListEvent | MediaQueryList
+    ) => {
+      setIsTablet(event.matches);
+    };
 
     const handleMobileResize = (
       event: MediaQueryListEvent | MediaQueryList
@@ -97,11 +122,14 @@ const Slider = () => {
       setIsMobile(event.matches);
     };
 
+    handleTabletResize(tabletMediaQuery);
     handleMobileResize(mobileMediaQuery);
 
+    tabletMediaQuery.addEventListener("change", handleTabletResize);
     mobileMediaQuery.addEventListener("change", handleMobileResize);
 
     return () => {
+      tabletMediaQuery.removeEventListener("change", handleTabletResize);
       mobileMediaQuery.removeEventListener("change", handleMobileResize);
     };
   }, []);
@@ -114,7 +142,7 @@ const Slider = () => {
           className={styles.slider_container}
           style={{
             position: "relative",
-            left: `${view}vw`,
+            left: `${view}${!isTablet && !isMobile ? "px" : "vw"}`,
             transition: "300ms",
           }}
         >

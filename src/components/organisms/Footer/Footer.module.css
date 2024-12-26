@@ -92,4 +92,8 @@
     font-size: 12px;
     margin-top: -30px;
   }
+
+  .footer a {
+    width: auto;
+  }
 }
