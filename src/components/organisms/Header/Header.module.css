@@ -1,5 +1,6 @@
 .header {
-  position: relative;
+  position: fixed;
+  z-index: 1001;
   width: 100%;
   height: 105px;
   padding: 19px 32px;
@@ -98,17 +99,18 @@
   height: 48px;
 }
 
+.header_lang_burg,
 .header_burger {
   display: none;
 }
 
 @media (max-width: 1350px) {
-.buttons {
-  width: 44%;
-}
-.buttons button {
-  font-size: 22px;
-}
+  .buttons {
+    width: 44%;
+  }
+  .buttons button {
+    font-size: 22px;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -199,8 +201,19 @@
   }
 }
 
+@media (max-width: 768px) {
+  .header {
+    height: 105px;
+    padding: 19px 15px;
+  }
+
+  .header_lang {
+    width: 100px;
+  }
+}
+
 @media (max-width: 579px) {
-  .header > div:first-child {
+  .header_lang ul {
     display: none;
   }
 
@@ -209,13 +222,29 @@
     width: 100vw;
     padding: 20px 0;
   }
+
+  .header_lang_burg {
+    display: block;
+  }
+
+  .header_lang_burg ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .header_lang_burg ul li {
+    font-size: 22px;
+  }
+
+  .header_lang_burg ul li:nth-of-type(2) {
+    border: 1px solid #ffffff;
+    height: 32px;
+    margin: 0 8px;
+  }
 }
 
 @media (max-width: 385px) {
-  .header > div:first-child {
-    display: none;
-  }
-
   .buttons,
   .buttons.activeMenu {
     width: 100vw;

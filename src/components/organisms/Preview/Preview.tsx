@@ -13,7 +13,7 @@ function Preview() {
   const t = useTranslations("Preview");
   const params = useParams();
 
-  const isMobile = width <= 768;
+  // const isMobile = width <= 768;
   const isSpace = width < 354;
   return (
     <div className={`${styles.preview}`} id="preview">
@@ -78,7 +78,7 @@ function Preview() {
               <br className={`${styles.show_on_mobile}`} />
               <span>{t("goalPrice")}</span>
             </div>
-            <Button text={t("btn_help")} size={isMobile ? "Small" : "Large"} />
+            <Button text={t("btn_help")} size={"Large"} />
           </li>
         </ul>
       </div>
