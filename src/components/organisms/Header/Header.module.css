@@ -177,15 +177,15 @@
   }
 
   .burgerIcon.active .bar:nth-child(3) {
-    transform: rotate(45deg) translate(-10px, -10px);
+    transform: rotate(45deg) translate(-8px, -8px);
   }
 
   .bar {
-    width: 40px;
+    width: 35px;
     height: 5px;
     border-radius: 5px;
     background: #ebbc09;
-    margin: 5px 0;
+    margin: 4px 0;
     transition: 0.4s;
   }
 
@@ -202,25 +202,16 @@
 }
 
 @media (max-width: 768px) {
+  .header_lang ul {
+    display: none;
+  }
   .header {
     height: 105px;
     padding: 19px 15px;
   }
 
   .header_lang {
-    width: 100px;
-  }
-}
-
-@media (max-width: 579px) {
-  .header_lang ul {
-    display: none;
-  }
-
-  .buttons,
-  .buttons.activeMenu {
-    width: 100vw;
-    padding: 20px 0;
+    width: 150px;
   }
 
   .header_lang_burg {
@@ -241,6 +232,19 @@
     border: 1px solid #ffffff;
     height: 32px;
     margin: 0 8px;
+  }
+
+  .header > div:first-child {
+    width: 145px;
+    height: 45px;
+  }
+}
+
+@media (max-width: 579px) {
+  .buttons,
+  .buttons.activeMenu {
+    width: 100vw;
+    padding: 20px 0;
   }
 }
 

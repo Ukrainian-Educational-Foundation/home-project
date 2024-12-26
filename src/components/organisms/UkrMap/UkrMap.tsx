@@ -74,7 +74,7 @@ function UkrMap() {
                   left: isPlaying ? "50%" : "",
                   top: isPlaying ? "50%" : "",
                   transform: isPlaying ? "translate(-50%, -50%)" : "",
-                  zIndex: isPlaying ? "999" : "",
+                  zIndex: isPlaying ? "1002" : "",
                 }}
                 onMouseOver={(e) =>
                   (e.currentTarget.style.filter = "brightness(0.8)")
@@ -90,14 +90,13 @@ function UkrMap() {
               >
                 <div
                   style={{
-                    position: "relative",
-                    top: isPlaying ? "115px" : "",
                     width: isPlaying ? "90vw" : "265px",
-                    height: isPlaying ? "80vh" : "150px",
+                    height: isPlaying ? "90vh" : "150px",
                     overflow: "hidden",
                     borderRadius: isPlaying ? "32px" : "16px",
                     transition: "width 0.3s ease, height 0.3s ease",
                     background: "gray",
+                    maxWidth: "1260px",
                   }}
                 >
                   <video
