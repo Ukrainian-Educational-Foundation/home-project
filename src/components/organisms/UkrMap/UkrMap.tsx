@@ -90,8 +90,10 @@ function UkrMap() {
               >
                 <div
                   style={{
+                    position: "relative",
+                    top: isPlaying ? "115px" : "",
                     width: isPlaying ? "90vw" : "265px",
-                    height: isPlaying ? "90vh" : "150px",
+                    height: isPlaying ? "80vh" : "150px",
                     overflow: "hidden",
                     borderRadius: isPlaying ? "32px" : "16px",
                     transition: "width 0.3s ease, height 0.3s ease",
