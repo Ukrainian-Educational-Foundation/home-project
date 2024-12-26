@@ -65,6 +65,25 @@ function Header() {
         >
           {t("contacts")}
         </button>
+        <div className={`${styles.header_lang_burg}`}>
+          <ul>
+            <li>
+              <button>
+                <Link href="/uk" locale={false}>
+                  UA
+                </Link>
+              </button>
+            </li>
+            <li className={styles.line}></li>
+            <li>
+              <button>
+                <Link href="/en" locale={false}>
+                  EN
+                </Link>
+              </button>
+            </li>
+          </ul>
+        </div>
       </div>
       <div className={`${styles.header_lang}`}>
         <Button text={t("btn_help")} size="Small" />

@@ -66,21 +66,21 @@
   }
 }
 
-@media (max-width: 768px){
+@media (max-width: 768px) {
   .link {
     width: 150px;
+  }
+
+  .small {
+    width: 100px;
+    height: 45px;
+    font-size: 14px;
   }
 }
 
 @media (max-width: 369px) {
   .link {
     width: 110px;
-  }
-
-  .small {
-    width: 110px;
-    height: 50px;
-    font-size: 14px;
   }
 
   .button {
