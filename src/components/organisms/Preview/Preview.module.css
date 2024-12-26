@@ -49,6 +49,9 @@
   height: 328px;
 }
 
+.logo_en {
+  margin-left: 40px;
+}
 /*.preview_left ul > li:first-child div:last-child {
   position: absolute;
   z-index: 1;
@@ -191,7 +194,7 @@
   }
 
   .logo_en {
-    margin-left: 10px;
+    margin-left: 25px;
   }
 
   .preview_left ul > li:first-child {
@@ -253,6 +256,10 @@
 
   .preview_left {
     padding: 40px 20px;
+  }
+
+  .logo_en {
+    margin-left: 14px;
   }
 
   .preview_left ul > li:nth-of-type(3) span {

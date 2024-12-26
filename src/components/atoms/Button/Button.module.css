@@ -1,7 +1,3 @@
-.link {
-  width: 304px;
-}
-
 .button {
   position: relative;
   gap: 8px;
@@ -50,9 +46,6 @@
 }
 
 @media (max-width: 1024px) {
-  .link {
-    width: 204px;
-  }
   .small {
     width: 150px;
     height: 50px;
