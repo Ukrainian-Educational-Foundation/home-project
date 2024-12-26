@@ -233,6 +233,10 @@
   .preview_right > div {
     height: 100%;
   }
+
+  .preview_left ul > li:nth-of-type(3) {
+    height: 132px;
+  }
 }
 
 @media (max-width: 559px) {
