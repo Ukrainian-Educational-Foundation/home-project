@@ -78,7 +78,7 @@ function Preview() {
               <br className={`${styles.show_on_mobile}`} />
               <span>{t("goalPrice")}</span>
             </div>
-            <Button text={t("btn_help")} size={"Large"} />
+            <Button text={t("btn_help")} size="Large" />
           </li>
         </ul>
       </div>
