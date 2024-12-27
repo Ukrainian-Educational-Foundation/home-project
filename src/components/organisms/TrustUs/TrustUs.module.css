@@ -237,6 +237,12 @@
   }
 }
 
+@media (max-width: 768px) {
+  .trust a {
+    width: 85%;
+  }
+}
+
 @media (max-width: 550px) {
   .trust_btn_right,
   .trust_btn_left {
@@ -246,5 +252,9 @@
 
   .trust_logo_wrap {
     width: 75%;
+  }
+
+  .trust a {
+    width: 100%;
   }
 }

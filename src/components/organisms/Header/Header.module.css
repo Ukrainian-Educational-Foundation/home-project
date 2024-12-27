@@ -249,6 +249,10 @@
 }
 
 @media (max-width: 385px) {
+ .header_lang {
+    width: 125px;
+  }
+
   .buttons,
   .buttons.activeMenu {
     width: 100vw;

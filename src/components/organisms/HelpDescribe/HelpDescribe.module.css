@@ -135,6 +135,11 @@
 }
 
 @media (max-width: 768px) {
+  .help_describe > div:first-child ul {
+    margin-top: 35px;
+    margin-bottom: 12px;
+  }
+
   .help_describe > div:first-child ul li div:first-child {
     width: 60px;
     height: 60px;
@@ -147,9 +152,31 @@
   }
 }
 
+@media (max-width: 449px) {
+  .help_describe {
+    gap: 40px;
+  }
+
+  .help_describe > div:first-child {
+    line-height: 40px;
+  }
+  
+  .help_describe > div:first-child ul {
+    flex-direction: column;
+  }
+
+  .help_describe > div:first-child ul li {
+    gap: 0;
+  }
+}
+
 @media (max-width: 380px) {
   .help_describe > div:first-child ul {
     gap: 0px;
+  }
+
+  .help_describe > div:first-child ul li {
+    margin-bottom: 25px;
   }
 
   .help_describe > div:first-child {
