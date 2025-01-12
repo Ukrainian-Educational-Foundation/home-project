@@ -18,7 +18,7 @@ interface DataProps {
 enum Slide {
   VIEW = 930,
   VIEW_TAB = 66,
-  VIEW_MOB = 60,
+  VIEW_MOB = 72,
 }
 
 function AboutFond() {
@@ -55,9 +55,10 @@ function AboutFond() {
       isTablet
         ? view < -isData.length * 22
         : isMobile
-        ? view < -isData.length * 30
+        ? view < -isData.length * 36
         : view < -isData.length * 186
     ) {
+      console.log(1);
       setView(initialView);
     }
   }, [initialView, view, isData, isTablet, isMobile]);
