@@ -241,6 +241,10 @@
   .buttons button:hover::after {
     width: 0;
   }
+  
+  .buttons button:hover::after {
+    width: 0;
+  }
 
   .header_lang_burg ul li:nth-of-type(2) {
     border: 1px solid #ffffff;

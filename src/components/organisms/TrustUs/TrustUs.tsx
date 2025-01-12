@@ -160,7 +160,7 @@ function TrustUs() {
   }, []);
 
   const handlePlayClick = () => {
-    setViewVideo(prev => !prev);
+    setViewVideo((prev) => !prev);
   };
 
   // const handlePauseClick = () => {
@@ -267,6 +267,7 @@ function TrustUs() {
                           <video
                             width="100%"
                             height="100%"
+                            style={{ borderRadius: "0 16px 16px 0" }}
                             controls
                             preload="none"
                             className={styles.slide_video}
