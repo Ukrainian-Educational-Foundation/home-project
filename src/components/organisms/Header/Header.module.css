@@ -216,16 +216,30 @@
 
   .header_lang_burg {
     display: block;
+    width: 100%;
+  }
+
+  .header_lang_burg::before {
+    content: "";
+    display: block;
+    height: 2px;
+    background-color: #ffffff;
+    margin-top: 12px;
   }
 
   .header_lang_burg ul {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
 
   .header_lang_burg ul li {
     font-size: 22px;
+  }
+
+  .buttons button:hover::after {
+    width: 0;
   }
 
   .header_lang_burg ul li:nth-of-type(2) {
@@ -245,6 +259,10 @@
   .buttons.activeMenu {
     width: 100vw;
     padding: 20px 0;
+  }
+  .header_lang_burg {
+    display: block;
+    width: 40%;
   }
 }
 

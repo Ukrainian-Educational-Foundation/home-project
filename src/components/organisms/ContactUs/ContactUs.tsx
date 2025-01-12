@@ -102,7 +102,8 @@ function ContactUs() {
             >
               <button>
                 <Image
-                  src="/FB.png.webp"
+                  // src="/FB.png.webp"
+                  src="/FB_icon.svg"
                   alt="logo"
                   fill
                   sizes="auto, auto"
@@ -116,7 +117,8 @@ function ContactUs() {
             >
               <button>
                 <Image
-                  src="/Linkedin.png.webp"
+                  // src="/Linkedin.png.webp"
+                  src="/Linkedin_icon.svg"
                   alt="logo"
                   fill
                   sizes="auto, auto"
@@ -130,7 +132,8 @@ function ContactUs() {
             >
               <button>
                 <Image
-                  src="/Telegram.png.webp"
+                  // src="/Telegram.png.webp"
+                  src="/Telegram_icon.svg"
                   alt="logo"
                   fill
                   sizes="auto, auto"
@@ -144,7 +147,8 @@ function ContactUs() {
             >
               <button>
                 <Image
-                  src="/Instagram.png.webp"
+                  // src="/Instagram.png.webp"
+                  src="/Instagram_icon.svg"
                   alt="logo"
                   fill
                   sizes="(max-width: 768px) 32px, (max-width: 1024px) 48px, 64px"

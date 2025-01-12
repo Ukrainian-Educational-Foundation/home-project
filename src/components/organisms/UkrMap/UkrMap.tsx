@@ -2,46 +2,46 @@
 
 import Image from "next/image";
 import styles from "./UkrMap.module.css";
-import React, { useRef, useState } from "react";
+import React from "react";
 import { useTranslations } from "next-intl";
 
-interface ActiveVideo {
-  videoOne: boolean;
-  videoTwo: boolean;
-  videoThree: boolean;
-  videoFour: boolean;
-}
+// interface ActiveVideo {
+//   videoOne: boolean;
+//   videoTwo: boolean;
+//   videoThree: boolean;
+//   videoFour: boolean;
+// }
 
 function UkrMap() {
   const t = useTranslations("UkrMap");
-  const videoRefs = {
-    videoOne: useRef<HTMLVideoElement>(null),
-    videoTwo: useRef<HTMLVideoElement>(null),
-    videoThree: useRef<HTMLVideoElement>(null),
-    videoFour: useRef<HTMLVideoElement>(null),
-  };
+  // const videoRefs = {
+  //   videoOne: useRef<HTMLVideoElement>(null),
+  //   videoTwo: useRef<HTMLVideoElement>(null),
+  //   videoThree: useRef<HTMLVideoElement>(null),
+  //   videoFour: useRef<HTMLVideoElement>(null),
+  // };
 
-  const [playingVideo, setPlayingVideo] = useState<
-    keyof typeof videoRefs | null
-  >(null);
+  // const [playingVideo, setPlayingVideo] = useState<
+  //   keyof typeof videoRefs | null
+  // >(null);
 
-  const [activeVideo, setActiveVideo] = useState<ActiveVideo>({
-    videoOne: false,
-    videoTwo: false,
-    videoThree: false,
-    videoFour: false,
-  });
+  // const [activeVideo, setActiveVideo] = useState<ActiveVideo>({
+  //   videoOne: false,
+  //   videoTwo: false,
+  //   videoThree: false,
+  //   videoFour: false,
+  // });
 
-  const handlePlay = (videoName: keyof typeof videoRefs) => {
-    videoRefs[videoName].current?.play();
-    setPlayingVideo(videoName);
-    setActiveVideo((prev) => ({ ...prev, [videoName]: true }));
-  };
+  // const handlePlay = (videoName: keyof typeof videoRefs) => {
+  //   videoRefs[videoName].current?.play();
+  //   setPlayingVideo(videoName);
+  //   setActiveVideo((prev) => ({ ...prev, [videoName]: true }));
+  // };
 
-  const handlePause = (videoName: keyof typeof videoRefs) => {
-    videoRefs[videoName].current?.pause();
-    setActiveVideo((prev) => ({ ...prev, [videoName]: false }));
-  };
+  // const handlePause = (videoName: keyof typeof videoRefs) => {
+  //   videoRefs[videoName].current?.pause();
+  //   setActiveVideo((prev) => ({ ...prev, [videoName]: false }));
+  // };
 
   return (
     <div className={`${styles.ukr_map}`} id="ukr_map">
@@ -56,10 +56,50 @@ function UkrMap() {
           <li>{t("description_p3")}</li>
         </ul>
       </div>
-      {playingVideo && <div className="overlay"></div>}
-      <div className={`${styles.ukr_map_last} ${playingVideo ? "hidden" : ""}`}>
-        <div>{t("videoStories")}</div>
+      {/* {playingVideo && <div className="overlay"></div>} */}
+      <div className={styles.ukr_map_last
+  //  ${playingVideo ? "hidden" : ""}
+       }>
+        {/* <div>{t("videoStories")}</div> */}
         <ul>
+          <li>
+            <Image
+              src="/images/photo_2025-01-08_15-06-42.webp"
+              alt="photo"
+              width="265"
+              height="150"
+              className={`${styles.img} ${styles.img_one}`}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/photo_2025-01-08_15-06-45.jpg"
+              alt="photo"
+              width="265"
+              height="150"
+              className={styles.img}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/photo_2025-01-08_15-06-47.jpg"
+              alt="photo"
+              width="265"
+              height="150"
+              className={styles.img}
+            />
+          </li>
+          <li>
+            <Image
+              src="/images/photo_2025-01-08_15-06-50.jpg"
+              alt="photo"
+              width="265"
+              height="150"
+              className={styles.img}
+            />
+          </li>
+        </ul>
+        {/* <ul>
           {Object.keys(videoRefs).map((key) => {
             const videoName = key as keyof typeof videoRefs;
             const isPlaying = playingVideo === videoName;
@@ -132,7 +172,7 @@ function UkrMap() {
               </li>
             );
           })}
-        </ul>
+        </ul> */}
       </div>
     </div>
   );

@@ -377,6 +377,7 @@
     height: auto;
     font-size: 24px;
     line-height: 40px;
+    margin-top: 24px;
   }
 
   .about_fond_last > ul {
@@ -385,13 +386,14 @@
     gap: 40px;
     font-size: 24px;
     line-height: 40px;
+    margin-top: 20px;
   }
 }
 
 @media (max-width: 768px) {
   .about_fond {
     gap: 20px;
-    padding: 0 20px 20px 20px;
+    padding: 30px 20px 20px 20px;
   }
 
   .about_fond > ul {
@@ -460,6 +462,10 @@
 
   .about_fond_card {
     height: 70px;
+  }
+  .about_fond {
+    gap: 20px;
+    padding: 0px 20px 20px 20px;
   }
 }
 

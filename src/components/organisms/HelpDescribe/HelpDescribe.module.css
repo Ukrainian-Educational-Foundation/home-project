@@ -160,13 +160,16 @@
   .help_describe > div:first-child {
     line-height: 40px;
   }
-  
+
   .help_describe > div:first-child ul {
     flex-direction: column;
   }
 
   .help_describe > div:first-child ul li {
     gap: 0;
+  }
+  .help_describe > div:last-child {
+    text-align: center;
   }
 }
 
@@ -181,5 +184,8 @@
 
   .help_describe > div:first-child {
     line-height: 40px;
+  }
+  .help_describe > div:last-child {
+    text-align: justify;
   }
 }
