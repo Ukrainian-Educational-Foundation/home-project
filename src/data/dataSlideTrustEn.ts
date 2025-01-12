@@ -6,7 +6,7 @@ export const dataSlideTrustEn = [
     width: "150px",
     height: "40px",
     photo: "/images/Anastasia_Kladova.png",
-    video: "/video_3.mp4",
+    video: "/IMG_4066.mp4",
     name: "Anastasia Kladova",
     position: "head of the fund",
     facebookLink: "https://www.facebook.com/hashtag/genesis_for_ukraine",
