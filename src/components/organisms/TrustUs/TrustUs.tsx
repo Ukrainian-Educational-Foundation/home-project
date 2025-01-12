@@ -14,6 +14,11 @@ interface DataProps {
   comments: string;
   width: string;
   height: string;
+  video?: string;
+  name?: string;
+  position?: string;
+  facebookLink?: string;
+  photo?: string;
 }
 
 enum Slide {
@@ -32,6 +37,7 @@ function TrustUs() {
 
   const [center, setCenter] = useState<number>(initialCenter);
   const [view, setView] = useState(0);
+  const [viewVideo, setViewVideo] = useState(false);
   const [data, setData] = useState<DataProps[]>([]);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -153,6 +159,14 @@ function TrustUs() {
     };
   }, []);
 
+  const handlePlayClick = () => {
+    setViewVideo(prev => !prev);
+  };
+
+  // const handlePauseClick = () => {
+  //   setViewVideo((prev) => !prev);
+  // };
+
   return (
     <div className={styles?.trust}>
       <div>{t("title")}</div>
@@ -211,7 +225,73 @@ function TrustUs() {
                       <Image src={item.logo} alt="logo" fill sizes="auto" />
                     </div>
                   </div>
-                  <div>{item.comments}</div>
+                  <div className={styles.slide_container}>
+                    <div className={styles.slide_description_container}>
+                      <p>{t("feedback")}</p>
+                      <h3>{item.name}</h3>
+                      <p>{item.position}</p>
+                      <a href={item.facebookLink} target="blank">
+                        <Image
+                          src="/FB_icon.svg"
+                          alt="facebookLink"
+                          width="32"
+                          height="32"
+                        />
+                      </a>
+                    </div>
+
+                    <div className={styles.slide_video_container}>
+                      {!viewVideo && item?.photo && (
+                        <div className={styles.slide_photo_container}>
+                          <Image
+                            src={item?.photo}
+                            alt="photo"
+                            width="100"
+                            height="100"
+                            className={styles.slide_video_photo}
+                          />
+
+                          <Image
+                            src="/play.png.webp"
+                            alt="photo"
+                            width="64"
+                            height="64"
+                            className={styles.slide_video_play}
+                            onClick={() => handlePlayClick()}
+                          />
+                        </div>
+                      )}
+
+                      {viewVideo && (
+                        <div className={styles.video}>
+                          <video
+                            width="100%"
+                            height="100%"
+                            controls
+                            preload="none"
+                            className={styles.slide_video}
+                          >
+                            <source src={item.video} type="video/mp4" />
+                            <track
+                              src={item.video}
+                              kind="subtitles"
+                              srcLang="en"
+                              label="English"
+                            />
+                            Your browser does not support the video tag.
+                          </video>
+                          {/* <Image
+                            src="/pause.png.webp"
+                            alt="photo"
+                            width="64"
+                            height="64"
+                            className={styles.slide_video_pause}
+                            onClick={() => handlePauseClick()}
+                          /> */}
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </li>
               ))
             ) : (

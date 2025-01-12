@@ -1,5 +1,17 @@
 export const dataSlideTrustEn = [
   {
+    logo: "/img_20240906_200246_832-300x99-3.png.webp",
+    comments:
+      "Here will be a testimonial about the foundation from a sponsor company or partner.",
+    width: "150px",
+    height: "40px",
+    photo: "/images/Anastasia_Kladova.png",
+    video: "/video_3.mp4",
+    name: "Anastasia Kladova",
+    position: "head of the fund",
+    facebookLink: "https://www.facebook.com/hashtag/genesis_for_ukraine",
+  },
+  {
     logo: "/rehau-logo-1.png.webp",
     comments: "Here will be a testimonial about the foundation from a sponsor company or partner.",
     width: "140px",
@@ -22,12 +34,6 @@ export const dataSlideTrustEn = [
     comments: "Here will be a testimonial about the foundation from a sponsor company or partner.",
     width: "150px",
     height: "45px",
-  },
-  {
-    logo: "/img_20240906_200246_832-300x99-3.png.webp",
-    comments: "Here will be a testimonial about the foundation from a sponsor company or partner.",
-    width: "150px",
-    height: "40px",
   },
   {
     logo: "/bce.webp",

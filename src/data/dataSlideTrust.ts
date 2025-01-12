@@ -1,5 +1,16 @@
 export const dataSlideTrust = [
   {
+    logo: "/img_20240906_200246_832-300x99-3.png.webp",
+    comments: "Тут буде відгук про фонд від компанії-спонсора або партнера",
+    width: "150px",
+    height: "40px",
+    photo: "/images/Anastasia_Kladova.png",
+    video: "/public/IMG_4066.mp4",
+    name: "Анастасії Кладової",
+    position: "керівниці фонду",
+    facebookLink: "https://www.facebook.com/hashtag/genesis_for_ukraine",
+  },
+  {
     logo: "/rehau-logo-1.png.webp",
     comments: "Тут буде відгук про фонд від компанії-спонсора або партнера",
     width: "140px",
@@ -22,12 +33,6 @@ export const dataSlideTrust = [
     comments: "Тут буде відгук про фонд від компанії-спонсора або партнера",
     width: "150px",
     height: "45px",
-  },
-  {
-    logo: "/img_20240906_200246_832-300x99-3.png.webp",
-    comments: "Тут буде відгук про фонд від компанії-спонсора або партнера",
-    width: "150px",
-    height: "40px",
   },
   {
     logo: "/bce.webp",

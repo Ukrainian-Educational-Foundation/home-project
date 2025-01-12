@@ -74,7 +74,8 @@
   },
   "TrustUs": {
     "title": "We are trusted by",
-    "btn_help": "Want to help"
+    "btn_help": "Want to help",
+    "feedback": "video feedback"
   },
   "ContactUs": {
     "contactUS": "CONTACT US",

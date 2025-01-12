@@ -6,10 +6,13 @@ import styles from "./Slider.module.css";
 import React, { useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import Image from "next/image";
 
 interface DataProps {
   text: string;
   id: number;
+  img?: string;
+  video?: string;
 }
 
 enum Slide {
@@ -149,6 +152,34 @@ const Slider = () => {
           {data.length > 0 ? (
             data.map((el, i) => (
               <div key={i} className={styles.slide}>
+                {el?.img && (
+                  <Image
+                    src={el.img}
+                    alt=""
+                    width="100"
+                    height="100"
+                    className={styles.slide_img}
+                  />
+                )}
+                {el?.video && (
+                  <video
+                    width="100px"
+                    height="100px"
+                    autoPlay
+                    loop
+                    muted
+                    className={styles.slide_video}
+                  >
+                    <source src={el.video} type="video/mp4" />
+                    <track
+                      src={el.video}
+                      kind="subtitles"
+                      srcLang="en"
+                      label="English"
+                    />
+                    Your browser does not support the video tag.
+                  </video>
+                )}
                 <div>{el.text}</div>
               </div>
             ))
