@@ -304,6 +304,11 @@
   .trust a {
     width: 85%;
   }
+
+  .trust_wrap {
+    padding: 0 0 0;
+    height: 55vh;
+  }
 }
 
 @media (max-width: 550px) {

@@ -368,8 +368,8 @@
   }
 
   .about_fond_team > div:nth-of-type(2) > button {
-    width: 5vw;
-    height: 5vh;
+    width: 6vw;
+    height: 8vh;
   }
 
   .about_fond_last {
@@ -419,7 +419,7 @@
   }
 
   .about_fond_team > div:nth-of-type(2) {
-    width: 100vw;
+    width: 80vw;
   }
 
   .about_fond > ul > li > div:first-child {
@@ -434,7 +434,7 @@
   }
 
   .about_fond_wrap {
-    width: 90vw;
+    width: 60vw;
   }
 
   .about_fond_card > div:last-child,

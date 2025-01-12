@@ -18,7 +18,7 @@ interface DataProps {
 enum Slide {
   VIEW = 930,
   VIEW_TAB = 66,
-  VIEW_MOB = 90,
+  VIEW_MOB = 60,
 }
 
 function AboutFond() {
@@ -44,7 +44,7 @@ function AboutFond() {
     const newView = isTablet
       ? -Slide.VIEW_TAB * 2 - 22
       : isMobile
-      ? -Slide.VIEW_MOB * 2 - 30
+      ? -Slide.VIEW_MOB * 4
       : -Slide.VIEW;
     setInitialView(newView);
     setView(newView);
@@ -88,13 +88,12 @@ function AboutFond() {
     if (data.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
       setData([...data.slice(data.length / 2), ...data]);
     }
-    if (
-      data.length > 0 &&
-      isData.length > 0 &&
-      (isTablet || isMobile) &&
-      flag
-    ) {
+    if (data.length > 0 && isData.length > 0 && isTablet && flag) {
       setData([...data.slice(3), ...data]);
+      setFlag(false);
+    }
+    if (data.length > 0 && isData.length > 0 && isMobile && flag) {
+      setData([...data.slice(2), ...data]);
       setFlag(false);
     }
   }, [flag, isData.length, isMobile, isTablet, params.locale]);
@@ -114,7 +113,7 @@ function AboutFond() {
     if (
       (!isTablet && !isMobile && view === -Slide.VIEW * 2) ||
       (isTablet && view < -Slide.VIEW_TAB * 5) ||
-      (isMobile && view < -Slide.VIEW_MOB * 5)
+      (isMobile && view < -Slide.VIEW_MOB * 7)
     ) {
       setView(initialView);
     } else {
@@ -197,7 +196,8 @@ function AboutFond() {
           <div>{animate && <AnimatedNumbers value={86} />}</div>
           <div>
             {t("trips.title")}
-            <br />{t("trips.description")}
+            <br />
+            {t("trips.description")}
           </div>
         </li>
         <li>
