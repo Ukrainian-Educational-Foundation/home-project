@@ -18,7 +18,7 @@ interface DataProps {
 enum Slide {
   VIEW = 930,
   VIEW_TAB = 66,
-  VIEW_MOB = 72,
+  VIEW_MOB = 84,
 }
 
 function AboutFond() {
