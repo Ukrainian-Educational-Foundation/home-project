@@ -55,7 +55,7 @@ function AboutFond() {
       isTablet
         ? view < -isData.length * 22
         : isMobile
-        ? view < -isData.length * 36
+        ? view < -isData.length * 42
         : view < -isData.length * 186
     ) {
       console.log(1);
@@ -225,7 +225,7 @@ function AboutFond() {
                 transition: "300ms",
               }}
             >
-              {isData.length > 0 ? (
+              {isData.length > 100 ? (
                 isData.map((human, index) => (
                   <li key={index}>
                     <div className={`${styles.about_img_wrap}`}>
@@ -249,7 +249,7 @@ function AboutFond() {
                   </li>
                 ))
               ) : (
-                <div>loading...</div>
+                <div className={`${styles.about_fond_preload}`}>loading...</div>
               )}
             </ul>
           </div>
