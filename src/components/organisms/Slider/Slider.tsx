@@ -168,6 +168,7 @@ const Slider = () => {
                     autoPlay
                     loop
                     muted
+                    playsInline
                     className={styles.slide_video}
                   >
                     <source src={el.video} type="video/mp4" />
