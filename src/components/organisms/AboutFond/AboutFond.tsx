@@ -71,13 +71,12 @@ function AboutFond() {
       if (dataEn.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
         setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
       }
-      if (
-        dataEn.length > 0 &&
-        isData.length > 0 &&
-        (isTablet || isMobile) &&
-        flag
-      ) {
+      if (dataEn.length > 0 && isData.length > 0 && isTablet && flag) {
         setData([...dataEn.slice(3), ...dataEn]);
+        setFlag(false);
+      }
+      if (data.length > 0 && isData.length > 0 && isMobile && flag) {
+        setData([...data.slice(2), ...data]);
         setFlag(false);
       }
       return;
@@ -236,7 +235,8 @@ function AboutFond() {
                         sizes="auto"
                         style={{
                           objectPosition:
-                            human.name === "Дмитро Лук’яниця"
+                            human.name === "Дмитро Лук’яниця" ||
+                            human.name === "Dmytro Luk'ianytsia"
                               ? "0px -15px"
                               : "50% 50%",
                         }}
