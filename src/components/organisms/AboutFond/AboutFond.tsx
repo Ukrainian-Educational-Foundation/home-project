@@ -225,7 +225,7 @@ function AboutFond() {
                 transition: "300ms",
               }}
             >
-              {isData.length > 100 ? (
+              {isData.length > 0 ? (
                 isData.map((human, index) => (
                   <li key={index}>
                     <div className={`${styles.about_img_wrap}`}>
