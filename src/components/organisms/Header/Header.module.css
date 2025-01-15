@@ -21,6 +21,8 @@
   transition: 200ms;
 }
 
+.lang_active_burger,
+.lang_inactive_burger,
 .buttons button {
   position: relative;
   color: #ffffff;
@@ -49,6 +51,10 @@
   width: 100%;
 }
 
+.lang_inactive_burger {
+  color: #a1a1a1 !important;
+}
+
 .header > div:first-child {
   position: relative;
   width: 180px;
@@ -73,7 +79,8 @@
   gap: 12px;
 }
 
-.header_lang ul li button {
+.lang_inactive,
+.lang_active {
   width: 40px;
   height: 60px;
   font-family: Onest;
@@ -90,8 +97,8 @@
   transition: 0.2s;
 }
 
-.header_lang ul li button:hover {
-  color: #c8c8c8;
+.lang_inactive {
+  color: #a1a1a1;
 }
 
 .header_lang ul li:nth-of-type(2) {
@@ -126,7 +133,8 @@
     gap: 5px;
   }
 
-  .header_lang ul li button {
+  .lang_inactive,
+  .lang_active {
     font-size: 20px;
   }
 
@@ -241,7 +249,7 @@
   .buttons button:hover::after {
     width: 0;
   }
-  
+
   .buttons button:hover::after {
     width: 0;
   }
@@ -271,7 +279,7 @@
 }
 
 @media (max-width: 385px) {
- .header_lang {
+  .header_lang {
     width: 125px;
   }
 

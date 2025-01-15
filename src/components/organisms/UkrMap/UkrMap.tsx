@@ -43,9 +43,18 @@ function UkrMap() {
   //   setActiveVideo((prev) => ({ ...prev, [videoName]: false }));
   // };
 
+  const title = t("title");
+
   return (
     <div className={`${styles.ukr_map}`} id="ukr_map">
-      <div>{t("title")}</div>
+      <div>
+        {title.split("\n").map((line, index) => (
+          <React.Fragment key={index}>
+            {line}
+            <br />
+          </React.Fragment>
+        ))}
+      </div>
       <div className={`${styles.ukr_map_wrap}`}>
         <div>
           <Image src="/map.png.webp" alt="logo" fill />
@@ -57,9 +66,12 @@ function UkrMap() {
         </ul>
       </div>
       {/* {playingVideo && <div className="overlay"></div>} */}
-      <div className={styles.ukr_map_last
-  //  ${playingVideo ? "hidden" : ""}
-       }>
+      <div
+        className={
+          styles.ukr_map_last
+          //  ${playingVideo ? "hidden" : ""}
+        }
+      >
         {/* <div>{t("videoStories")}</div> */}
         <ul>
           <li>

@@ -58,7 +58,6 @@ function AboutFond() {
         ? view < -isData.length * 42
         : view < -isData.length * 186
     ) {
-      console.log(1);
       setView(initialView);
     }
   }, [initialView, view, isData, isTablet, isMobile]);
@@ -193,7 +192,7 @@ function AboutFond() {
           <div>{t("projects")}</div>
         </li>
         <li>
-          <div>{animate && <AnimatedNumbers value={86} />}</div>
+          <div>{animate && <AnimatedNumbers value={87} />}</div>
           <div>
             {t("trips.title")}
             <br />
@@ -201,7 +200,7 @@ function AboutFond() {
           </div>
         </li>
         <li>
-          <div>{animate && <AnimatedNumbers value={20000} />}</div>
+          <div>{animate && <AnimatedNumbers value={20000} />}+</div>
           <div>{t("children")}</div>
         </li>
       </ul>
@@ -286,13 +285,13 @@ function AboutFond() {
             onMouseLeave={() => setHover((prev) => ({ ...prev, two: false }))}
           >
             <a
-              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              href="https://news.telegraf.com.ua/ukr/ukraina/2024-05-21/5852998-lagidna-evakuatsiya-yak-tse-pratsyue-i-de-pereselentsyam-z-donbasu-dopomagayut-buduvati-nove-zhittya"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+              <Image src="/news2.webp" alt="logo" fill sizes="auto, auto" />
               {isHover.two ? (
-                <div className={styles.about_fond_text}>{t("review")}</div>
+                <div className={styles.about_fond_text}>{t("review2")}</div>
               ) : null}
             </a>
           </li>
@@ -301,13 +300,13 @@ function AboutFond() {
             onMouseLeave={() => setHover((prev) => ({ ...prev, three: false }))}
           >
             <a
-              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              href="https://www.facebook.com/story.php?story_fbid=935545908614148&id=100064762414539&rdid=990JDq6EVpkWiBu2"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+              <Image src="/news3.webp" alt="logo" fill sizes="auto, auto" />
               {isHover.three ? (
-                <div className={styles.about_fond_text}>{t("review")}</div>
+                <div className={styles.about_fond_text}>{t("review3")}</div>
               ) : null}
             </a>
           </li>

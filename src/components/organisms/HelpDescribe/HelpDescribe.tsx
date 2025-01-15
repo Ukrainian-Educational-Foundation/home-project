@@ -6,6 +6,8 @@ import { useTranslations } from "next-intl";
 
 function HelpDescribe() {
   const t = useTranslations("HelpDescribe");
+
+  const middleBlockHeader = t("middleBlockHeader");
   return (
     <div className={`${styles.help_describe}`}>
       <div>
@@ -45,6 +47,17 @@ function HelpDescribe() {
             <div>{t("psychologicalCare")}</div>
           </li>
         </ul>
+      </div>
+      <div className={`${styles.help_middle_block}`}>
+        <div>
+          {middleBlockHeader.split("\n").map((line, index) => (
+            <React.Fragment key={index}>
+              {line}
+              <br />
+            </React.Fragment>
+          ))}
+        </div>
+        <div>{t("middleBlockBody")}</div>
       </div>
       <div>
         {t("missing.title")}

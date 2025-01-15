@@ -43,6 +43,10 @@ function TrustUs() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    console.log(data);
+  }, [data]);
+
+  useEffect(() => {
     if (isMobile) {
       setView(initialViewMob);
     } else if (isTablet) {
@@ -61,7 +65,7 @@ function TrustUs() {
         !isTablet
       ) {
         setData([...dataSlideTrustEn.slice(3), ...dataSlideTrustEn]);
-      } else {
+      } else if (isMobile || isTablet) {
         setData([...dataSlideTrustEn.slice(1), ...dataSlideTrustEn]);
       }
       return;
@@ -74,7 +78,7 @@ function TrustUs() {
       !isTablet
     ) {
       setData([...dataSlideTrust.slice(3), ...dataSlideTrust]);
-    } else {
+    } else if (isMobile || isTablet) {
       setData([...dataSlideTrust.slice(1), ...dataSlideTrust]);
     }
   }, [data.length, params.locale, isMobile, isTablet]);
