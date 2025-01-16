@@ -30,10 +30,10 @@ enum Slide {
 function TrustUs() {
   const t = useTranslations("TrustUs");
   const params = useParams();
-  const initialView = -Slide.VIEW * Math.floor(dataSlideTrust.length - 3);
+  const initialView = -Slide.VIEW * (dataSlideTrust.length - 2);
   const initialViewTablet = -Slide.VIEW_TAB * (dataSlideTrust.length - 1);
   const initialViewMob = -Slide.VIEW_MOB * (dataSlideTrust.length - 1);
-  const initialCenter = Math.floor(dataSlideTrust.length - 2);
+  const initialCenter = Math.floor(dataSlideTrust.length - 1);
 
   const [center, setCenter] = useState<number>(initialCenter);
   const [view, setView] = useState(0);
@@ -60,7 +60,12 @@ function TrustUs() {
         !isMobile &&
         !isTablet
       ) {
-        setData([...dataSlideTrustEn.slice(3), ...dataSlideTrustEn]);
+        setData([
+          ...dataSlideTrustEn.slice(1, 2),
+          ...dataSlideTrust.slice(3),
+          ...dataSlideTrust,
+          ...dataSlideTrustEn.slice(1, 2),
+        ]);
       } else if (isMobile || isTablet) {
         setData([...dataSlideTrustEn.slice(1), ...dataSlideTrustEn]);
       }
@@ -73,7 +78,12 @@ function TrustUs() {
       !isMobile &&
       !isTablet
     ) {
-      setData([...dataSlideTrust.slice(3), ...dataSlideTrust]);
+      setData([
+        ...dataSlideTrustEn.slice(1, 2),
+        ...dataSlideTrust.slice(3),
+        ...dataSlideTrust,
+        ...dataSlideTrustEn.slice(1, 2),
+      ]);
     } else if (isMobile || isTablet) {
       setData([...dataSlideTrust.slice(1), ...dataSlideTrust]);
     }
