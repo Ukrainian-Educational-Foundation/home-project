@@ -26,13 +26,24 @@ function OurSupport() {
       <div className={styles.our_suppurt_wrap}>
         <div>{t("supporting")}</div>
         <ul>
-          {duplicatedLogos.map((src, index) => (
-            <li key={index}>
-              <div>
-                <Image src={src} alt="logo" fill sizes="auto, auto" />
-              </div>
-            </li>
-          ))}
+          {duplicatedLogos.map((src, index) => {
+            const isSpecialImage = src === "/Devik.png.webp";
+
+            return (
+              <li key={index}>
+                <div>
+                  <Image
+                    src={src}
+                    alt="logo"
+                    fill={!isSpecialImage}
+                    width={isSpecialImage ? 170 : undefined} 
+                    height={isSpecialImage ? 50 : undefined}
+                    sizes={isSpecialImage ? "100px, 100px" : "auto, auto"}
+                  />
+                </div>
+              </li>
+            );
+          })}
         </ul>
       </div>
     </div>

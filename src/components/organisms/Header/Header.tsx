@@ -6,13 +6,14 @@ import { useTranslations } from "next-intl";
 import Button from "@/components/atoms/Button/Button";
 import styles from "./Header.module.css";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { useParams } from "next/navigation";
 
 function Header() {
   const params = useParams();
   const [isBurger, setBurger] = useState(false);
+  const [isEndpoint, setIsEndPoint] = useState("");
 
   const t = useTranslations("Header");
 
@@ -22,6 +23,14 @@ function Header() {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const fullUrl = window.location.href.split("");
+      const endPoint = fullUrl.slice(fullUrl.length - 2).join("");
+      setIsEndPoint(endPoint);
+    }
+  }, []);
 
   return (
     <div className={`${styles.header}`}>
@@ -68,7 +77,13 @@ function Header() {
         <div className={`${styles.header_lang_burg}`}>
           <ul>
             <li>
-              <button>
+              <button
+                className={
+                  isEndpoint === "uk"
+                    ? styles.lang_active_burger
+                    : styles.lang_inactive_burger
+                }
+              >
                 <Link href="/uk" locale={false}>
                   UA
                 </Link>
@@ -76,7 +91,13 @@ function Header() {
             </li>
             <li className={styles.line}></li>
             <li>
-              <button>
+              <button
+                className={
+                  isEndpoint === "en"
+                    ? styles.lang_active_burger
+                    : styles.lang_inactive_burger
+                }
+              >
                 <Link href="/en" locale={false}>
                   EN
                 </Link>
@@ -89,7 +110,11 @@ function Header() {
         <Button text={t("btn_help")} size="Small" />
         <ul>
           <li>
-            <button>
+            <button
+              className={
+                isEndpoint === "uk" ? styles.lang_active : styles.lang_inactive
+              }
+            >
               <Link href="/uk" locale={false}>
                 UA
               </Link>
@@ -97,7 +122,11 @@ function Header() {
           </li>
           <li className={styles.line}></li>
           <li>
-            <button>
+            <button
+              className={
+                isEndpoint === "en" ? styles.lang_active : styles.lang_inactive
+              }
+            >
               <Link href="/en" locale={false}>
                 EN
               </Link>

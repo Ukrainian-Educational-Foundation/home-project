@@ -1,29 +1,45 @@
+import React, { Suspense } from "react";
 import styles from "./page.module.css";
-import Preview from "@/components/organisms/Preview/Preview";
-import OurSupport from "@/components/organisms/OurSupport/OurSupport";
-import UkrMap from "@/components/organisms/UkrMap/UkrMap";
-import OldLady from "@/components/organisms/OldLady/OldLady";
-import Slider from "@/components/organisms/Slider/Slider";
-import HelpDescribe from "@/components/organisms/HelpDescribe/HelpDescribe";
-import House from "@/components/organisms/House/House";
-import AboutFond from "@/components/organisms/AboutFond/AboutFond";
-import TrustUs from "@/components/organisms/TrustUs/TrustUs";
-import ContactUs from "@/components/organisms/ContactUs/ContactUs";
-
+const Preview = React.lazy(
+  () => import("@/components/organisms/Preview/Preview")
+);
+const OurSupport = React.lazy(
+  () => import("@/components/organisms/OurSupport/OurSupport")
+);
+const OldLady = React.lazy(
+  () => import("@/components/organisms/OldLady/OldLady")
+);
+const Slider = React.lazy(() => import("@/components/organisms/Slider/Slider"));
+const HelpDescribe = React.lazy(
+  () => import("@/components/organisms/HelpDescribe/HelpDescribe")
+);
+const House = React.lazy(() => import("@/components/organisms/House/House"));
+const AboutFond = React.lazy(
+  () => import("@/components/organisms/AboutFond/AboutFond")
+);
+const UkrMap = React.lazy(() => import("@/components/organisms/UkrMap/UkrMap"));
+const TrustUs = React.lazy(
+  () => import("@/components/organisms/TrustUs/TrustUs")
+);
+const ContactUs = React.lazy(
+  () => import("@/components/organisms/ContactUs/ContactUs")
+);
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <Preview />
-      <OurSupport />
-      <UkrMap />
-      <OldLady />
-      <Slider />
-      <HelpDescribe />
-      <House />
-      <AboutFond />
-      <TrustUs />
-      <ContactUs />
-    </div>
+    <Suspense fallback={<div>Loading...</div>}>
+      <div className={styles.page}>
+        <Preview />
+        <OurSupport />
+        <UkrMap />
+        <OldLady />
+        <Slider />
+        <HelpDescribe />
+        <House />
+        <AboutFond />
+        <TrustUs />
+        <ContactUs />
+      </div>
+    </Suspense>
   );
 }

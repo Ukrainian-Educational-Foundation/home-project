@@ -18,7 +18,7 @@ interface DataProps {
 enum Slide {
   VIEW = 930,
   VIEW_TAB = 66,
-  VIEW_MOB = 90,
+  VIEW_MOB = 84,
 }
 
 function AboutFond() {
@@ -44,7 +44,7 @@ function AboutFond() {
     const newView = isTablet
       ? -Slide.VIEW_TAB * 2 - 22
       : isMobile
-      ? -Slide.VIEW_MOB * 2 - 30
+      ? -Slide.VIEW_MOB * 4
       : -Slide.VIEW;
     setInitialView(newView);
     setView(newView);
@@ -55,7 +55,7 @@ function AboutFond() {
       isTablet
         ? view < -isData.length * 22
         : isMobile
-        ? view < -isData.length * 30
+        ? view < -isData.length * 42
         : view < -isData.length * 186
     ) {
       setView(initialView);
@@ -70,13 +70,12 @@ function AboutFond() {
       if (dataEn.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
         setData([...dataEn.slice(dataEn.length / 2), ...dataEn]);
       }
-      if (
-        dataEn.length > 0 &&
-        isData.length > 0 &&
-        (isTablet || isMobile) &&
-        flag
-      ) {
+      if (dataEn.length > 0 && isData.length > 0 && isTablet && flag) {
         setData([...dataEn.slice(3), ...dataEn]);
+        setFlag(false);
+      }
+      if (data.length > 0 && isData.length > 0 && isMobile && flag) {
+        setData([...data.slice(2), ...data]);
         setFlag(false);
       }
       return;
@@ -88,13 +87,12 @@ function AboutFond() {
     if (data.length > 0 && isData.length === 0 && !isTablet && !isMobile) {
       setData([...data.slice(data.length / 2), ...data]);
     }
-    if (
-      data.length > 0 &&
-      isData.length > 0 &&
-      (isTablet || isMobile) &&
-      flag
-    ) {
+    if (data.length > 0 && isData.length > 0 && isTablet && flag) {
       setData([...data.slice(3), ...data]);
+      setFlag(false);
+    }
+    if (data.length > 0 && isData.length > 0 && isMobile && flag) {
+      setData([...data.slice(2), ...data]);
       setFlag(false);
     }
   }, [flag, isData.length, isMobile, isTablet, params.locale]);
@@ -114,7 +112,7 @@ function AboutFond() {
     if (
       (!isTablet && !isMobile && view === -Slide.VIEW * 2) ||
       (isTablet && view < -Slide.VIEW_TAB * 5) ||
-      (isMobile && view < -Slide.VIEW_MOB * 5)
+      (isMobile && view < -Slide.VIEW_MOB * 7)
     ) {
       setView(initialView);
     } else {
@@ -194,14 +192,15 @@ function AboutFond() {
           <div>{t("projects")}</div>
         </li>
         <li>
-          <div>{animate && <AnimatedNumbers value={86} />}</div>
+          <div>{animate && <AnimatedNumbers value={87} />}</div>
           <div>
             {t("trips.title")}
-            <br />{t("trips.description")}
+            <br />
+            {t("trips.description")}
           </div>
         </li>
         <li>
-          <div>{animate && <AnimatedNumbers value={20000} />}</div>
+          <div>{animate && <AnimatedNumbers value={20000} />}+</div>
           <div>{t("children")}</div>
         </li>
       </ul>
@@ -235,7 +234,8 @@ function AboutFond() {
                         sizes="auto"
                         style={{
                           objectPosition:
-                            human.name === "Дмитро Лук’яниця"
+                            human.name === "Дмитро Лук’яниця" ||
+                            human.name === "Dmytro Luk'ianytsia"
                               ? "0px -15px"
                               : "50% 50%",
                         }}
@@ -248,7 +248,7 @@ function AboutFond() {
                   </li>
                 ))
               ) : (
-                <div>loading...</div>
+                <div className={`${styles.about_fond_preload}`}>loading...</div>
               )}
             </ul>
           </div>
@@ -285,13 +285,13 @@ function AboutFond() {
             onMouseLeave={() => setHover((prev) => ({ ...prev, two: false }))}
           >
             <a
-              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              href="https://news.telegraf.com.ua/ukr/ukraina/2024-05-21/5852998-lagidna-evakuatsiya-yak-tse-pratsyue-i-de-pereselentsyam-z-donbasu-dopomagayut-buduvati-nove-zhittya"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+              <Image src="/news2.webp" alt="logo" fill sizes="auto, auto" />
               {isHover.two ? (
-                <div className={styles.about_fond_text}>{t("review")}</div>
+                <div className={styles.about_fond_text}>{t("review2")}</div>
               ) : null}
             </a>
           </li>
@@ -300,13 +300,13 @@ function AboutFond() {
             onMouseLeave={() => setHover((prev) => ({ ...prev, three: false }))}
           >
             <a
-              href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
+              href="https://www.facebook.com/story.php?story_fbid=935545908614148&id=100064762414539&rdid=990JDq6EVpkWiBu2"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news.png.webp" alt="logo" fill sizes="auto, auto" />
+              <Image src="/news3.webp" alt="logo" fill sizes="auto, auto" />
               {isHover.three ? (
-                <div className={styles.about_fond_text}>{t("review")}</div>
+                <div className={styles.about_fond_text}>{t("review3")}</div>
               ) : null}
             </a>
           </li>

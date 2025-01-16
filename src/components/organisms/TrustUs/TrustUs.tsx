@@ -30,10 +30,10 @@ enum Slide {
 function TrustUs() {
   const t = useTranslations("TrustUs");
   const params = useParams();
-  const initialView = -Slide.VIEW * Math.floor(dataSlideTrust.length - 3);
+  const initialView = -Slide.VIEW * (dataSlideTrust.length - 2);
   const initialViewTablet = -Slide.VIEW_TAB * (dataSlideTrust.length - 1);
   const initialViewMob = -Slide.VIEW_MOB * (dataSlideTrust.length - 1);
-  const initialCenter = Math.floor(dataSlideTrust.length - 2);
+  const initialCenter = Math.floor(dataSlideTrust.length - 1);
 
   const [center, setCenter] = useState<number>(initialCenter);
   const [view, setView] = useState(0);
@@ -60,8 +60,13 @@ function TrustUs() {
         !isMobile &&
         !isTablet
       ) {
-        setData([...dataSlideTrustEn.slice(3), ...dataSlideTrustEn]);
-      } else {
+        setData([
+          ...dataSlideTrustEn.slice(1, 2),
+          ...dataSlideTrust.slice(3),
+          ...dataSlideTrust,
+          ...dataSlideTrustEn.slice(1, 2),
+        ]);
+      } else if (isMobile || isTablet) {
         setData([...dataSlideTrustEn.slice(1), ...dataSlideTrustEn]);
       }
       return;
@@ -73,8 +78,13 @@ function TrustUs() {
       !isMobile &&
       !isTablet
     ) {
-      setData([...dataSlideTrust.slice(3), ...dataSlideTrust]);
-    } else {
+      setData([
+        ...dataSlideTrustEn.slice(1, 2),
+        ...dataSlideTrust.slice(3),
+        ...dataSlideTrust,
+        ...dataSlideTrustEn.slice(1, 2),
+      ]);
+    } else if (isMobile || isTablet) {
       setData([...dataSlideTrust.slice(1), ...dataSlideTrust]);
     }
   }, [data.length, params.locale, isMobile, isTablet]);
@@ -160,7 +170,7 @@ function TrustUs() {
   }, []);
 
   const handlePlayClick = () => {
-    setViewVideo(prev => !prev);
+    setViewVideo((prev) => !prev);
   };
 
   // const handlePauseClick = () => {
@@ -267,6 +277,7 @@ function TrustUs() {
                           <video
                             width="100%"
                             height="100%"
+                            style={{ borderRadius: "0 16px 16px 0" }}
                             controls
                             preload="none"
                             className={styles.slide_video}

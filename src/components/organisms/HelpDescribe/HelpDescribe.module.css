@@ -4,7 +4,7 @@
   justify-content: space-between;
   flex-direction: column;
   width: 100vw;
-  height: 919px;
+  height: 1241px;
   padding: 40px 90px;
   gap: 80px;
 }
@@ -91,6 +91,36 @@
   color: #ffffff;
 }
 
+.help_middle_block {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  gap: 24px;
+}
+
+.help_middle_block > div:first-child {
+  font-family: Onest;
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 50.4px;
+  letter-spacing: 0.02em;
+  text-align: center;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #5368a7;
+}
+
+.help_middle_block > div:last-child {
+  font-family: Onest;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32px;
+  text-align: left;
+  text-underline-position: from-font;
+  text-decoration-skip-ink: none;
+  color: #303058;
+}
+
 @media (max-width: 1024px) {
   .help_describe > div:first-child {
     width: 90vw;
@@ -99,7 +129,9 @@
     line-height: 60px;
   }
 
-  .help_describe > div:first-child ul {
+  .help_middle_block,
+  .help_middle_block > div:first-child,
+  .help_middle_block > div:last-child .help_describe > div:first-child ul {
     width: 100%;
     height: auto;
   }
@@ -132,9 +164,24 @@
     font-size: 20px;
     line-height: 30px;
   }
+
+  .help_middle_block > div:first-child {
+    font-size: 24px;
+    line-height: 30px;
+  }
+
+  .help_middle_block > div:last-child {
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 
 @media (max-width: 768px) {
+
+  .help_describe {
+    padding: 40px 20px;
+  }
+
   .help_describe > div:first-child ul {
     margin-top: 35px;
     margin-bottom: 12px;

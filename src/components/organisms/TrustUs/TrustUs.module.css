@@ -243,7 +243,7 @@
 
   .trust_card {
     width: 50vw;
-    height: 40vh;
+    height: 250px;
     top: 0;
   }
 
@@ -279,8 +279,6 @@
 
   .trust_card {
     width: 80vw;
-    height: 40vh;
-    top: 0;
   }
 
   .trust_carddiv:last-child {
@@ -303,6 +301,11 @@
 @media (max-width: 768px) {
   .trust a {
     width: 85%;
+  }
+
+  .trust_wrap {
+    padding: 0 0 0;
+    height: 55vh;
   }
 }
 
