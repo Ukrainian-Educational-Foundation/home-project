@@ -178,14 +178,16 @@
 }
 
 .slide_video_container {
+  position: relative;
   width: 50%;
   height: 100%;
 }
 
 .slide_photo_container {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100%;
+  z-index: 1;
 }
 
 .video {
@@ -193,6 +195,7 @@
 }
 
 .slide_video_photo {
+  position: relative;
   width: 100%;
   height: 100%;
   object-fit: cover;
