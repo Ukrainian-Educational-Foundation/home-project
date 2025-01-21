@@ -2,7 +2,7 @@
 
 import Button from "@/components/atoms/Button/Button";
 import styles from "./TrustUs.module.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { dataSlideTrust } from "@/data/dataSlideTrust";
 import { dataSlideTrustEn } from "@/data/dataSlideTrustEn";
@@ -28,6 +28,8 @@ enum Slide {
 }
 
 function TrustUs() {
+  const videoRefs = useRef<HTMLVideoElement[]>([]);
+
   const t = useTranslations("TrustUs");
   const params = useParams();
   const initialView = -Slide.VIEW * (dataSlideTrust.length - 2);
@@ -37,10 +39,34 @@ function TrustUs() {
 
   const [center, setCenter] = useState<number>(initialCenter);
   const [view, setView] = useState(0);
-  const [viewVideo, setViewVideo] = useState(false);
+  const [viewVideo, setViewVideo] = useState<boolean[]>([]);
   const [data, setData] = useState<DataProps[]>([]);
   const [isTablet, setIsTablet] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+
+  const handlePlayClick = (index: number) => {
+    // Останавливаем все видео и обновляем состояние
+    videoRefs.current.forEach((video, i) => {
+      if (i !== index && video) {
+        video.pause();
+      }
+    });
+
+    // Обновляем состояние viewVideo только для выбранного индекса
+    const newViewVideo = [...viewVideo];
+    newViewVideo[index] = true;
+    setViewVideo(newViewVideo);
+
+    // Запускаем текущее видео
+    const currentVideo = videoRefs.current[index];
+    if (currentVideo) {
+      currentVideo.play();
+    }
+  };
+
+  useEffect(() => {
+    setViewVideo(new Array(data.length).fill(false));
+  }, [data]);
 
   useEffect(() => {
     if (isMobile) {
@@ -169,9 +195,9 @@ function TrustUs() {
     };
   }, []);
 
-  const handlePlayClick = () => {
-    setViewVideo((prev) => !prev);
-  };
+  // const handlePlayClick = () => {
+  //   setViewVideo((prev) => !prev);
+  // };
 
   // const handlePauseClick = () => {
   //   setViewVideo((prev) => !prev);
@@ -217,9 +243,9 @@ function TrustUs() {
                         : "",
                   }}
                   onClick={
-                    index === center - 1
+                    index === center - 1 && !isMobile && !isTablet
                       ? handlePrev
-                      : index === center + 1
+                      : index === center + 1 && !isMobile && !isTablet
                       ? handleNext
                       : () => {}
                   }
@@ -251,7 +277,7 @@ function TrustUs() {
                     </div>
 
                     <div className={styles.slide_video_container}>
-                      {!viewVideo && item?.photo && (
+                      {!viewVideo[index] && item?.photo && (
                         <div className={styles.slide_photo_container}>
                           <Image
                             src={item?.photo}
@@ -267,7 +293,7 @@ function TrustUs() {
                             width="64"
                             height="64"
                             className={styles.slide_video_play}
-                            onClick={() => handlePlayClick()}
+                            onClick={() => handlePlayClick(index)}
                           />
                         </div>
                       )}
@@ -275,6 +301,12 @@ function TrustUs() {
                       {viewVideo && (
                         <div className={styles.video}>
                           <video
+                            ref={(el) => {
+                              if (el) {
+                                videoRefs.current[index] = el;
+                                el.onplay = () => handlePlayClick(index);
+                              }
+                            }}
                             width="100%"
                             height="100%"
                             style={{ borderRadius: "0 16px 16px 0" }}

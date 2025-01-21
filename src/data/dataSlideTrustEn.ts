@@ -38,7 +38,7 @@ export const dataSlideTrustEn = [
     width: "50px",
     height: "50px",
     photo: "/photo/svitlana.svg",
-    video: "svitlana_video.webm",
+    video: "/svetlana_video.webm",
     name: "name",
     position: "position",
     facebookLink: "https://www.facebook.com/groups/bspilka/?locale=uk_UA",

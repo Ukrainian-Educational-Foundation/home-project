@@ -43,18 +43,9 @@ function UkrMap() {
   //   setActiveVideo((prev) => ({ ...prev, [videoName]: false }));
   // };
 
-  const title = t("title");
-
   return (
     <div className={`${styles.ukr_map}`} id="ukr_map">
-      <div>
-        {title.split("\n").map((line, index) => (
-          <React.Fragment key={index}>
-            {line}
-            <br />
-          </React.Fragment>
-        ))}
-      </div>
+      <div>{t("title")}</div>
       <div className={`${styles.ukr_map_wrap}`}>
         <div>
           <Image src="/map.png.webp" alt="logo" fill />
