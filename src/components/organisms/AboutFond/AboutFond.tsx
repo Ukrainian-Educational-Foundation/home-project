@@ -8,6 +8,7 @@ import Image from "next/image";
 import AnimatedNumbers from "@/hooks/animationNumber";
 import { useTranslations } from "next-intl";
 import { useParams } from "next/navigation";
+import Link from "next/link";
 
 interface DataProps {
   name: string;
@@ -269,46 +270,52 @@ function AboutFond() {
             onMouseEnter={() => setHover((prev) => ({ ...prev, one: true }))}
             onMouseLeave={() => setHover((prev) => ({ ...prev, one: false }))}
           >
-            <a
+            <Link
               href="https://www.rbc.ua/rus/news/volonter-tetyana-lyulka-vlasni-ochi-bachila-1726219367.html"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news.png.webp" alt="logo" fill sizes="auto" />
+              <div className={styles.img_wrap}>
+                <Image src="/news.png.webp" alt="logo" fill sizes="auto" />
+              </div>
               {isHover.one ? (
                 <div className={styles.about_fond_text}>{t("review")}</div>
               ) : null}
-            </a>
+            </Link>
           </li>
           <li
             onMouseEnter={() => setHover((prev) => ({ ...prev, two: true }))}
             onMouseLeave={() => setHover((prev) => ({ ...prev, two: false }))}
           >
-            <a
+            <Link
               href="https://news.telegraf.com.ua/ukr/ukraina/2024-05-21/5852998-lagidna-evakuatsiya-yak-tse-pratsyue-i-de-pereselentsyam-z-donbasu-dopomagayut-buduvati-nove-zhittya"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news2.webp" alt="logo" fill sizes="auto, auto" />
+              <div className={styles.img_wrap}>
+                <Image src="/news2.webp" alt="logo" fill sizes="auto" />
+              </div>
               {isHover.two ? (
                 <div className={styles.about_fond_text}>{t("review2")}</div>
               ) : null}
-            </a>
+            </Link>
           </li>
           <li
             onMouseEnter={() => setHover((prev) => ({ ...prev, three: true }))}
             onMouseLeave={() => setHover((prev) => ({ ...prev, three: false }))}
           >
-            <a
+            <Link
               href="https://www.facebook.com/story.php?story_fbid=935545908614148&id=100064762414539&rdid=990JDq6EVpkWiBu2"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <Image src="/news3.webp" alt="logo" fill sizes="auto, auto" />
+              <div className={styles.img_wrap}>
+                <Image src="/news3.webp" alt="logo" fill sizes="auto" />
+              </div>
               {isHover.three ? (
                 <div className={styles.about_fond_text}>{t("review3")}</div>
               ) : null}
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

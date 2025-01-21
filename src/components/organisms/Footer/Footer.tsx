@@ -29,7 +29,7 @@ function Footer() {
           {params.locale === "en" ? (
             <Image src="/logo_english.svg" alt="logo" fill sizes="auto" />
           ) : (
-            <Image src="/FundLogo.webp" alt="logo" fill sizes="auto" />
+            <Image src="/FundLogo.webp" priority alt="logo" fill sizes="auto" />
           )}
         </div>
         <div>

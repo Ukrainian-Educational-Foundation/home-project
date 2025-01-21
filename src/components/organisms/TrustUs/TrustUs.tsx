@@ -50,7 +50,6 @@ function TrustUs() {
   const [isMobile, setIsMobile] = useState(false);
 
   const handlePlayClick = (index: number) => {
-    // Останавливаем текущее воспроизводимое видео
     if (
       currentPlayingIndex !== null &&
       videoRefs.current[currentPlayingIndex]
@@ -58,20 +57,15 @@ function TrustUs() {
       videoRefs.current[currentPlayingIndex].pause();
     }
 
-    // Запускаем новое видео
     const currentVideo = videoRefs.current[index];
     if (currentVideo) {
       currentVideo.play();
-      setCurrentPlayingIndex(index); // Обновляем индекс текущего видео
+      setCurrentPlayingIndex(index);
     }
 
-    // Обновляем состояние viewVideo
     const newViewVideo = viewVideo.map((_, i) => i === index);
     setViewVideo(newViewVideo);
   };
-  // useEffect(() => {
-  //   console.log(videoRefs);
-  // }, [videoRefs]);
 
   useEffect(() => {
     setViewVideo(new Array(data.length).fill(false));
@@ -220,6 +214,11 @@ function TrustUs() {
     };
   }, []);
 
+  const extendedData = data.map((item, index) => ({
+    ...item,
+    uniqueKey: `${item.logo}_${index}`,
+  }));
+
   return (
     <div className={styles?.trust}>
       <div>{t("title")}</div>
@@ -237,11 +236,11 @@ function TrustUs() {
               transition: "300ms",
             }}
           >
-            {data.length > 0 ? (
-              data.map((item, index) => {
+            {(extendedData || data).length > 0 ? (
+              (extendedData || data).map((item, index) => {
                 return (
                   <li
-                    key={index}
+                    key={item.uniqueKey}
                     className={
                       center === index && !isMobile && !isTablet
                         ? styles.trust_center
