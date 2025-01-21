@@ -16,7 +16,7 @@ export const dataSlideTrustEn = [
     width: "150px",
     height: "40px",
     photo: "/photo/anastasia.svg",
-    video: "/IMG_4066.webm",
+    video: "/anastasia_video.webm",
     name: "name",
     position: "position",
     facebookLink: "https://www.facebook.com/hashtag/genesis_for_ukraine",
