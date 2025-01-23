@@ -13,7 +13,7 @@ function Button({ text, size = "Small" }: ButtonProps) {
       className={`${styles.button} ${sizeClass}`}
     >
       {/* <button disabled={disabled} className={`${styles.button} ${sizeClass}`}> */}
-        {text}
+      {text.toUpperCase()}
       {/* </button> */}
     </a>
   );

@@ -15,34 +15,19 @@ function HelpDescribe() {
         <ul>
           <li>
             <div>
-              <Image
-                src="/benefit2.png.webp"
-                alt="logo"
-                fill
-                sizes="auto, auto"
-              />
+              <Image src="/benefit2.svg" alt="logo" fill sizes="auto" />
             </div>
             <div>{t("financialSupport")}</div>
           </li>
           <li>
             <div>
-              <Image
-                src="/benefit1.png.webp"
-                alt="logo"
-                fill
-                sizes="auto, auto"
-              />
+              <Image src="/benefit.svg" alt="logo" fill sizes="auto" />
             </div>
             <div>{t("education")}</div>
           </li>
           <li>
             <div>
-              <Image
-                src="/benefit.png.webp"
-                alt="logo"
-                fill
-                sizes="auto, auto"
-              />
+              <Image src="/benefit3.svg" alt="logo" fill sizes="auto" />
             </div>
             <div>{t("psychologicalCare")}</div>
           </li>
@@ -50,7 +35,7 @@ function HelpDescribe() {
       </div>
       <div className={`${styles.help_middle_block}`}>
         <div>
-          {middleBlockHeader.split("\n").map((line, index) => (
+          {middleBlockHeader?.split("\n").map((line, index) => (
             <React.Fragment key={index}>
               {line}
               <br />

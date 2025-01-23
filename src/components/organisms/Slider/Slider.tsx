@@ -16,7 +16,7 @@ interface DataProps {
 }
 
 enum Slide {
-  VIEW = 1260,
+  VIEW = 1292,
   VIEW_TAB = 90,
   VIEW_MOB = 92,
 }
@@ -155,9 +155,9 @@ const Slider = () => {
                 {el?.img && (
                   <Image
                     src={el.img}
-                    alt=""
-                    width="100"
-                    height="100"
+                    alt="logo"
+                    fill
+                    sizes="auto"
                     className={styles.slide_img}
                   />
                 )}
