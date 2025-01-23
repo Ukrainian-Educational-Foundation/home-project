@@ -57,13 +57,35 @@ function TrustUs() {
       videoRefs.current[currentPlayingIndex].pause();
     }
 
-    const currentVideo = videoRefs.current[index];
-    if (currentVideo) {
-      currentVideo.play();
-      setCurrentPlayingIndex(index);
+    let currentVideo;
+    let numVideo = null;
+
+    if (!isMobile && !isTablet) {
+      numVideo =
+        index === data.length - 1 || index === 0
+          ? dataSlideTrust.length - 1
+          : null;
+      currentVideo = videoRefs.current[numVideo || index];
+    } else {
+      currentVideo = videoRefs.current[index];
     }
 
-    const newViewVideo = viewVideo.map((_, i) => i === index);
+    if (currentVideo) {
+      currentVideo.play();
+      setCurrentPlayingIndex(numVideo || index);
+    }
+
+    const newViewVideo = viewVideo.map((_, i) => {
+      if (i === numVideo) {
+        return true;
+      } else if (numVideo && i === index) {
+        return false;
+      } else if (!numVideo && i === index) {
+        return true;
+      } else {
+        return false;
+      }
+    });
     setViewVideo(newViewVideo);
   };
 
@@ -328,7 +350,12 @@ function TrustUs() {
                               width="100%"
                               height="100%"
                               style={{ borderRadius: "0 16px 16px 0" }}
-                              controls
+                              controls={
+                                index === data.length - 1 ||
+                                (index === 0 && !isMobile && !isTablet)
+                                  ? false
+                                  : true
+                              }
                               preload="none"
                               className={styles.slide_video}
                             >

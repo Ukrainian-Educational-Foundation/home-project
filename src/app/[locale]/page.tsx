@@ -13,7 +13,7 @@ const Slider = React.lazy(() => import("@/components/organisms/Slider/Slider"));
 const HelpDescribe = React.lazy(
   () => import("@/components/organisms/HelpDescribe/HelpDescribe")
 );
-const House = React.lazy(() => import("@/components/organisms/House/House"));
+// const House = React.lazy(() => import("@/components/organisms/House/House"));
 const AboutFond = React.lazy(
   () => import("@/components/organisms/AboutFond/AboutFond")
 );
@@ -35,7 +35,7 @@ export default function Home() {
         <OldLady />
         <Slider />
         <HelpDescribe />
-        <House />
+        {/* <House /> */}
         <AboutFond />
         <TrustUs />
         <ContactUs />

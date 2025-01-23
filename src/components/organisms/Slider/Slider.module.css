@@ -10,7 +10,7 @@
 }
 
 .slider > div:first-child {
-  width: 1260px;
+  width: 1292px;
   height: 66px;
   font-family: Onest, sans-serif;
   font-size: 36px;
@@ -22,7 +22,7 @@
 }
 
 .slider_wrap {
-  width: 1260px;
+  width: 1292px;
   height: auto;
   overflow: hidden;
 }
@@ -38,7 +38,7 @@
 
 .slide {
   position: relative;
-  width: 590px;
+  width: 606px;
   height: 540px;
   border-radius: 16px;
   background: #b9b9b9;
@@ -77,6 +77,9 @@
 }
 
 .buttons {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
   display: flex;
   gap: 16px;
 }

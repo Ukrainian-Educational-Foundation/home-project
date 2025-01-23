@@ -45,6 +45,7 @@ function Preview() {
                   <Image
                     src="/Dim.png.webp"
                     alt="logo"
+                    priority
                     fill
                     sizes="auto, auto"
                   />

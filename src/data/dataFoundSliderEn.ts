@@ -7,7 +7,7 @@ export const dataFoundSliderEn = [
   {
     id: 2,
     text: `It is 2 hectares of land and 2,000 square meters of building space. Work on clearing the site has already begun.`,
-    video: "/Video_1.mp4",
+    video: "/Video1.webm",
   },
   {
     id: 3,
@@ -17,7 +17,7 @@ export const dataFoundSliderEn = [
   {
     id: 4,
     text: `It is 2 hectares of land and 2,000 square meters of building space. Work on clearing the site has already begun.`,
-    video: "/Video_2.mp4",
+    video: "/Video2.webm",
   },
   {
     id: 5,
@@ -27,7 +27,7 @@ export const dataFoundSliderEn = [
   {
     id: 6,
     text: `It is 2 hectares of land and 2,000 square meters of building space. Work on clearing the site has already begun.`,
-    video: "/Video_3.mp4",
+    video: "/Video3.webm",
   },
   // {
   //   id: 7,

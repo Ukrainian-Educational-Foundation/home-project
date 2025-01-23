@@ -27,9 +27,9 @@ function Footer() {
       <div className={`${styles.footer_main}`}>
         <div>
           {params.locale === "en" ? (
-            <Image src="/logo_english.svg" alt="logo" fill sizes="auto" />
+            <Image src="/Fund_logo_english.svg" alt="logo" fill sizes="auto" />
           ) : (
-            <Image src="/FundLogo.webp" priority alt="logo" fill sizes="auto" />
+            <Image src="/Fund_logo.svg" priority alt="logo" fill sizes="auto" />
           )}
         </div>
         <div>

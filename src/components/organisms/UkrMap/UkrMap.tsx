@@ -48,7 +48,7 @@ function UkrMap() {
       <div>{t("title")}</div>
       <div className={`${styles.ukr_map_wrap}`}>
         <div>
-          <Image src="/map.png.webp" alt="logo" fill />
+          <Image src="/map.svg" alt="logo" fill />
         </div>
         <ul>
           <li>{t("description_p1")}</li>

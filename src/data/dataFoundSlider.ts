@@ -10,7 +10,7 @@ export const dataFoundSlider = [
     id: 2,
     text: ` Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
             роботи по зачищенню території.`,
-    video: "/Video_1.mp4",
+    video: "/Video1.webm",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const dataFoundSlider = [
     id: 4,
     text: ` Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
             роботи по зачищенню території.`,
-    video: "/Video_2.mp4",
+    video: "/Video2.webm",
   },
   {
     id: 5,
@@ -36,7 +36,7 @@ export const dataFoundSlider = [
     id: 6,
     text: ` Це 2 га землі та 2000 кв метрів площі корпусів. Вже почалися
             роботи по зачищенню території.`,
-    video: "/Video_3.mp4",
+    video: "/Video3.webm",
   },
   // {
   //   id: 7,
