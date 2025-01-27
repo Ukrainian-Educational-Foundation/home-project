@@ -94,11 +94,13 @@
 .help_middle_block {
   display: flex;
   flex-direction: column;
+  max-width: 1174px;
   height: auto;
   gap: 24px;
 }
 
 .help_middle_block > div:first-child {
+  min-height: 183px;
   font-family: Onest;
   font-size: 36px;
   font-weight: 500;
@@ -111,6 +113,7 @@
 }
 
 .help_middle_block > div:last-child {
+  min-height: 105px;
   font-family: Onest;
   font-size: 20px;
   font-weight: 400;
@@ -183,6 +186,7 @@
   }
 
   .help_describe > div:first-child ul {
+    flex-direction: column;
     margin-top: 35px;
     margin-bottom: 12px;
   }
@@ -206,10 +210,6 @@
 
   .help_describe > div:first-child {
     line-height: 40px;
-  }
-
-  .help_describe > div:first-child ul {
-    flex-direction: column;
   }
 
   .help_describe > div:first-child ul li {

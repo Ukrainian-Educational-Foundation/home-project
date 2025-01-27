@@ -49,6 +49,11 @@
   height: 328px;
 }
 
+
+.preview_left ul > li:first-child div:first-child img{
+    max-width: 450px;
+}
+
 .logo_en {
   margin-left: 40px;
 }
@@ -64,14 +69,15 @@
 .sunrice_en {
   position: absolute;
   z-index: -1;
-  left: 355px;
+  /* left: 355px; */
+  left: 300px;
   top: 13px;
   width: 208px;
   height: 208px;
 }
 .sunrice_en {
   top: -8px;
-  left: 410px;
+  left: 370px;
 }
 
 .preview_left ul > li:nth-of-type(2) {
