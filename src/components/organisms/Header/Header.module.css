@@ -4,7 +4,7 @@
   width: 100%;
   height: 105px;
   padding: 19px 32px;
-  background: #303058;
+  background: #393186;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,6 +19,7 @@
   /* width: 44%; */
   height: 60px;
   transition: 200ms;
+  margin-left: 30px;
 }
 
 .lang_active_burger,
@@ -55,15 +56,15 @@
   color: #a1a1a1 !important;
 }
 
-.header > div:first-child {
+/* .header > div:first-child {
   position: relative;
   width: 180px;
   height: 60px;
-}
+} */
 
 .header_lang {
   display: flex;
-  width: 394px;
+  width: 440px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -154,10 +155,11 @@
     padding: 0 50px;
     width: max-content;
     height: max-content;
-    background: #303058;
+    background: #393186;
     padding: 20px 100px;
     z-index: 1000;
     transition: 500ms;
+    margin-left: -25px;
   }
 
   .buttons.activeMenu {
@@ -192,14 +194,14 @@
     width: 35px;
     height: 5px;
     border-radius: 5px;
-    background: #ebbc09;
+    background: #f8de18;
     margin: 4px 0;
     transition: 0.4s;
   }
 
   .burgerIcon:active div,
   .burgerIcon:hover div {
-    background: #ebbc09;
+    background: #f8de18;
   }
 
   .buttons button,
@@ -261,8 +263,8 @@
   }
 
   .header > div:first-child {
-    width: 145px;
-    height: 45px;
+    width: 345px;
+    /* height: 45px; */
   }
 }
 
@@ -271,6 +273,7 @@
   .buttons.activeMenu {
     width: 100vw;
     padding: 20px 0;
+    margin-left: -5px;
   }
   .header_lang_burg {
     display: block;

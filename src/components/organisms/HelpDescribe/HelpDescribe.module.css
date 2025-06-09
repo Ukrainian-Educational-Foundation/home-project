@@ -4,8 +4,8 @@
   justify-content: space-between;
   flex-direction: column;
   width: 100vw;
-  height: 1241px;
-  padding: 40px 90px;
+  height: 1187px;
+  padding: 142px 90px 37px 90px;
   gap: 80px;
 }
 
@@ -15,7 +15,8 @@
   justify-content: space-between;
   flex-direction: column;
   width: 1260px;
-  height: 339px;
+  height: 330px;
+  font-family: Onest;
   font-family: Onest;
   font-size: 36px;
   font-weight: 500;
@@ -32,7 +33,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: row;
-  width: 1109px;
+  width: 1260px;
   height: 214p;
   gap: 40px;
 }
@@ -42,7 +43,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  width: 343px;
+  /* width: 343px; */
   height: 214px;
   gap: 8px;
 }
@@ -57,16 +58,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 343px;
+  width: 268px;
   height: 86px;
-  font-family: Onest;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  /* font-family: Onest;
   font-size: 24px;
   font-weight: 600;
   line-height: 32px;
-  text-align: center;
+  text-align: center; */
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
 }
 
 .help_describe > div:last-child {
@@ -75,20 +81,23 @@
   justify-content: space-between;
   flex-direction: column;
   width: 1260px;
-  height: 355px;
-  padding: 66px 64px;
+  height: 273px;
+  padding: 41px 64px;
   gap: 8px;
   border-radius: 16px;
   background: #5368a7b2;
   font-family: Onest;
-  font-size: 28px;
-  font-weight: 500;
-  line-height: 40px;
-  letter-spacing: 0.02em;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #ffffff;
+  margin-top: -85px;
 }
 
 .help_middle_block {
@@ -97,6 +106,7 @@
   max-width: 1174px;
   height: auto;
   gap: 24px;
+  margin-top: -50px;
 }
 
 .help_middle_block > div:first-child {
@@ -121,10 +131,13 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
 }
 
 @media (max-width: 1024px) {
+  .help_describe {
+    padding: 22px 90px 37px 90px;
+  }
   .help_describe > div:first-child {
     width: 90vw;
     height: auto;
@@ -137,6 +150,14 @@
   .help_middle_block > div:last-child .help_describe > div:first-child ul {
     width: 100%;
     height: auto;
+  }
+
+  .help_describe > div:first-child ul {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
   }
 
   .help_describe > div:first-child ul li {
@@ -169,8 +190,10 @@
   }
 
   .help_middle_block > div:first-child {
+    min-height: 133px;
     font-size: 24px;
     line-height: 30px;
+    gap: 0;
   }
 
   .help_middle_block > div:last-child {
@@ -180,15 +203,23 @@
 }
 
 @media (max-width: 768px) {
-
   .help_describe {
     padding: 40px 20px;
   }
 
+  /* .help_describe > div:first-child ul {
+    width: auto;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  } */
+
   .help_describe > div:first-child ul {
+    display: flex;
     flex-direction: column;
     margin-top: 35px;
-    margin-bottom: 12px;
+    margin-bottom: 52px;
   }
 
   .help_describe > div:first-child ul li div:first-child {
@@ -199,6 +230,7 @@
   .help_describe > div:last-child {
     font-size: 16px;
     line-height: 24px;
+    margin-top: -40px;
     padding: 20px;
   }
 }
@@ -217,6 +249,7 @@
   }
   .help_describe > div:last-child {
     text-align: center;
+    margin-top: 4px;
   }
 }
 

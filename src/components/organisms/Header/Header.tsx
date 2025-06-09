@@ -7,11 +7,11 @@ import Button from "@/components/atoms/Button/Button";
 import styles from "./Header.module.css";
 
 import React, { useEffect, useState } from "react";
-import Image from "next/image";
-import { useParams } from "next/navigation";
+// import Image from "next/image";
+// import { useParams } from "next/navigation";
 
 function Header() {
-  const params = useParams();
+  // const params = useParams();
   const [isBurger, setBurger] = useState(false);
   const [isEndpoint, setIsEndPoint] = useState("");
 
@@ -34,13 +34,13 @@ function Header() {
 
   return (
     <div className={`${styles.header}`}>
-      <div>
+      {/* <div>
         {params.locale === "en" ? (
           <Image src="/Fund_logo_english.svg" alt="logo" fill sizes="auto" />
         ) : (
           <Image src="/Fund_logo.svg" priority alt="logo" fill sizes="auto" />
         )}
-      </div>
+      </div> */}
       <div className={`${styles.buttons} ${isBurger ? styles.activeMenu : ""}`}>
         <button
           onClick={() => {

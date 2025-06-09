@@ -1,0 +1,55 @@
+.qrCode_container {
+  width: 100vw;
+  max-width: 1260px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  max-width: 537px;
+  margin-right: 40px;
+}
+
+.img {
+  position: relative !important;
+  margin-top: 30px;
+}
+
+.title {
+  font-family: Onest;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 40px;
+  letter-spacing: 2%;
+  text-align: left;
+  vertical-align: middle;
+  color: #5368a7;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+  .qrCode_container {
+    width: 90vw;
+  }
+  .qrCode_container {
+    padding: 30px 0;
+  }
+}
+
+@media screen and (max-width: 639px) {
+  .qrCode_container {
+    flex-direction: column;
+  }
+
+  .container {
+    max-width: 400px;
+  }
+
+  .qrCode {
+    position: relative !important;
+    display: block;
+    margin-left: auto;
+    margin-top: 15px;
+  }
+}

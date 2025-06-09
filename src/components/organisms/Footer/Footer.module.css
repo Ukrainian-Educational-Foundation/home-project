@@ -5,7 +5,7 @@
   min-height: 260px;
   padding: 40px 57px 40px 57px;
   gap: 80px;
-  background: #303058;
+  background: #393186;
   font-family: Onest;
   font-size: 16px;
   font-weight: 400;
@@ -14,6 +14,7 @@
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
   color: #ffffff;
+  margin-top: -45px;
 }
 
 .footer_main {
@@ -64,6 +65,10 @@
 }
 
 @media (max-width: 1024px) {
+  .footer {
+    margin-top: 0px;
+  }
+
   .footer_main {
     display: flex;
     flex-direction: column;
