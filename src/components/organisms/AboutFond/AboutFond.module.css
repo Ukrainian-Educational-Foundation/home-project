@@ -59,7 +59,7 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
 }
 
 .about_fond > ul > li > div:last-child {
@@ -75,16 +75,16 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
   margin-top: 8px;
 }
 
-.about_fond > ul > li:last-child{
-    width: 319px;
+.about_fond > ul > li:last-child {
+  width: 319px;
 }
 
-.about_fond > ul > li:last-child > div{
-    width: 319px;
+.about_fond > ul > li:last-child > div {
+  width: 319px;
 }
 
 .about_fond_team {
@@ -120,7 +120,7 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
 }
 
 .about_fond_wrap {
@@ -156,7 +156,7 @@
   border: none;
   font-size: 36px;
   cursor: pointer;
-  color: #303058;
+  color: #393186;
   padding: 10px;
   position: relative;
   width: 80px;
@@ -224,7 +224,7 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
 }
 
 .about_fond_last > div {
@@ -246,7 +246,7 @@
   text-align: center;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
 }
 
 .about_fond_last > ul > li {
@@ -291,7 +291,7 @@
   text-decoration-style: solid;
   text-underline-position: from-font;
   text-decoration-skip-ink: auto;
-  color: #303058;
+  color: #393186;
   transition: 300ms;
   z-index: 2;
 }
@@ -350,9 +350,9 @@
     line-height: 26px;
   }
 
-  .about_fond > ul > li:last-child{
+  .about_fond > ul > li:last-child {
     width: 281px;
-}
+  }
 
   .about_fond_team {
     height: auto;
@@ -448,9 +448,9 @@
     line-height: 20px;
   }
 
-  .about_fond > ul > li:last-child{
+  .about_fond > ul > li:last-child {
     width: 110px;
-}
+  }
 
   .about_fond_last > ul {
     flex-direction: column;

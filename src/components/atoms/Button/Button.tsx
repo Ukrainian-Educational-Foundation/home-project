@@ -7,7 +7,8 @@ function Button({ text, size = "Small" }: ButtonProps) {
 
   return (
     <a
-      href="https://send.monobank.ua/jar/5HAkre4YYa"
+      href="https://send.monobank.ua/jar/5GQUm1YLKY"
+      // "https://send.monobank.ua/jar/5HAkre4YYa"
       target="_blank"
       rel="noopener noreferrer"
       className={`${styles.button} ${sizeClass}`}

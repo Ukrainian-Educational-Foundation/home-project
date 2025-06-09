@@ -28,6 +28,7 @@ function ContactUs() {
   return (
     <div className={`${styles.contact}`} id="contact">
       <div>{t("contactUS")}</div>
+      <p className={styles.description}>{t("description")}</p>
       <div>
         <ul className={`${styles.contact_headers}`}>
           <li>
@@ -149,6 +150,20 @@ function ContactUs() {
                 <Image
                   // src="/Instagram.png.webp"
                   src="/Instagram_icon.svg"
+                  alt="logo"
+                  fill
+                  sizes="(max-width: 768px) 32px, (max-width: 1024px) 48px, 64px"
+                />
+              </button>
+            </a>
+            <a
+              href="https://whatsapp.com/channel/0029Vb3GUYK89iniCX5fKX2K"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>
+                <Image
+                  src="/Whatsapp.svg"
                   alt="logo"
                   fill
                   sizes="(max-width: 768px) 32px, (max-width: 1024px) 48px, 64px"

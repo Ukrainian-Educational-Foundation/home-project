@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/atoms/Button/Button";
+// import Button from "@/components/atoms/Button/Button";
 import styles from "./TrustUs.module.css";
 import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
@@ -121,10 +121,16 @@ function TrustUs() {
         setData([
           dataSlideTrustEn[2],
           dataSlideTrustEn[3],
+          dataSlideTrustEn[4],
+          dataSlideTrustEn[5],
+          dataSlideTrustEn[6],
           dataSlideTrustEn[0],
           dataSlideTrustEn[1],
           dataSlideTrustEn[2],
           dataSlideTrustEn[3],
+          dataSlideTrustEn[4],
+          dataSlideTrustEn[5],
+          dataSlideTrustEn[6],
           dataSlideTrustEn[0],
         ]);
       }
@@ -147,10 +153,16 @@ function TrustUs() {
       setData([
         dataSlideTrust[2],
         dataSlideTrust[3],
+        dataSlideTrust[4],
+        dataSlideTrust[5],
+        dataSlideTrust[6],
         dataSlideTrust[0],
         dataSlideTrust[1],
         dataSlideTrust[2],
         dataSlideTrust[3],
+        dataSlideTrust[4],
+        dataSlideTrust[5],
+        dataSlideTrust[6],
         dataSlideTrust[0],
       ]);
     }
@@ -386,7 +398,7 @@ function TrustUs() {
           </button>
         ) : null}
       </div>
-      <Button size="Large" text={t("btn_help")} />
+      {/* <Button size="Large" text={t("btn_help")} /> */}
     </div>
   );
 }

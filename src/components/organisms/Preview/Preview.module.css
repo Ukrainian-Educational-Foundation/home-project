@@ -1,4 +1,9 @@
-.preview {
+.banner {
+  position: relative !important;
+  margin-top: 105px;
+}
+
+/* .preview {
   display: flex;
   flex-direction: row;
   width: 100vw;
@@ -49,28 +54,20 @@
   height: 328px;
 }
 
-
-.preview_left ul > li:first-child div:first-child img{
-    max-width: 450px;
+.preview_left ul > li:first-child div:first-child img {
+  max-width: 450px;
 }
 
 .logo_en {
   margin-left: 40px;
 }
-/*.preview_left ul > li:first-child div:last-child {
-  position: absolute;
-  z-index: 1;
-  left: 355px;
-  top: 13px;
-  width: 208px;
-  height: 208px;
-} */
+
 .sunrice,
 .sunrice_en {
   position: absolute;
   z-index: -1;
   /* left: 355px; */
-  left: 300px;
+/* left: 300px;
   top: 13px;
   width: 208px;
   height: 208px;
@@ -97,14 +94,13 @@
   flex-direction: column;
   justify-content: space-between;
   font-family: Onest;
-  /* height: 120px; */
   font-size: 24px;
   font-weight: 400;
   line-height: 32px;
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
   gap: 8px;
 }
 
@@ -153,7 +149,7 @@
   text-align: left;
   text-underline-position: from-font;
   text-decoration-skip-ink: none;
-  color: #303058;
+  color: #393186;
   white-space: nowrap;
 }
 
@@ -192,7 +188,6 @@
 
 @media (max-width: 768px) {
   .preview_left ul > li:first-child div:first-child {
-    /* width: 385px; */
     width: 100%;
     min-width: 368px;
     max-width: 385px;
@@ -207,11 +202,6 @@
     left: -47px;
   }
 
-  /* .preview_left ul > li:first-child div:last-child {
-    left: 65vw;
-    width: 150px;
-    height: 150px;
-  } */
   .sunrice,
   .sunrice_en {
     left: 65vw;
@@ -264,7 +254,6 @@
     height: auto;
     width: max-content;
     font-size: 16px;
-    /* line-height: 20px; */
     white-space: wrap;
   }
 
@@ -291,4 +280,4 @@
     font-size: 17px;
     line-height: 20px;
   }
-}
+} */

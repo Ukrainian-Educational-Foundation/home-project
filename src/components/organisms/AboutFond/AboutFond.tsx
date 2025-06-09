@@ -193,7 +193,7 @@ function AboutFond() {
           <div>{t("projects")}</div>
         </li>
         <li>
-          <div>{animate && <AnimatedNumbers value={87} />}</div>
+          <div>{animate && <AnimatedNumbers value={89} />}</div>
           <div>
             {t("trips.title")}
             <br />

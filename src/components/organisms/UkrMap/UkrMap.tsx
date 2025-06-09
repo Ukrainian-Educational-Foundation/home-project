@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "./UkrMap.module.css";
 import React from "react";
 import { useTranslations } from "next-intl";
+import Button from "@/components/atoms/Button/Button";
+import QRCode from "../QRCode/QRCode";
 
 // interface ActiveVideo {
 //   videoOne: boolean;
@@ -48,13 +50,41 @@ function UkrMap() {
       <div>{t("title")}</div>
       <div className={`${styles.ukr_map_wrap}`}>
         <div>
-          <Image src="/map.svg" alt="logo" fill />
+          <div className={styles.video_wrap}>
+            {/* <Image src="/map.svg" alt="logo" fill /> */}
+            <video
+              src="/Vlad.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                width: "100%",
+                height: "100%",
+                objectFit: "cover",
+                borderRadius: "16px",
+              }}
+            ></video>
+          </div>
         </div>
         <ul>
-          <li>{t("description_p1")}</li>
+          <li>
+            <p className={styles.title}>{t("header")}</p>
+            <p className={styles.descr}>{t("description")}</p>
+          </li>
+          <li>
+            {t("description_p1")} <br /> {t("description_p1a")}
+          </li>
+
           <li>{t("description_p2")}</li>
-          <li>{t("description_p3")}</li>
+          <li className={styles.description_attention}>
+            {t("description_p3")}
+          </li>
+          <li>
+            <Button text={t("btn_help")} size={"Large"} />
+          </li>
         </ul>
+        {/* <Button text={t("btn_help")} size={"Large"} /> */}
       </div>
       {/* {playingVideo && <div className="overlay"></div>} */}
       <div
@@ -63,11 +93,14 @@ function UkrMap() {
           //  ${playingVideo ? "hidden" : ""}
         }
       >
+        <div className={styles.qrCode}>
+          <QRCode />
+        </div>
         {/* <div>{t("videoStories")}</div> */}
         <ul>
           <li>
             <Image
-              src="/images/photo_2025-01-08_15-06-42.webp"
+              src="/images/1adbd0cf45c1f6ea32d925bf63b07621692e7d8c.png"
               alt="photo"
               width="265"
               height="150"
@@ -85,7 +118,7 @@ function UkrMap() {
           </li>
           <li>
             <Image
-              src="/images/photo_2025-01-08_15-06-47.jpg"
+              src="/images/46b6d2160416fc2cc122f1114a0f2e2c2bfb0c5c.png"
               alt="photo"
               width="265"
               height="150"

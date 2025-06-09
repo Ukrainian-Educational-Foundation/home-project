@@ -1,5 +1,15 @@
 import React, { Suspense } from "react";
 import styles from "./page.module.css";
+const ReadyHome = React.lazy(
+  () => import("@/components/organisms/ReadyHome/ReadyHome")
+);
+const DevelopmentDIM = React.lazy(
+  () => import("@/components/organisms/DevelopmentDIM/DevelopmentDIM")
+);
+const OurMission = React.lazy(
+  () => import("@/components/organisms/OurMission/OurMission")
+);
+const QRCode = React.lazy(() => import("@/components/organisms/QRCode/QRCode"));
 const Preview = React.lazy(
   () => import("@/components/organisms/Preview/Preview")
 );
@@ -9,7 +19,7 @@ const OurSupport = React.lazy(
 const OldLady = React.lazy(
   () => import("@/components/organisms/OldLady/OldLady")
 );
-const Slider = React.lazy(() => import("@/components/organisms/Slider/Slider"));
+// const Slider = React.lazy(() => import("@/components/organisms/Slider/Slider"));
 const HelpDescribe = React.lazy(
   () => import("@/components/organisms/HelpDescribe/HelpDescribe")
 );
@@ -32,12 +42,18 @@ export default function Home() {
         <Preview />
         <OurSupport />
         <UkrMap />
+        <ReadyHome />
         <OldLady />
-        <Slider />
+        <QRCode />
+        {/* <Slider /> */}
         <HelpDescribe />
+        <QRCode />
+        <DevelopmentDIM />
         {/* <House /> */}
         <AboutFond />
         <TrustUs />
+        <OurMission />
+        <QRCode />
         <ContactUs />
       </div>
     </Suspense>

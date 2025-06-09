@@ -31,6 +31,12 @@ function HelpDescribe() {
             </div>
             <div>{t("psychologicalCare")}</div>
           </li>
+          <li>
+            <div>
+              <Image src="/users-group-two-rounded-svgrepo-com 1.svg" alt="logo" fill sizes="auto" />
+            </div>
+            <div>{t("family")}</div>
+          </li>
         </ul>
       </div>
       <div className={`${styles.help_middle_block}`}>
@@ -47,7 +53,6 @@ function HelpDescribe() {
       <div>
         {t("missing.title")}
         <br /> {t("missing.subTitle")}
-        <br /> {t("missing.goal")}
         <Button text={t("btn_help")} size="Large" />
       </div>
     </div>
