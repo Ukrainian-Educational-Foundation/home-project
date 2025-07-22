@@ -75,8 +75,8 @@ function AboutFond() {
         setData([...dataEn.slice(3), ...dataEn]);
         setFlag(false);
       }
-      if (data.length > 0 && isData.length > 0 && isMobile && flag) {
-        setData([...data.slice(2), ...data]);
+      if (dataEn.length > 0 && isData.length > 0 && isMobile && flag) {
+        setData([...dataEn.slice(2), ...dataEn]);
         setFlag(false);
       }
       return;
