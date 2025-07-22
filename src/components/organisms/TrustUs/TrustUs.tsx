@@ -309,7 +309,9 @@ function TrustUs() {
                           position: "relative",
                         }}
                       >
-                        <Image src={item.logo} alt="logo" fill sizes="auto" />
+                        {item.logo && (
+                          <Image src={item.logo} alt="logo" fill sizes="auto" />
+                        )}
                       </div>
                     </div>
                     <div className={styles.slide_container}>
@@ -338,18 +340,20 @@ function TrustUs() {
                               className={styles.slide_video_photo}
                             />
 
-                            <Image
-                              src="/play.png.webp"
-                              alt="photo"
-                              width="64"
-                              height="64"
-                              className={styles.slide_video_play}
-                              onClick={() => handlePlayClick(index)}
-                            />
+                            {item?.video && (
+                              <Image
+                                src="/play.png.webp"
+                                alt="photo"
+                                width="64"
+                                height="64"
+                                className={styles.slide_video_play}
+                                onClick={() => handlePlayClick(index)}
+                              />
+                            )}
                           </div>
                         )}
 
-                        {viewVideo && (
+                        {item?.video && viewVideo && (
                           <div className={styles.video}>
                             <video
                               ref={(el) => {

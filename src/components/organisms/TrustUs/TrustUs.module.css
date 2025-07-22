@@ -334,7 +334,20 @@
     width: 75%;
   }
 
+  .trust {
+    margin-bottom: 15px;
+  }
+
   .trust a {
     width: 100%;
+  }
+  .trust_card {
+    height: 290px;
+  }
+}
+
+@media (max-width: 410px) {
+  .trust_card {
+    height: 330px;
   }
 }

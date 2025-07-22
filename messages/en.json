@@ -23,58 +23,61 @@
     "supporting": "Companies supporting us:"
   },
   "UkrMap": {
-    "header": "",
-    "description": "",
+    "header": "Vladyk, 7 years old",
+    "description": "Lyman, Donetsk Oblast.",
     "videoStories": "Watch the video stories of our wards:",
-    "title": "",
-    "description_p1": "For example, our foundation is currently supporting a 7-year-old boy named Vlad from Lyman, Donetsk Oblast. He witnessed his mother’s death. We evacuated him and his grandmother to Bila Tserkva, where we rented housing for them. We take him to a psychologist twice a week and fully provide them with food, medical care, and clothing.",
-    "description_p1a": "",
-    "description_p2": "From Vlad’s case, we realized the need to create a place where such children can live and receive comprehensive support until adulthood, while their guardians could continue living there even after the child reaches adulthood.",
-    "description_p3": "Vlad’s story is just one of thousands like it.",
-    "btn_help": ""
+    "title": "We are a charitable organization — the Ukrainian Educational Foundation — dedicated to supporting hildren.Over 20,000 children are currently under our care. Since the beginning of the full-scale war, we have been arrying out humanitarian missions to the eastern regions of Ukraine. We help evacuate families, create educational spaces, and conduct workshops for children living in frontline “red zones.” Our special focus is on orphaned children living with elderly guardians of retirement age — currently, there are more than 100 such children in our care.",
+    "title_1": "Our special focus is on orphaned children who live with guardians of retirement age. There are more than 100 such children under our care.",
+    "description_p1": "Vladik is a boy who lost his mother in the war. He was evacuated from Lyman together with his grandmother. We found them housing, helped them adapt, and provided everything they needed.",
+    "description_p1a": "But there are hundreds of children like Vladik — children who have lost their parents, but have not lost their right to warmth, safety, and love.",
+    "description_p2": "It is for them that we are creating HOME — a space where they can live, learn, and receive medical and psychological support.",
+    "description_p3": "Our mission is not just to provide a roof over their heads, but to create a true family for those who have been left alone.",
+    "btn_help": "Want to help"
   },
   "ReadyHome": {
-    "title": "",
-    "description_1": "",
-    "description_2": "",
+    "title": "The HOME is ready! Now it’s time to set it up",
+    "description_1": "We have already found and purchased the perfect building — a former hospital located 20 km from Bila Tserkva.",
+    "description_2": "Renovations and preparations are currently underway so that children and their guardians can move into a safe home as soon as possible.",
     "list": {
-      "item_1": "",
-      "item_2": "",
-      "item_3": ""
+      "item_1": "2 hectares of land — a space for living and growth",
+      "item_2": "Ready residential buildings",
+      "item_3": "Nearby there is a school, park, and store — everything for a comfortable life"
     },
-    "finaly": ""
+    "finaly": "To complete the renovation and provide children with everything they need, we need your support."
   },
   "QRCode": {
-    "title": ""
+    "title": "QR code to contribute to the Monobank fundraiser"
   },
   "OldLady": {
-    "title": "",
-    "title_2": "",
+    "title": "We are deeply convinced that we must take responsibility for the children and wives of those who took responsibility for us and gave their lives or health defending the country.",
+    "title_2": "Your help is their future. Together, we can give children a true HOME.",
     "aboutProject": {
       "title": "This is why the idea of the HOME Center for Children project was born.",
       "description": "This category of children and elderly people requires round-the-clock care. We began searching for models of similar centers to adopt the best practices.",
       "teamInformation": "Our team visited all well-known (and even lesser-known) shelters, rehabilitation centers, and care homes in Ukraine and Europe. And only one (!!!) truly stands out: Marta Levchenko's “City of Goodness”. It is the largest shelter in Ukraine, currently housing 300 mothers with children, two relocated orphanages, a hospice for children with cancer, and an animal shelter."
     },
-    "btn_help": ""
+    "btn_help": "MAKE A DONATION"
   },
   "Slider": {
     "title": "We found it!"
   },
   "HelpDescribe": {
     "title": "What the children will receive in the HOME",
-    "financialSupport": "",
-    "education": "",
-    "psychologicalCare": "",
-    "family": "",
+    "financialSupport": "A safe place to live",
+    "education": "Quality education and development",
+    "psychologicalCare": "Medical and psychological support",
+    "family": "A sense of family and support",
+    "middleBlockHeader": "The home will be a place where they feel safe, have access to education, medical care, and psychological support.",
+    "middleBlockBody": "The project aims to provide orphaned children not just with physical shelter, but with a true sense of family where they can grow, learn, and build their future.",
     "missing": {
-      "title": "",
-      "subTitle": ""
+      "title": "Your help is their future.",
+      "subTitle": "Together, we can give children a true HOME."
     },
-    "btn_help": ""
+    "btn_help": "MAKE A DONATION"
   },
   "DevelopmentDIM": {
-    "title": "",
-    "description": ""
+    "title": "Development of the HOME project over the next 5 years",
+    "description": "Currently, our foster care service focuses on families of fallen heroes, those in captivity, and those wounded, as well as children whose parents serve in the State Emergency Service and children of medical workers in the “red” zones. For these categories of families, we are developing (and it is already partially operational) a rehabilitation program. At the HOME Center, children with their mothers will be able to undergo 7- and 10-day rehabilitation courses with full board. Psychologists and group sessions will be available. We intend to obtain a medical license."
   },
   "House": {
     "title": "What will happen to the project next",
@@ -94,7 +97,9 @@
     "children": "children under our care",
     "team": "Our team",
     "aboutUs": "Media about us",
-    "review": "Volunteer Tetiana Liulka: “I’ve seen with my own eyes how parents hide their children in basements to avoid evacuation."
+    "review": "Volunteer Tetiana Liulka: “I’ve seen with my own eyes how parents hide their children in basements to avoid evacuation.",
+    "review2": "\"The foundation helps large families, elderly people without guardianship, and animal rights activists to evacuate from the 'red zone'.\"",
+    "review3": "”State Emergency Service: The charitable organization 'Ukrainian Educational Foundation' gifted a rescuer a new hearing aid.”"
   },
   "TrustUs": {
     "title": "We are trusted by",
@@ -102,14 +107,14 @@
     "feedback": "video feedback"
   },
   "OurMission": {
-    "title": "",
-    "description_title": "",
-    "description": "",
-    "btn_help": ""
+    "title": "Become part of our mission!",
+    "description_title": "Helping is easy:",
+    "description": "Make a donation — every hryvnia brings us closer to completing the renovation.",
+    "btn_help": "MAKE A DONATION"
   },
   "ContactUs": {
-    "contactUS": "",
-    "description": "",
+    "contactUS": "Follow us and tell your friends",
+    "description": "The more people know about the HOME project, the more children we can save. Together we are strong.",
     "LeaveMessage": "Leave a message",
     "fromYou": "We’d love to hear from you",
     "media": "Follow us on social media"
